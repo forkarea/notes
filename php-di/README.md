@@ -59,6 +59,7 @@ class Head {
      // ...
    }
 }
+```
 
 * drugi parametr konstruktora ```$charset``` klasy *Head* uniemożliwia wykorzystanie metody *autowiring*
 * nawet gdyby parametr ```$charset``` przyjmował obiekt, to PHP-DI nie jest w stanie okreslić jakiego typu on jest - brakuje Type Hinting
