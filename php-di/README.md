@@ -59,10 +59,12 @@ class Head {
      // ...
    }
 }
+
+$head = $container->get('Head');
 ```
 
-* drugi parametr konstruktora ```$charset``` klasy *Head* uniemożliwia wykorzystanie metody *autowiring*
-* nawet gdyby parametr ```$charset``` przyjmował obiekt, to PHP-DI nie jest w stanie okreslić jakiego typu on jest - brakuje Type Hinting
+* wynikiem powyższego kodu będzie exception *Entry Head cannot be resolved: The parameter 'charset' of Head::__construct has no value defined or guessable*
+* drugi parametr konstruktora ```$charset``` klasy *Head* uniemożliwia wykorzystanie metody *autowiring* - PHP-DI nie jest w stanie okreslić jakiego typu jest ten parameter - brakuje Type Hinting
 * metoda ```setRevisions()``` nie zostanie uruchomiona
 * powyższy przykład powinien wykorzystać metodę *PHP definitions*
 
