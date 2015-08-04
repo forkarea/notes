@@ -68,7 +68,6 @@ $builder->addDefinitions([
 
 $container = $builder->build();
 
-
 // get instance of Document class
 $document = $container->get('Document');
 var_dump($document);

@@ -90,7 +90,9 @@ $head = $container->get('Head');
   * setter/method injection
   * property injection
 * nie wspiera mapowania interfejsu na konkretną implementację
-  
+
+Pełny przykład metody annotations: [annotations.php](annotations.php)
+
 ### PHP Definitions
 
 * pomocne tam gdzie metody Autowiring i Annotations nie wystarczają
@@ -98,6 +100,8 @@ $head = $container->get('Head');
   * bezpośrednie deklarowanie definicji: ```$builder->addDefinitions([ /* ... */ ]);```
   * ładowanie definicji z pliku: ```$builder->addDefinitions('config.php');```
   * istnieje możliwość bezpośredniego dopisywania wartości do kontenera: ```$container->set('database.host', 'localhost');```
+* wsparcie mapowania interfejsu na konkretną implementację
+* możę być także kontenerem z konfiguracją (nawet zależną od środowiska)
 
 Wybrane typy definicji:
 
@@ -117,6 +121,14 @@ Wybrane typy definicji:
 [
     'path.tmp' => '/tmp',
     'log.file' => DI\string('{path.tmp}/app.log')
+]
+```
+
+*Environment variables*
+
+```php
+[
+    'database.url' => DI\env('DATABASE_URL', 'default@value')
 ]
 ```
  
@@ -168,14 +180,6 @@ Wybrane typy definicji:
 ```php
 [
     'doctrine.entity_manager' => DI\get('Doctrine\ORM\EntityManager')
-]
-```
-   
-*Environment variables*
-
-```php
-[
-    'database.url' => DI\env('DATABASE_URL', 'default@value')
 ]
 ```
 
