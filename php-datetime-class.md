@@ -1,16 +1,16 @@
 # PHP - DateTime Class
 
-Obs³uga dat w PHP.
+ObsÅ‚uga dat w PHP.
 
-## Przyk³ady
+## PrzykÅ‚ady
 
-Kontekst przyk³adów
+Kontekst przykÅ‚adÃ³w
 
 ```php
 $datetime = new DateTime();
 ```
 
-Formatowanie i wyœwietlenie daty
+Formatowanie i wyÅ›wietlenie daty
 
 ```php
 echo $datetime->format("Y-m-d H:i:s"); // 2015-08-27 13:05:34
@@ -52,7 +52,7 @@ echo $datetime->setDate(2015, 8, 27)->modify("+1 day")->format("Y-m-d"); // 2015
 echo $datetime->setDate(2015, 8, 27)->modify("-1 week")->format("Y-m-d"); // 2015-08-20
 ```
 
-Obliczanie ró¿nic miêdzy datami
+Obliczanie rÃ³Å¼nic miÄ™dzy datami
 
 ```php
 $interval = $datetime->diff(new DateTime("-38 days"));
