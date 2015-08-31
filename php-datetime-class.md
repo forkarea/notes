@@ -64,6 +64,21 @@ echo $interval->days; // 38
 echo $interval->format("%yY, %mM, %dD"); // 0Y, 1M, 7D
 ```
 
+Porównanie dat
+
+```php
+$d1 = new DateTime();
+$d2 = new DateTime();
+
+$d1->setDate(2015, 8, 27);
+$d2->setDate(2015, 8, 27);
+
+var_dump($d1 == $d2); // true
+var_dump($d1 === $d2); // false
+
+var_dump($d1->format("U") === $d2->format("U")); // true
+```
+
 ## Linki
 
 * http://php.net/manual/en/class.datetime.php
