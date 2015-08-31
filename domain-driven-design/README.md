@@ -11,6 +11,7 @@ Notatki na temat DDD
 
 ## Przykładowa separacja w projekcie
 
+```
 src/
    /Application
       /Controllers
@@ -29,3 +30,4 @@ src/
       /Repository
          /FilesystemPlugins.php
          /MongoDbMessages.php
+```
