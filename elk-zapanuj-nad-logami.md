@@ -15,26 +15,19 @@ Przedstawienie procesu grupowania logów i wyœwietlenia ich.
 Czym s¹ logi? Po co je sstosujemy? Problemy z logami.
 
 - "(...) zapis zawieraj¹cy informacjê o zdarzeniach i dzia³aniach dotycz¹cych systemu informatycznego, systemu komputerowego czy komputera." Wikipedia.
-
 - umo¿liwiaj¹ analizê dzia³ania systemu, detekcjê:
   - b³êdów, nieprawid³owoœci dzia³ania,
   - prób i sposobów w³amañ
-
 - multum logów, w zale¿noœci od u¿ytego stacku technologicznego. Prosta web aplikacja to logi z:
   - Syslog (Linux), 
   - Apache,
   - PHP,
   - MySQL (slowlog, https://dev.mysql.com/doc/refman/5.5/en/server-logs.html),
   - Application logs.
-
 - ciê¿ko siê je przegl¹da (SSH -> tail, cat, grep, awk ...)
-
 - du¿y rozmiar - powodzenia przy analizie 100GB nieustrukturyzowanych logów
-
 - polityka archiwizacji logów
-
 - niepotrzebne - z punktu widzenia klienta, nie przynosz¹ korzyœci biznesowej a jednak je kodzimy
-
 - nie przegl¹damy ich - kto w ci¹gu ostatniego miesi¹ca sam z siebie rzuci³ okiem na logi?
 
 ## ELK
