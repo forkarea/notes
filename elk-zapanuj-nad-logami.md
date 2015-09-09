@@ -30,13 +30,18 @@ Czym s¹ logi? Po co je sstosujemy? Problemy z logami.
   - developerzy kodz¹ ```$log->warning('...');```
 - nie przegl¹damy ich - kto w ci¹gu ostatniego miesi¹ca sam z siebie rzuci³ okiem na logi?
 
+> Logowanie jest Twoim przyjacielem. Aplikacje powinny logowaæ na poziomie *WARNING* za ka¿dym razem, kiedy przekraczany jest czas na nawi¹zywanie po³aczenia sieciowego lub czas odpowiedzi niebezpiecznie siê wyd³u¿a. Powinieneœ logowaæ na poziomie *INFO* lub, jeœli logi s¹ zbyt rozwlek³e, na poziomie *DEBUG* za ka¿dym razem, gdy zamykasz po³¹czenie. Powinieneœ logowaæ na poziomie *DEBUG* ka¿de po³¹czenie, które otwierasz, w³¹czaj¹c mo¿liwie du¿o informacji na temat punktu koñcowego po³aczenia.
+>
+> -- *Ci¹g³e dostarczanie oprogramowania. Automatyzacja kompilacji, testowania i wdra¿ania. Jez Humble. David Farley. Helion 2011.*
+
 ## ELK
 
 *Elasticsearch + Logstash + Kibana*
 
 - trzy niezale¿ne od siebie open-sourceowe projekty
 - vendor - firma Elastic
-- "How can you maintain blazing-fast analytics as you data grows larger and larger? Answer: the ELK stack makes it way easier -- and way faster -- to search and analyze large data sets."
+
+*ELK* wspomaga proces indeksowania plików logów (ale nie tylko) w jednym miejscu. Dziêki temu mo¿liwe jest wyszukiwanie w czasie rzeczywistym, analizowanie danych oraz przygotowywanie wizualizacji z informacji zawartych w logach. Jest szybki nawet w du¿ych zbiorach danych, nawet takich zawieraj¹cych gigabajty informacji.
 
 // Grafika jak to dzia³a
 
@@ -173,11 +178,15 @@ $: sudo vi /etc/logstash-forwarder.conf
 $: sudo service logstash-forwarder restart
 ```
 
+https://github.com/elastic/logstash-forwarder
+
 ## Notatki
 
 Pamiêtaæ o:
 - na jakich licencjach oparty jest ELK
 - alternatywa dla ELK
+  - https://home.regit.org/2014/01/a-bit-of-logstash-cooking/
+  - Splunk
 - jak wygl¹da wdro¿enie ELK do dzia³aj¹cego œrodowiska?
 - omówiæ czym jest lumberjack
 - opowiedzieæ o Grok
@@ -186,9 +195,6 @@ Inne:
 - http://www.logstash.net/docs/1.4.2/tutorials/10-minute-walkthrough/
 - http://www.slideshare.net/3camp/logstash-28920758
 - http://www.slideshare.net/CloudElements/logstash-33327736
-
-Logstash Forwarder:
-- https://github.com/elastic/logstash-forwarder
 - https://www.digitalocean.com/community/tutorials/adding-logstash-filters-to-improve-centralized-logging
 - https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-4-on-ubuntu-14-04
 - https://wiki.zimbra.com/wiki/Centralized_Logs_-_Elasticsearch,_Logstash_and_Kibana
