@@ -179,6 +179,8 @@ Pamiêtaæ o:
 - na jakich licencjach oparty jest ELK
 - alternatywa dla ELK
 - jak wygl¹da wdro¿enie ELK do dzia³aj¹cego œrodowiska?
+- omówiæ czym jest lumberjack
+- opowiedzieæ o Grok
 
 Inne: 
 - http://www.logstash.net/docs/1.4.2/tutorials/10-minute-walkthrough/
