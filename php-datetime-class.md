@@ -19,8 +19,8 @@ echo $datetime->format("Y-m-d H:i:s"); // 2015-08-27 13:05:34
 Ustawianie strefy czasowej
 
 ```php
-$datetime ->setTimezone(new DateTimeZone("Europe/Warsaw")); // ok
-$datetime ->setTimezone(new DateTimeZone("Sun/Silesia")); // Unknown or bad timezone (Sun/Silesia)
+$datetime->setTimezone(new DateTimeZone("Europe/Warsaw")); // ok
+$datetime->setTimezone(new DateTimeZone("Sun/Silesia")); // Unknown or bad timezone (Sun/Silesia)
 ```
 
 Ustawienie daty (int $year, int $month, int $day = 1)
