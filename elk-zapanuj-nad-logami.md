@@ -10,7 +10,7 @@ ELK - Elasticsearch Logstash Kibana
 
 ## Logi
 
-Czym s¹ logi? Po co je sstosujemy? Problemy z logami.
+### Czym s¹ logi? Po co je stosujemy? Problemy z logami.
 
 - "(...) zapis zawieraj¹cy informacjê o zdarzeniach i dzia³aniach dotycz¹cych systemu informatycznego, systemu komputerowego czy komputera." via Wikipedia.
 - umo¿liwiaj¹ analizê dzia³ania systemu, detekcjê:
@@ -30,9 +30,44 @@ Czym s¹ logi? Po co je sstosujemy? Problemy z logami.
   - developerzy kodz¹ ```$log->warning('...');```
 - nie przegl¹damy ich - kto w ci¹gu ostatniego miesi¹ca sam z siebie rzuci³ okiem na logi?
 
+Niew¹tpliwie logi s¹ u¿ytecznym narzêdziem, jednak wykorzystywane powinny byæ w sposób przemyœlany - nie za du¿o, nie za ma³o :-) Dobrym pomys³em jest implementacja funkcjonalnoœci umo¿liwiaj¹cej aktywowanie/deaktywowanie rejestracji zdarzeñ do logów.
+
+### Poziomy logowania
+
+Poziomy lgowania zdefiniowane przez *Syslog* (opisane w [RFC 5424](http://tools.ietf.org/html/rfc5424)):
+
+
+Level | Description | Example
+------|-------------|--------
+Emergency | system is unusable | *Child cannot open lock file. Exiting*
+Alert | action must be taken immediately | *getpwuid: couldn't determine user name from uid*
+Critical | critical conditions | *socket: Failed to get a socket, exiting child*
+Error | error conditions | *Premature end of script headers*
+Warning | warning conditions | *child process 1234 did not exit, sending another SIGHUP*
+Notice | normal but significant condition | *httpd: caught SIGBUS, attempting to dump core in ...*
+Informational | informational messages | *Server seems busy, (you may need to increase StartServers, or Min/MaxSpareServers)...*
+Debug | debug-level messages | *Opening config file ...*
+
+Wykorzysytwane miêdzy innymi przez:
+
+- standard [PSR-3](http://www.php-fig.org/psr/psr-3/) - definiuj¹cy uniwersalny interfejs loggera dla aplikacji napisanych w jêzyku PHP,
+- serwer HTTP - [Apache 2](http://httpd.apache.org/docs/2.4/mod/core.html#loglevel).
+
+### Co o logach mówi literatura?
+
 > Logowanie jest Twoim przyjacielem. Aplikacje powinny logowaæ na poziomie *WARNING* za ka¿dym razem, kiedy przekraczany jest czas na nawi¹zywanie po³aczenia sieciowego lub czas odpowiedzi niebezpiecznie siê wyd³u¿a. Powinieneœ logowaæ na poziomie *INFO* lub, jeœli logi s¹ zbyt rozwlek³e, na poziomie *DEBUG* za ka¿dym razem, gdy zamykasz po³¹czenie. Powinieneœ logowaæ na poziomie *DEBUG* ka¿de po³¹czenie, które otwierasz, w³¹czaj¹c mo¿liwie du¿o informacji na temat punktu koñcowego po³aczenia.
 >
 > -- *Ci¹g³e dostarczanie oprogramowania. Automatyzacja kompilacji, testowania i wdra¿ania. Jez Humble. David Farley. Helion 2011.*
+
+> (...)
+> - instrukcje rejestracyjne pogarszaj¹ czytelnoœæ programu, utrudniaj¹c oddzielenie jego zasadniczych instrukcji od konstrukcji pomocniczych;
+> - instrukcje rejestracyjne dotkniête s¹ t¹ sam¹ przypad³oœci¹, co komentarze: gdy kod aplikacji ewoluuje, programiœci zwykle zapominaj¹ o ich uaktualnieniu, co czyni je nieadekwatnymi do kontekstu, a to jest gorsze ni¿ kompletna bezu¿ytecznoœæ, bo myl¹ce;
+> - niezale¿nie od tego, ile instrukcji rejestracyjnych znajdzie siê w kodzie aplikacji, zawsze bêd¹ one niewystarczaj¹ce - w przypadku kolejnego debugowania prawdopodobnie pojawi¹ siê nowe. Pozostawianie ich w kodzie sprawia, ¿e dwa poprzednie problemy staj¹ siê jeszcze bardziej wyraŸne.
+>
+> (...)
+> Generalnie, najbardziej u¿ytecznymi wpisami w dzienniku s¹ te na najwy¿szym (strategicznym) poziomie, odzwierciedlaj¹ce typowe dla aplikacji zdarzenia - jak np. logowanie do serwera HTTP. Niskopoziomowe (taktyczne) wpisy maj¹ u¿ytecznoœæ raczej ograniczon¹ czasowo - bo np. pe³ni¹ rolê pomocn¹ w poszukiwaniu konkretnego b³êdu - i celownoœæ pozostawienia generuj¹cych je instrukcji jest co najmniej w¹tpliwa.
+>
+> -- *Debugowanie. Jak wyszukiwaæ i naprawiaæ b³êdy w kodzie oraz im zapobiegaæ. Paul Butcher. Helion 2009.*
 
 ## ELK
 
