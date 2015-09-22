@@ -14,7 +14,8 @@ ELK - Elasticsearch Logstash Kibana
 
 - "(...) zapis zawieraj¹cy informacjê o zdarzeniach i dzia³aniach dotycz¹cych systemu informatycznego, systemu komputerowego czy komputera." via Wikipedia.
 - umo¿liwiaj¹ analizê dzia³ania systemu, detekcjê:
-   - b³êdów, nieprawid³owoœci dzia³ania,
+   - b³êdów - sytuacji wyj¹tkowych np. logowanie informacji o wyj¹tku
+   - nieprawid³owoœci dzia³ania - niezapisanie przes³anych informacji w bazie danych np. z formularza rejestracyjnego,
    - prób i sposobów w³amañ
 - multum logów, w zale¿noœci od u¿ytego stacku technologicznego. Prosta web aplikacja to logi z:
    - Linux Logs (Syslog, Auth Log, FTPD Log, etc.)
@@ -85,11 +86,11 @@ Wykorzysytwane miêdzy innymi przez:
 *Indexing, storage and retrieval engine*
 
 - silnik wyszukiwania (full-text search*)
-- real-time
 - bazuj¹cy na *Apache Lucene*
+- real-time - szybkie indexowanie danych, dostêp danych od razu
 - skalowalny, rozproszony, wysoko dostêpny
 - komunikacja odbywa siê za pomoc¹ JSON + RESTful API (requesty HTTP - GET, POST, PUT, DELETE)
-- brak narzutu schematu sk³adowanych dokumentów - JSON documents 
+- brak okreœlonego schematu dla sk³adowanych dokumentów - JSON Documents
 
 #### Terminologia
 
@@ -202,9 +203,16 @@ Przyk³adowa odpowiedŸ, z ¿¹dania */logstash-2015.09.15/_search?q=response:404*:
 
 ### Logstash
 
-Log input slicer and dicer and output writer
+*Log input slicer and dicer and output writer*
 
-- https://github.com/elastic/logstash/tree/v1.4.2/patterns
+- trzy odpowiedzialnoœci:
+  - inputs - agregowanie danych z ró¿nych Ÿróde³ (np. Apache Logs, MySQL logs, syslog, auth.log)
+  - filters - parsowanie danych do postaci znormalizowanej
+  - output - odsy³anie przetworzonych danych (np. Elasticsearch, Mail, IRC, Redis, MongoDB)
+- dostarczanie danych za miêdzi innymi za pomoc¹:
+  - TCP (nas³uchuje na wybranym porcie, wrzucamy linie loga),
+  - protokó³ Lumberjack,
+  - stdin
 
 ### Kibana
 
