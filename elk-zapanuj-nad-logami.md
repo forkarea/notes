@@ -205,14 +205,50 @@ Przyk³adowa odpowiedŸ, z ¿¹dania */logstash-2015.09.15/_search?q=response:404*:
 
 *Log input slicer and dicer and output writer*
 
+- pipeline: inputs > filters > output
 - trzy odpowiedzialnoœci:
-  - inputs - agregowanie danych z ró¿nych Ÿróde³ (np. Apache Logs, MySQL logs, syslog, auth.log)
+  - inputs - agregowanie danych z ró¿nych Ÿróde³
+    - file, tcp, stdin, syslog, websocket, lumberjack
   - filters - parsowanie danych do postaci znormalizowanej
-  - output - odsy³anie przetworzonych danych (np. Elasticsearch, Mail, IRC, Redis, MongoDB)
+    - 
+  - outputs - odsy³anie przetworzonych danych
+    - 
 - dostarczanie danych za miêdzi innymi za pomoc¹:
   - TCP (nas³uchuje na wybranym porcie, wrzucamy linie loga),
   - protokó³ Lumberjack,
   - stdin
+
+### Grok
+
+- text matcher - umo¿liwia parsowanie tekstu w celu wyodrêbnienia interesuj¹cych nas danych
+- przetwarzanie nieustrukturyzowanych danych do ustrukturyzowanego formatu
+- oko³o 120 gotowych wzorców umo¿liwiaj¹cych wyodrêbnianie:
+  - daty, czasu
+  - url, host,
+  - uuid,
+  - log levelu
+  - itd. [zobacz wiêcej](https://github.com/elastic/logstash/tree/v1.4.2/patterns)
+- mo¿emy definiowaæ w³asne wzorce
+
+Dostêpny jest debugger online dla Groka: [grokdebug.herokuapp.com](http://grokdebug.herokuapp.com)
+
+```
+Input:
+
+  81.112.56.18 GET /page?id=contact 1337
+
+Pattern:
+  
+  %{IP:client} %{WORD:method} %{URIPATHPARAM:request} %{NUMBER:bytes}
+
+Result:
+
+ client  : 81.112.56.18
+ method  : GET
+ request : /page?id=contact
+ bytes   : 1337
+
+```
 
 ### Kibana
 
@@ -367,6 +403,10 @@ Inne:
 - https://www.digitalocean.com/community/tutorials/adding-logstash-filters-to-improve-centralized-logging
 - https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-4-on-ubuntu-14-04
 - https://wiki.zimbra.com/wiki/Centralized_Logs_-_Elasticsearch,_Logstash_and_Kibana
+
+Grok
+- http://svops.com/blog/introduction-to-logstash-grok-patterns/
+- https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html
 
 Prezentacje:
 - http://www.slideshare.net/Divante/agregacja-i-analiza-logw
