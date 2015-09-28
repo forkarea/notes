@@ -26,7 +26,7 @@ class User {
     }
 }
 
-class ArrayUserFactory implements UserFactory {
+class RegisterFormUserFactory implements UserFactory {
     public function createUser(array $data) {
         $user = new User($data['username']);
        
@@ -68,7 +68,7 @@ $data = [
 ];
 
 $userRepository = new DoctrineUserRepository;
-$userFactory = new ArrayUserFactory;
+$userFactory = new RegisterFormUserFactory;
 $registerService = new RegisterUserService($userRepository, $userFactory);
 
 $registerService->register($data);
