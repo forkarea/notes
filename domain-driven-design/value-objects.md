@@ -22,6 +22,26 @@ Jeżeli klasa EmailAddress będzie walidować adres e-mail to nie będzie potrze
 new Money(100, new Currency(Currency::USD));
 ```
 
+```php
+final class UserId
+{
+    private $userId;
+    
+    public function __construct($userId)
+    {
+        $this->guard($userId);
+        $this->userId = $userId;
+    }
+    
+    private function guard($userId)
+    {
+        if (!is_int($userId) || $userId <= 0) {
+            throw new \InvalidArgumentException("The Id should be a int, greater than zero.");
+        }
+    }
+}
+```
+
 ## Linki
 
 * http://it.esky.pl/2015/07/10/domain-driven-design-value-objects/
