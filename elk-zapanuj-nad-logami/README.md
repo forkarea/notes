@@ -104,6 +104,10 @@ Wykorzysytwane miêdzy innymi przez:
 - FacebookPosts (np. per day),
 - WikipediaArticles.
 
+**Document** - odpowiednik rekordu w RDBMS, JSON ({key:value})
+
+**Shard** - czêœæ indexu, która jest dystrybuowana pomiêdzy nodami, forma kopii zapasowej (w momencie gdy któryœ z node jest niedostêpny)
+
 // dodaæ grafikê obrazuj¹c¹ terminologiê: https://s3.amazonaws.com/media-p.slid.es/uploads/szymontezewski/images/42225/Zrzut_ekranu_2013-07-2_o_20.47.51.png
 
 #### Full-Text Search
@@ -254,6 +258,10 @@ Result:
 
 Data Displayer
 
+#### Log Details
+
+![kibana-log-details.png](kibana-log-details.png)
+
 ## Praktyka
 
 Opis dotyczy uruchomienia serwera *ELK* oraz konfiguracji serwerów aplikacyjnych (*LAMP Node* - Linux, Apache, MySQL, PHP) które za pomoc¹ *Logstash Forwarder* bêd¹ przekazywaæ logi do serwera *ELK*.
@@ -378,39 +386,3 @@ $: sudo vi /etc/logstash-forwarder.conf
 ```
 $: sudo service logstash-forwarder restart
 ```
-
-https://github.com/elastic/logstash-forwarder
-
-## Notatki
-
-Pamiêtaæ o:
-- na jakich licencjach oparty jest ELK
-- alternatywa dla ELK
-  - https://home.regit.org/2014/01/a-bit-of-logstash-cooking/
-  - Splunk
-- jak wygl¹da wdro¿enie ELK do dzia³aj¹cego œrodowiska?
-- omówiæ czym jest lumberjack
-- opowiedzieæ o Grok
-
-Inne: 
-- http://perftests.ninja/2015/05/20/elk-konfiguracja-elasticsearch/
-- http://openness.microsoft.com/pl-cee/blog/2015/05/18/elasticsearch-w-azure/
-- http://perftests.ninja/2015/05/21/elk-konfiguracja-elasticsearch-update/
-
-- http://www.logstash.net/docs/1.4.2/tutorials/10-minute-walkthrough/
-- http://www.slideshare.net/3camp/logstash-28920758
-- http://www.slideshare.net/CloudElements/logstash-33327736
-- https://www.digitalocean.com/community/tutorials/adding-logstash-filters-to-improve-centralized-logging
-- https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-4-on-ubuntu-14-04
-- https://wiki.zimbra.com/wiki/Centralized_Logs_-_Elasticsearch,_Logstash_and_Kibana
-
-Grok
-- http://svops.com/blog/introduction-to-logstash-grok-patterns/
-- https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html
-
-Prezentacje:
-- http://www.slideshare.net/Divante/agregacja-i-analiza-logw
-- http://www.slideshare.net/3camp/logstash-28920758?related=1
-- http://moquet.net/talks/ipc-2015-elk/
-- http://www.slideshare.net/jillesvangurp/elk-stack-34785684
-- http://linuxfestnorthwest.org/sites/default/files/slides/Log%20Analysis%20with%20the%20ELK%20Stack.pdf (Grok Debuger do tworzenia filtrów logstash)
