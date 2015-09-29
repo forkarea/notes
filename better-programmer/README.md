@@ -23,15 +23,15 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
 - ~~Refaktoryzacja~~
 - ~~Wymiana i zdobywanie wiedzy~~
 - DOJO programowania
-- ~~Automatyzacja~~
-- ~~Bazy danych~~
+- Automatyzacja
+- Bazy danych
 - Narzędzia
 - ~~Projekty i ich prowadzenie~~
 - Spotkania
 - ~~Szacowanie~~
 - ~~Zarządzanie czasem~~
-- ~~Klient vs Pracodawca vs Programista~~
-- ~~Współpraca~~
+- Klient vs Pracodawca vs Programista
+- Współpraca
 - ~~Debugowanie~~
 - ~~Praca nad kodem~~
 - ~~Programowanie obiektowe~~
@@ -78,6 +78,20 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
 - [devblogi.pl/2010/10/ostateczne-programistyczne-kata.html](http://www.devblogi.pl/2010/10/ostateczne-programistyczne-kata.html)
 - [solidsoft.wordpress.com/2010/12/09/czym-jest-coding-dojo-i-code-kata](https://solidsoft.wordpress.com/2010/12/09/czym-jest-coding-dojo-i-code-kata/)
 
+## Automatyzacja
+
+- Automatyzacja powinna odbywać się na każdym poziomie procesu wytwarzania programowania:
+  - na poziomie rozstawiania środowiska developerskiego
+  - na poziomie deployu aplikacji
+  - na poziomie budowania aplikacji
+  - na poziomie statycznej analizy kodu
+  - na poziomie testowania - jednostkowego, akceptacyjnego (w oparciu o acceptance criteria), funkcjonalnego
+- Zwróć uwagę na zrównoleglenie procesów automatycznych. W przypadku testów automatycznych opartych o Selenium można wykorzystać Selenium-Grid w celu równoległego uruchomienia testów na różnych komputerach (z różnymi przeglądarkami, systemami operacyjnymi).
+
+## Baza danych
+
+- Tak samo jak wersjonujesz kod, wersjonuj bazę danych korzystając np. z LiquidBase
+
 ## Narzędzia
 
 - Poznaj swoje narzędzia - **dobrze** je poznaj. Są twoim przyjacielem. To one mogą wspomagać i ułatwiać Twoja codzienna pracę
@@ -90,3 +104,28 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
 
 - Jeżeli jesteś uczestnikiem spotkania staraj się do niego przygotować, przejrzyj dostępne Ci materiały na temat spotkania, stwórz notatki na temat swoich przemyśleń - pomysłów na usprawnienia, dobrych i złych stron
 - Jeżeli prowadzisz spotkanie, wyślij agende spotkania uczestnikom. Opisz krótko każdy z punktów. Podziel czas spotkania w odpowiedni sposób pomiędzy konkretnymi punktami agendy. Zdefiniuj główny cel spotkania
+
+## Klient vs Pracodawca vs Programista
+
+- *"Interesuj się statkiem którym przyszło Ci płynąć"* ~ Robert c. Martin
+- Staraj się zrozumieć biznes, cel i potrzeby klienta. Ciężko rozwiązywać problemy klientów, jeśli ich wcześniej dobrze nie zrozumiemy...
+- Znaj cele i wymagania pracodawcy, myśl tymi kategoriami. Profesjonalny programista poświęca czas na poznanie swojej firmy i branży, rozmawia o problemach, stara się je zrozumieć i proponuje możliwości ich rozwiązania mając na uwadze swoja wiedzę o technologi: problem + software = rozwiązanie problemu.
+
+## Współpraca
+
+- Zadaj pytanie > Daj wypowiedzieć się reszcie > Podsumuj oraz dodaj swoje za i przeciw
+- Decyzje powinny zostać podjęte przez zespół - tak aby każdy z członków utożsamiał się z decyzją
+- Podchodź do każdego swojego współpracownika w inny - najbardziej dostosowany sposób. Każdy człowiek jest inny. Pamiętaj o tym.
+- Kod jest własnością zespołu a nie poszczególnych jego członków.
+  - Jeżeli napotykasz komentarze w stylu @TODO, @FIXME, nazwy zmiennych, funkcji, metod lub klas nie spełniają konwencji - zmień je.
+  - Jeżeli w którymś z fragmentów kodu napotykasz błąd, nie identyfikuj go z osobą która go popełniła.
+  - Nie ustrzegaj się poprawy błędów w kodzie który nie został napisany przez Ciebie.
+  - Pamiętaj to kod zespołu - każdy z członków odpowiada za całość, a nie tylko za wybrane fragmenty.
+- Praca w parach to:
+  - Efektywny sposób rozwiązywania problemów - nawet jeżeli jeden z programistów jest znużony pracą nad problemem
+  - Dobry moment na dokonywanie inspekcji kodu na bieżąco
+  - Świetny sposób na dzielenie się wiedza
+  - Odpowiedni czas na poznawanie rożnych (nieznanych Ci) części systemu
+  - Pamiętaj - co dwie głowy to nie jedna!
+- Bądź częścią zespołu nie samotnikiem z słuchawkami na uszach - jako zespół np. siedźcie razem, twarzą do siebie czyli tworząc okrąg - tak aby podsłuchać mamrotanie kolegi, prowadzić spontaniczną werbalna i niewerbalna komunikacje
+- Nucz się przyjmować pomoc oraz o nią prosić. Jeżeli siedzisz z zespołem w jednym pokoju wstań i powiedz "Potrzebuje pomocy". Wykorzystaj dostępne Ci media - StackOverflow, Facebook, Twitter, fora internetowe, e-mail, telefon. *"Zdecydownie nieprofesjonalne jest stanie w miejscu, podczas gdy pomoc jest tak łatwo dostępna"* ~ Robert C. Martin
