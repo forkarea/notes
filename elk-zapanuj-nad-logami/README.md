@@ -5,14 +5,20 @@ ELK - Elasticsearch Logstash Kibana
 ## Spis treœci
 
 1) Logi
+
 2) ELK
+
 3) Praktyka
+
+4) ELK a skalowalnoœæ
+
+5) Przydatne linki
 
 ## Logi
 
 ### Czym s¹ logi? Po co je stosujemy? Problemy z logami.
 
-- "(...) zapis zawieraj¹cy informacjê o zdarzeniach i dzia³aniach dotycz¹cych systemu informatycznego, systemu komputerowego czy komputera." via Wikipedia.
+- "(...) zapis zawieraj¹cy informacjê o zdarzeniach i dzia³aniach dotycz¹cych systemu informatycznego, systemu komputerowego czy komputera." via Wikipedia,
 - umo¿liwiaj¹ analizê dzia³ania systemu, detekcjê:
    - b³êdów - sytuacji wyj¹tkowych np. logowanie informacji o wyj¹tku
    - nieprawid³owoœci dzia³ania - niezapisanie przes³anych informacji w bazie danych np. z formularza rejestracyjnego,
@@ -21,7 +27,7 @@ ELK - Elasticsearch Logstash Kibana
    - Linux Logs (Syslog, Auth Log, FTPD Log, etc.)
    - Apache,
    - PHP,
-   - MySQL (slowlog, https://dev.mysql.com/doc/refman/5.5/en/server-logs.html),
+   - MySQL (slowlog, general log, error log)
    - Application Logs.
 - ciê¿ko siê je przegl¹da (Old School way : SSH -> tail, cat, grep, less, awk ...)
 - du¿y rozmiar, brak spójnego formatu pomiêdzy logami - powodzenia przy analizie 100GB nieustrukturyzowanych logów
