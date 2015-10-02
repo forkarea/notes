@@ -208,18 +208,14 @@ Przyk³adowa odpowiedŸ, z ¿¹dania */logstash-2015.09.15/_search?q=response:404*:
 
 *Log input slicer and dicer and output writer*
 
-- pipeline: inputs > filters > output
+- pipeline: inputs > filters > outputs
 - trzy odpowiedzialnoœci:
   - inputs - agregowanie danych z ró¿nych Ÿróde³
-    - file, tcp, stdin, syslog, websocket, lumberjack
+    - file, TCP, stdin, syslog, websocket, protokó³ Lmberjack
   - filters - parsowanie danych do postaci znormalizowanej
     - 
   - outputs - odsy³anie przetworzonych danych
     - 
-- dostarczanie danych za miêdzi innymi za pomoc¹:
-  - TCP (nas³uchuje na wybranym porcie, wrzucamy linie loga),
-  - protokó³ Lumberjack,
-  - stdin
 
 ### Grok
 
@@ -401,6 +397,14 @@ $: sudo vi /etc/logstash-forwarder.conf
 $: sudo service logstash-forwarder restart
 ```
 
+## ELK a skalowalnoœæ
+
+// 
+
 ## Przydatne linki
 
-- [Scaling an ELK stack](https://www.digitalocean.com/community/tutorials/adding-logstash-filters-to-improve-centralized-logging)
+- [Elastic](http://elastic.co)
+- [Elastic GitHub](https://github.com/elastic)
+- [Grok Debug](http://grokdebug.herokuapp.com)
+- [Grok Patterns](https://github.com/logstash-plugins/logstash-patterns-core/tree/master/patterns)
+- [Scaling an ELK stack](http://www.slideshare.net/renzotoma39/scaling-an-elk-stack-at-bolcom-39412550)
