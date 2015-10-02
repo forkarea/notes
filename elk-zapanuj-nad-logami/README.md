@@ -76,16 +76,15 @@ Wykorzysytwane miêdzy innymi przez:
 - trzy niezale¿ne od siebie open-sourceowe projekty
 - vendor - firma Elastic
 
-*ELK* wspomaga proces indeksowania plików logów (ale nie tylko) w jednym miejscu. Dziêki temu mo¿liwe jest wyszukiwanie w czasie rzeczywistym, analizowanie danych oraz przygotowywanie wizualizacji z informacji zawartych w logach. Jest szybki nawet w du¿ych zbiorach danych, nawet takich zawieraj¹cych gigabajty informacji.
+*ELK* wspomaga proces indeksowania plików logów (ale nie tylko) w jednym miejscu. Dziêki temu mo¿liwe jest wyszukiwanie w czasie rzeczywistym, analizowanie danych oraz przygotowywanie wizualizacji z informacji zawartych w logach. Jest szybki w du¿ych zbiorach danych, nawet takich zawieraj¹cych gigabajty informacji.
 
-// Grafika jak to dzia³a
-// ze logstash zbiera, elastic przechowyje (DB) kinbana korzysta z DB i wyœwietla u¿ytkownikowi
+![elk-flow.png](elk-flow.png)
 
 ### Elasticsearch
 
 *Indexing, storage and retrieval engine*
 
-- silnik wyszukiwania (full-text search*)
+- serwer bazy danych i jednoczeœnie silnik wyszukiwania (full-text search*)
 - bazuj¹cy na *Apache Lucene*
 - real-time - szybkie indexowanie danych, dostêp danych od razu
 - skalowalny, rozproszony, wysoko dostêpny
@@ -262,11 +261,26 @@ Data Displayer
 
 ![kibana-log-details.png](kibana-log-details.png)
 
+#### Discover Tab
+
+![kibana-discover-tab.png](kibana-discover-tab.png)
+
+#### Visualize Tab
+
+![kibana-visualize-1.png](kibana-visualize-1.png)
+
+
+![kibana-visualize-2.png](kibana-visualize-2.png)
+
+#### Dashboard
+
+![kibana-dashboard.png](kibana-dashboard.png)
+
 ## Praktyka
 
-Opis dotyczy uruchomienia serwera *ELK* oraz konfiguracji serwerów aplikacyjnych (*LAMP Node* - Linux, Apache, MySQL, PHP) które za pomoc¹ *Logstash Forwarder* bêd¹ przekazywaæ logi do serwera *ELK*.
+Opis dotyczy uruchomienia serwera *ELK* oraz konfiguracji serwerów aplikacyjnych (*LAMP Node* - Linux, Apache, MySQL, App) które za pomoc¹ *Logstash Forwarder* bêd¹ przekazywaæ logi do serwera *ELK*.
 
-// grafika prezentuj¹ca architekturê serwerów
+![simple-architecture.png](simple-architecture.png)
 
 ### ELK Server
 
@@ -386,3 +400,7 @@ $: sudo vi /etc/logstash-forwarder.conf
 ```
 $: sudo service logstash-forwarder restart
 ```
+
+## Przydatne linki
+
+- [Scaling an ELK stack](https://www.digitalocean.com/community/tutorials/adding-logstash-filters-to-improve-centralized-logging)
