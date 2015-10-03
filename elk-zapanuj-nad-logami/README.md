@@ -219,9 +219,9 @@ Przyk³adowa odpowiedŸ, z ¿¹dania */logstash-2015.09.15/_search?q=response:404*:
   - inputs - agregowanie danych z ró¿nych Ÿróde³
     - file, TCP, stdin, syslog, websocket, protokó³ Lmberjack
   - filters - parsowanie danych do postaci znormalizowanej
-    - 
+    - grok, mutate, geoip, json_encode
   - outputs - odsy³anie przetworzonych danych
-    - 
+    - elasticsearch, redis, mongoDB, irc, slack, file - csv
 
 ### Grok
 
@@ -257,7 +257,14 @@ Result:
 
 ### Kibana
 
-Data Displayer
+*Data Displayer*
+
+- aplikacja webowa umo¿liwiaj¹ca wizualizacjê informacji zawartych w logach (przetworzonych poprzez filtry Logstash)
+- intuicyjny interfejs - nawet dla osób nie technicznych
+- umo¿liwia filtrowanie i wyszukiwanie danych
+- dostêp do nowych danych w Real-Time
+- mo¿liwoœæ generowania wykresów, list na podstawie danych - przy u¿yciu prostego kreatora
+- pulpity - zawieraj¹ce widgety - wyrkresy, listy - ³atwy sposób edycji (przeci¹gnij opuœæ, rozszerz)
 
 #### Log Details
 
@@ -405,7 +412,7 @@ $: sudo service logstash-forwarder restart
 
 ## ELK a skalowalnoœæ
 
-// 
+![scalable-architecture.png](scalable-architecture.png)
 
 ## Przydatne linki
 
