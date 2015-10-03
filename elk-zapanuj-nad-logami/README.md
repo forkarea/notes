@@ -18,7 +18,10 @@ ELK - Elasticsearch Logstash Kibana
 
 ### Czym s¹ logi? Po co je stosujemy? Problemy z logami.
 
-- "(...) zapis zawieraj¹cy informacjê o zdarzeniach i dzia³aniach dotycz¹cych systemu informatycznego, systemu komputerowego czy komputera." via Wikipedia,
+> (...) zapis zawieraj¹cy informacjê o zdarzeniach i dzia³aniach dotycz¹cych systemu informatycznego, systemu komputerowego czy komputera.
+>
+> -- *via Wikipedia*
+
 - umo¿liwiaj¹ analizê dzia³ania systemu, detekcjê:
    - b³êdów - sytuacji wyj¹tkowych np. logowanie informacji o wyj¹tku
    - nieprawid³owoœci dzia³ania - niezapisanie przes³anych informacji w bazie danych np. z formularza rejestracyjnego,
