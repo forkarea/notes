@@ -1,6 +1,8 @@
 # Better Programmer
 
-*Clean Code & Good Practices & Pragmatic Programmer*
+Clean Code & Good Practices & Pragmatic Programmer
+
+## Przedmowa
 
 Dokument ten jest zbiorem dobrych rad i przemyśleń dotyczących wytwarzania oprogramownia oraz postępowania zawodowego programisty. To efekt zdobytego doświadczenia poprzez:
 
@@ -53,13 +55,15 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
 
 **S.M.A.R.T.** - każdy wyznaczany cel powinien być:
 
-- Simple - jednoznaczny, jasno sformułowany
-- Measurable - mierzalny, można zmierzyć postęp
-- Achievable - osiągalny, realistyczny, wykonalny w określonym czasie
-- Relevant - istotny, ważny krok w przód
-- Timely defined - określony w czasie, ma swoją "datę zakończenia"
+- Simple - jednoznaczny, jasno sformułowany,
+- Measurable - mierzalny, można zmierzyć postęp,
+- Achievable - osiągalny, realistyczny, wykonalny w określonym czasie,
+- Relevant - istotny, ważny krok w przód,
+- Timely defined - określony w czasie, ma swoją "datę zakończenia".
 
-**Zasada Pareto (zasada 80/20)** - 20% pracy przynosi 80% zysku
+**Zasada Pareto (zasada 80/20)** - 20% pracy przynosi 80% zysku.
+
+**KISS** - Keep It Simple, Stupid. 
 
 ## Rekrutacja
 
