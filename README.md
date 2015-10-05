@@ -5,6 +5,7 @@ Short notes about software development.
 ## Zawartość
 
 * [Better Programmer](better-programmer) - Clean Code, Good Practices, Pragmatic Programmer
+* [Big Data - Introduction] - An introduction to Big Data
 * [Concepts Of Architecture](concepts-of-architecture) - Concepts of architecture for typical problems
 * [Domain-Driven Design](domain-driven-design) - Notes about DDD
 * [Elasticsearch](elasticsearch-training) - Search & Analyze Data in Real Time
