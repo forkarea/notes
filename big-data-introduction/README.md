@@ -1,5 +1,5 @@
 # Big Data - Introduction
 
-Wprowadzenie w úwiat Big Data
+Wprowadzenie w ≈õwiat Big Data
 
-## Spis Treúci
+## Spis tre≈õci
