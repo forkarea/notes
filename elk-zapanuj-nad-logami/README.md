@@ -4,15 +4,38 @@ ELK - Elasticsearch Logstash Kibana
 
 ## Spis treœci
 
-1) Logi
+1. [Logi](#Logi)
+   
+  - [Czym s¹ logi? Po co je stosujemy? Problemy z logami.](#Czym s¹ logi? Po co je stosujemy? Problemy z logami.)
+  - [Poziomy logowania](#Poziomy logowania)
+  - [Co o logach mówi literatura?](#Co o logach mówi literatura?)
 
-2) ELK
+2. [ELK](#ELK)
 
-3) Praktyka
+  - [Elasticsearch](#Elasticsearch)
+    - [Terminologia](#Terminologia)
+    - [Full-Text Search](#Full-Text Search)
+    - [Wyszukiwanie w indexie](#Wyszukiwanie w indexie)
+  - [Logstash](#Logstash)
+    - [Grok](#Grok)
+  - [Kibana](#Kibana)
+    - [Log Details](#Log Details)
+    - [Discover Tab](#Discover Tab)
+    - [Visualize Tab](#Visualize Tab)
+    - [Dashboard](#Dashboard)
 
-4) ELK a skalowalnoœæ
+3. [Praktyka](#Praktyka)
 
-5) Przydatne linki
+  - [ELK Server](#ELK Server)
+    - [Docker ELK Stack](#Docker ELK Stack)
+    - [Wygenerowanie certyfikatu SSL](#Wygenerowanie certyfikatu SSL)
+    - [Konfiguracja Logstash](#Konfiguracja Logstash)
+  - [LAMP Node](#LAMP Node)
+    - [Logstash Forwarder](#Logstash Forwarder)
+
+4. [ELK a skalowalnoœæ](#ELK a skalowalnoœæ)
+
+5. [Przydatne linki](#Przydatne linki)
 
 ## Logi
 
@@ -131,7 +154,7 @@ Wykorzysytwane miêdzy innymi przez:
 - [Ÿród³o](http://kni.univ.rzeszow.pl/files/prezentacja_media_SPHINX.pdf)
 
 
-#### Wyszukiwanie w indexie:
+#### Wyszukiwanie w indexie
 
 ```
 $: curl -XGET 'http://localhost:9200/'
@@ -301,6 +324,24 @@ Predefined requirements dla serwera *ELK*:
 - Git Client
 - Docker & Docker Compose
 
+#### Docker ELK Stack
+
+Najprostrzym sposobem na rozpoczêcie przygody z *ELK Stack* jest uruchomienie gotowego kontenera ([Docker-Elk](https://github.com/deviantony/docker-elk)):
+
+```
+$: git clone git@github.com:deviantony/docker-elk.git
+$: cd docker-elk
+$: docker-compose up -d
+```
+
+Po prawid³owym uruchomieniu na przedstawionych portach zostaj¹ uruchomione nastêpuj¹ce us³ugi:
+
+- *5000*: Logstash TCP input
+- *9200*: Elasticsearch HTTP
+- *5601*: Kibana Web Interface
+
+Teraz wystarczy tylko otworzyæ adres [http://localhost:5061](http://localhost:5061) w przegl¹darce aby uzyskaæ dostêp do interfejsu Kibana.
+
 #### Wygenerowanie certyfikatu SSL
 
 Rekomendowana lokalizacja plików:
@@ -352,25 +393,7 @@ $: openssl req -x509  -batch -nodes -newkey rsa:2048 -days 365 -keyout private/l
 
 Nastêpnie plik *logstash-forwarder.crt* bêdzie tak¿e wykorzystywany na *Linux Node*. Najlepiej niech znajduje siê w takiej samej lokalizacji. Korzystaæ bêdzie z niego *logastash-forwarder*.
 
-#### Docker ELK Stack
-
-Najprostrzym sposobem na rozpoczêcie przygody z *ELK Stack* jest uruchomienie gotowego kontenera ([Docker-Elk](https://github.com/deviantony/docker-elk)):
-
-```
-$: git clone git@github.com:deviantony/docker-elk.git
-$: cd docker-elk
-$: docker-compose up -d
-```
-
-Po prawid³owym uruchomieniu na przedstawionych portach zostaj¹ uruchomione nastêpuj¹ce us³ugi:
-
-- *5000*: Logstash TCP input
-- *9200*: Elasticsearch HTTP
-- *5601*: Kibana Web Interface
-
-Teraz wystarczy tylko otworzyæ adres [http://localhost:5061](http://localhost:5061) w przegl¹darce aby uzyskaæ dostêp do interfejsu Kibana.
-
-#### Logstash
+#### Konfiguracja Logstash
 
 https://www.elastic.co/downloads/logstash
 https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html
