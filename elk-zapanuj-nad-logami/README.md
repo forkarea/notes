@@ -4,38 +4,38 @@ ELK - Elasticsearch Logstash Kibana
 
 ## Spis treœci
 
-1. [Logi](#Logi)
+1. [Logi](#logi)
    
-  - [Czym s¹ logi? Po co je stosujemy? Problemy z logami.](#Czym s¹ logi? Po co je stosujemy? Problemy z logami.)
-  - [Poziomy logowania](#Poziomy logowania)
-  - [Co o logach mówi literatura?](#Co o logach mówi literatura?)
+  - [Czym s¹ logi? Po co je stosujemy? Problemy z logami.](#czym-s¹-logi-po-co-je-stosujemy-problemy-z-logami)
+  - [Poziomy logowania](#poziomy-logowania)
+  - [Co o logach mówi literatura?](#co-o-logach-mówi-literatura)
 
-2. [ELK](#ELK)
+2. [ELK](#elk)
 
-  - [Elasticsearch](#Elasticsearch)
-    - [Terminologia](#Terminologia)
-    - [Full-Text Search](#Full-Text Search)
-    - [Wyszukiwanie w indexie](#Wyszukiwanie w indexie)
-  - [Logstash](#Logstash)
-    - [Grok](#Grok)
-  - [Kibana](#Kibana)
-    - [Log Details](#Log Details)
-    - [Discover Tab](#Discover Tab)
-    - [Visualize Tab](#Visualize Tab)
-    - [Dashboard](#Dashboard)
+  - [Elasticsearch](#elasticsearch)
+    - [Terminologia](#terminologia)
+    - [Full-Text Search](#full-text-search)
+    - [Wyszukiwanie w indexie](#wyszukiwanie-w-indexie)
+  - [Logstash](#logstash)
+    - [Grok](#grok)
+  - [Kibana](#kibana)
+    - [Log Details](#log-details)
+    - [Discover Tab](#discover-tab)
+    - [Visualize Tab](#visualize-tab)
+    - [Dashboard](#dashboard)
 
-3. [Praktyka](#Praktyka)
+3. [Praktyka](#praktyka)
 
-  - [ELK Server](#ELK Server)
-    - [Docker ELK Stack](#Docker ELK Stack)
-    - [Wygenerowanie certyfikatu SSL](#Wygenerowanie certyfikatu SSL)
-    - [Konfiguracja Logstash](#Konfiguracja Logstash)
-  - [LAMP Node](#LAMP Node)
-    - [Logstash Forwarder](#Logstash Forwarder)
+  - [ELK Server](#elk-server)
+    - [Docker ELK Stack](#docker-elk-stack)
+    - [Wygenerowanie certyfikatu SSL](#wygenerowanie-certyfikatu-ssl)
+    - [Konfiguracja Logstash](#konfiguracja-logstash)
+  - [LAMP Node](#lamp-node)
+    - [Logstash Forwarder](#logstash-forwarder)
 
-4. [ELK a skalowalnoœæ](#ELK a skalowalnoœæ)
+4. [ELK a skalowalnoœæ](#elk-a-skalowalnoœæ)
 
-5. [Przydatne linki](#Przydatne linki)
+5. [Przydatne linki](#przydatne-linki)
 
 ## Logi
 
