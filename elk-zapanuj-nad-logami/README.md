@@ -248,6 +248,8 @@ Przyk³adowa odpowiedŸ, z ¿¹dania */logstash-2015.09.15/_search?q=response:404*:
     - grok, mutate, geoip, json_encode
   - outputs - odsy³anie przetworzonych danych
     - elasticsearch, redis, mongoDB, irc, slack, file - csv
+    
+![logstash-flow.png](logstash-flow.png)
 
 ### Grok
 
@@ -262,6 +264,8 @@ Przyk³adowa odpowiedŸ, z ¿¹dania */logstash-2015.09.15/_search?q=response:404*:
 - mo¿emy definiowaæ w³asne wzorce
 
 Dostêpny jest debugger online dla Groka: [grokdebug.herokuapp.com](http://grokdebug.herokuapp.com)
+
+Przyk³ad 1:
 
 ```
 Input:
@@ -278,6 +282,28 @@ Result:
  method  : GET
  request : /page?id=contact
  bytes   : 1337
+
+```
+
+Przyk³ad 2:
+
+```
+Input:
+
+  2015-09-28 15:19:45 81.51.21.55 /var/app/src/Plugins.php 43 ERROR "Can't initialize plug-ins directory"
+
+Pattern:
+
+  %{GREEDYDATA:date} %{IP:ip} %{PATH:file} %{NUMBER:line} %{LOGLEVEL:level} %{QUOTEDSTRING:message}
+
+Result:
+
+ date    : 2015-09-28 15:19:45
+ ip      : 81.51.21.55
+ file    : /var/app/src/Plugins.php
+ line    : 43
+ level   : ERROR
+ message : Can't initialize plug-ins directory
 
 ```
 
@@ -395,21 +421,40 @@ Nastêpnie plik *logstash-forwarder.crt* bêdzie tak¿e wykorzystywany na *Linux No
 
 #### Konfiguracja Logstash
 
-https://www.elastic.co/downloads/logstash
-https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html
+```
+input {
+  lumberjack {
+    port => 5000
+    ssl_certificate => "/etc/pki/tls/certs/logstash-forwarder.crt"
+    ssl_key => "/etc/pki/tls/private/logstash-forwarder.key"
+  }
+}
+
+filter {
+  if [type] == "my-syslog" {
+    grok {
+      match => {"message" => "%{SYSLOGBASE}"}
+    }
+  }
+
+  if [type] == "my-apache" {
+    grok {
+      match => {"message" => "%{COMBINEDAPACHELOG}"}
+    }
+  }
+}
+
+output {
+  elasticsearch {
+    host => "elasticsearch.host"
+    port => "9200"
+  }
+}
+```
 
 ### LAMP Node
 
 #### Logstash Forwarder
-
-syslog, auth.log,
-ftp? ssh?
-
-php logs:
-- http://stackoverflow.com/questions/5127838/where-does-php-store-the-error-log-php5-apache-fastcgi-cpanel
-- http://askubuntu.com/questions/14763/where-are-the-apache-and-php-log-files
-
-app logs
 
 ```
 $: sudo vi /etc/logstash-forwarder.conf
@@ -418,18 +463,26 @@ $: sudo vi /etc/logstash-forwarder.conf
 ```json
 {
   "network": {
-    "servers": ["localhost:5000"],
+    "servers": ["logstash.host:5000"],
     "timeout": 15,
     "ssl ca": "/etc/pki/tls/certs/logstash-forwarder.crt"
   },
-  "files": [{
-    "paths": [
-      "/var/log/syslog",
-      "/var/log/auth.log"
-    ],
-    "fields": {"type": "syslog"}
-  }]
+  "files": [
+    {
+        "paths": ["/var/log/syslog", "/var/log/auth.log"],
+        "fields": {"type": "my-syslog"}
+    },
+    {
+      "paths": ["/var/log/apache2/access.log", "/var/log/apache2/error.log"],
+      "fields": {"type": "my-apache"}
+    },
+    {
+      "paths": ["/var/log/app.log"],
+      "fields": {"type": "my-app"}
+    }
+  ]
 }
+
 ```
 
 ```
