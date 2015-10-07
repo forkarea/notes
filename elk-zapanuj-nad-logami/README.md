@@ -339,9 +339,16 @@ Result:
 
 ## Praktyka
 
-Opis dotyczy uruchomienia serwera *ELK* oraz konfiguracji serwerów aplikacyjnych (*LAMP Node* - Linux, Apache, MySQL, App) które za pomoc¹ *Logstash Forwarder* bêd¹ przekazywaæ logi do serwera *ELK*.
+Opis dotyczy uruchomienia serwera *ELK* oraz konfiguracji serwerów aplikacyjnych (*Nodes*) które za pomoc¹ *Logstash Forwarder* bêd¹ przekazywaæ logi do serwera *ELK*. Przedstawione w oparciu o system Linux Ubuntu 14.04 LTS.
 
 ![simple-architecture.png](simple-architecture.png)
+
+ELK Server - Logstash + Elasticsearch + Kibana
+
+Nodes:
+
+  - Application Node
+  - Database Node
 
 ### ELK Server
 
@@ -375,7 +382,7 @@ Rekomendowana lokalizacja plików:
 - certificates (.crt): ```/etc/pki/tls/certs/```
 - keys (.key): ```/etc/pki/tls/private/```
 
-Wygenerowane certyfikaty bêd¹ potrzebne dla *logstash* (pliki .crt oraz .key) i *logstash-forwarder* (tylko plik .crt).
+Wygenerowane certyfikaty bêd¹ potrzebne dla *Logstash* (pliki .crt oraz .key) i *Logstash Forwarder* (tylko plik .crt).
 
 ##### Localhost
 
@@ -442,19 +449,33 @@ filter {
       match => {"message" => "%{COMBINEDAPACHELOG}"}
     }
   }
+  
+  if [type] == "my-app" {
+    grok {
+      match => {"message" =>
+        "%{GREEDYDATA:data} %{IP:ip} %{PATH:file} %{NUMBER:line} %{LOGLEVEL:level} %{QUOTEDSTRING:message}"
+      }
+    }
+  }
 }
 
 output {
   elasticsearch {
-    host => "elasticsearch.host"
+    host => "localhost"
     port => "9200"
   }
 }
 ```
 
-### LAMP Node
+### Nodes
+
+Serwer aplikacyjny powinien posiadaæ zainstalowan¹, skonfigurowan¹ oraz uruchomion¹ us³ugê *Logstash Forwarder*.
 
 #### Logstash Forwarder
+
+@todo Instalacja
+
+Przyk³ad konfiguracji:
 
 ```
 $: sudo vi /etc/logstash-forwarder.conf
@@ -484,6 +505,8 @@ $: sudo vi /etc/logstash-forwarder.conf
 }
 
 ```
+
+Po zmianie konfiguracji nale¿y zrestartowaæ us³ugê.
 
 ```
 $: sudo service logstash-forwarder restart
