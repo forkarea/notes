@@ -2,13 +2,13 @@
 
 ELK - Elasticsearch Logstash Kibana
 
-## Spis treœci
+## Spis treÅ›ci
 
 1. [Logi](#logi)
    
-  - [Czym s¹ logi? Po co je stosujemy? Problemy z logami.](#czym-s¹-logi-po-co-je-stosujemy-problemy-z-logami)
+  - [Czym sÄ… logi? Po co je stosujemy? Problemy z logami.](#czym-sÄ…-logi-po-co-je-stosujemy-problemy-z-logami)
   - [Poziomy logowania](#poziomy-logowania)
-  - [Co o logach mówi literatura?](#co-o-logach-mówi-literatura)
+  - [Co o logach mÃ³wi literatura?](#co-o-logach-mÃ³wi-literatura)
 
 2. [ELK](#elk)
 
@@ -33,37 +33,37 @@ ELK - Elasticsearch Logstash Kibana
   - [LAMP Node](#lamp-node)
     - [Logstash Forwarder](#logstash-forwarder)
 
-4. [ELK a skalowalnoœæ](#elk-a-skalowalnoœæ)
+4. [ELK a skalowalnoÅ›Ä‡](#elk-a-skalowalnoÅ›Ä‡)
 
 5. [Przydatne linki](#przydatne-linki)
 
 ## Logi
 
-### Czym s¹ logi? Po co je stosujemy? Problemy z logami.
+### Czym sÄ… logi? Po co je stosujemy? Problemy z logami.
 
-> (...) zapis zawieraj¹cy informacjê o zdarzeniach i dzia³aniach dotycz¹cych systemu informatycznego, systemu komputerowego czy komputera.
+> (...) zapis zawierajÄ…cy informacjÄ™ o zdarzeniach i dziaÅ‚aniach dotyczÄ…cych systemu informatycznego, systemu komputerowego czy komputera.
 >
 > -- *via Wikipedia*
 
-- umo¿liwiaj¹ analizê dzia³ania systemu, detekcjê:
-   - b³êdów - sytuacji wyj¹tkowych np. logowanie informacji o wyj¹tku
-   - nieprawid³owoœci dzia³ania - niezapisanie przes³anych informacji w bazie danych np. z formularza rejestracyjnego,
-   - prób i sposobów w³amañ
-- multum logów, w zale¿noœci od u¿ytego stacku technologicznego. Prosta web aplikacja to logi z:
+- umoÅ¼liwiajÄ… analizÄ™ dziaÅ‚ania systemu, detekcjÄ™:
+   - bÅ‚Ä™dÃ³w - sytuacji wyjÄ…tkowych np. logowanie informacji o wyjÄ…tku
+   - nieprawidÅ‚owoÅ›ci dziaÅ‚ania - niezapisanie przesÅ‚anych informacji w bazie danych np. z formularza rejestracyjnego,
+   - prÃ³b i sposobÃ³w wÅ‚amaÅ„
+- multum logÃ³w, w zaleÅ¼noÅ›ci od uÅ¼ytego stacku technologicznego. Prosta web aplikacja to logi z:
    - Linux Logs (Syslog, Auth Log, FTPD Log, etc.)
    - Apache,
    - PHP,
    - MySQL (slowlog, general log, error log)
    - Application Logs.
-- ciê¿ko siê je przegl¹da (Old School way : SSH -> tail, cat, grep, less, awk ...)
-- du¿y rozmiar, brak spójnego formatu pomiêdzy logami - powodzenia przy analizie 100GB nieustrukturyzowanych logów
-- nale¿y zadbaæ o wprowadzenie polityki archiwizacji logów
-- niepotrzebne - z punktu widzenia klienta, nie przynosz¹ korzyœci biznesowej a jednak:
-  - s¹...,
-  - developerzy kodz¹ ```$log->warning('...');```
-- nie przegl¹damy ich - kto w ci¹gu ostatniego miesi¹ca sam z siebie rzuci³ okiem na logi?
+- ciÄ™Å¼ko siÄ™ je przeglÄ…da (Old School way : SSH -> tail, cat, grep, less, awk ...)
+- duÅ¼y rozmiar, brak spÃ³jnego formatu pomiÄ™dzy logami - powodzenia przy analizie 100GB nieustrukturyzowanych logÃ³w
+- naleÅ¼y zadbaÄ‡ o wprowadzenie polityki archiwizacji logÃ³w
+- niepotrzebne - z punktu widzenia klienta, nie przynoszÄ… korzyÅ›ci biznesowej a jednak:
+  - sÄ…...,
+  - developerzy kodzÄ… ```$log->warning('...');```
+- nie przeglÄ…damy ich - kto w ciÄ…gu ostatniego miesiÄ…ca sam z siebie rzuciÅ‚ okiem na logi?
 
-Niew¹tpliwie logi s¹ u¿ytecznym narzêdziem, jednak wykorzystywane powinny byæ z rozwag¹. Dobrym pomys³em jest implementacja funkcjonalnoœci umo¿liwiaj¹cej aktywowanie/deaktywowanie rejestracji zdarzeñ do logów (np. tylko tych z poziomem *DEBUG*).
+NiewÄ…tpliwie logi sÄ… uÅ¼ytecznym narzÄ™dziem, jednak wykorzystywane powinny byÄ‡ z rozwagÄ…. Dobrym pomysÅ‚em jest implementacja funkcjonalnoÅ›ci umoÅ¼liwiajÄ…cej aktywowanie/deaktywowanie rejestracji zdarzeÅ„ do logÃ³w (np. tylko tych z poziomem *DEBUG*).
 
 ### Poziomy logowania
 
@@ -80,35 +80,35 @@ Notice | normal but significant condition | *httpd: caught SIGBUS, attempting to
 Informational | informational messages | *Server seems busy, (you may need to increase StartServers, or Min/MaxSpareServers)...*
 Debug | debug-level messages | *Opening config file ...*
 
-Wykorzysytwane miêdzy innymi przez:
+Wykorzysytwane miÄ™dzy innymi przez:
 
-- standard [PSR-3](http://www.php-fig.org/psr/psr-3/) - definiuj¹cy uniwersalny interfejs loggera dla aplikacji napisanych w jêzyku PHP,
+- standard [PSR-3](http://www.php-fig.org/psr/psr-3/) - definiujÄ…cy uniwersalny interfejs loggera dla aplikacji napisanych w jÄ™zyku PHP,
 - serwer HTTP - [Apache 2](http://httpd.apache.org/docs/2.4/mod/core.html#loglevel).
 
-### Co o logach mówi literatura?
+### Co o logach mÃ³wi literatura?
 
-> Logowanie jest Twoim przyjacielem. Aplikacje powinny logowaæ na poziomie *WARNING* za ka¿dym razem, kiedy przekraczany jest czas na nawi¹zywanie po³aczenia sieciowego lub czas odpowiedzi niebezpiecznie siê wyd³u¿a. Powinieneœ logowaæ na poziomie *INFO* lub, jeœli logi s¹ zbyt rozwlek³e, na poziomie *DEBUG* za ka¿dym razem, gdy zamykasz po³¹czenie. Powinieneœ logowaæ na poziomie *DEBUG* ka¿de po³¹czenie, które otwierasz, w³¹czaj¹c mo¿liwie du¿o informacji na temat punktu koñcowego po³aczenia.
+> Logowanie jest Twoim przyjacielem. Aplikacje powinny logowaÄ‡ na poziomie *WARNING* za kaÅ¼dym razem, kiedy przekraczany jest czas na nawiÄ…zywanie poÅ‚aczenia sieciowego lub czas odpowiedzi niebezpiecznie siÄ™ wydÅ‚uÅ¼a. PowinieneÅ› logowaÄ‡ na poziomie *INFO* lub, jeÅ›li logi sÄ… zbyt rozwlekÅ‚e, na poziomie *DEBUG* za kaÅ¼dym razem, gdy zamykasz poÅ‚Ä…czenie. PowinieneÅ› logowaÄ‡ na poziomie *DEBUG* kaÅ¼de poÅ‚Ä…czenie, ktÃ³re otwierasz, wÅ‚Ä…czajÄ…c moÅ¼liwie duÅ¼o informacji na temat punktu koÅ„cowego poÅ‚aczenia.
 >
-> -- *Ci¹g³e dostarczanie oprogramowania. Automatyzacja kompilacji, testowania i wdra¿ania. Jez Humble. David Farley. Helion 2011.*
+> -- *CiÄ…gÅ‚e dostarczanie oprogramowania. Automatyzacja kompilacji, testowania i wdraÅ¼ania. Jez Humble. David Farley. Helion 2011.*
 
 > (...)
-> - instrukcje rejestracyjne pogarszaj¹ czytelnoœæ programu, utrudniaj¹c oddzielenie jego zasadniczych instrukcji od konstrukcji pomocniczych;
-> - instrukcje rejestracyjne dotkniête s¹ t¹ sam¹ przypad³oœci¹, co komentarze: gdy kod aplikacji ewoluuje, programiœci zwykle zapominaj¹ o ich uaktualnieniu, co czyni je nieadekwatnymi do kontekstu, a to jest gorsze ni¿ kompletna bezu¿ytecznoœæ, bo myl¹ce;
-> - niezale¿nie od tego, ile instrukcji rejestracyjnych znajdzie siê w kodzie aplikacji, zawsze bêd¹ one niewystarczaj¹ce - w przypadku kolejnego debugowania prawdopodobnie pojawi¹ siê nowe. Pozostawianie ich w kodzie sprawia, ¿e dwa poprzednie problemy staj¹ siê jeszcze bardziej wyraŸne.
+> - instrukcje rejestracyjne pogarszajÄ… czytelnoÅ›Ä‡ programu, utrudniajÄ…c oddzielenie jego zasadniczych instrukcji od konstrukcji pomocniczych;
+> - instrukcje rejestracyjne dotkniÄ™te sÄ… tÄ… samÄ… przypadÅ‚oÅ›ciÄ…, co komentarze: gdy kod aplikacji ewoluuje, programiÅ›ci zwykle zapominajÄ… o ich uaktualnieniu, co czyni je nieadekwatnymi do kontekstu, a to jest gorsze niÅ¼ kompletna bezuÅ¼ytecznoÅ›Ä‡, bo mylÄ…ce;
+> - niezaleÅ¼nie od tego, ile instrukcji rejestracyjnych znajdzie siÄ™ w kodzie aplikacji, zawsze bÄ™dÄ… one niewystarczajÄ…ce - w przypadku kolejnego debugowania prawdopodobnie pojawiÄ… siÄ™ nowe. Pozostawianie ich w kodzie sprawia, Å¼e dwa poprzednie problemy stajÄ… siÄ™ jeszcze bardziej wyraÅºne.
 >
 > (...)
-> Generalnie, najbardziej u¿ytecznymi wpisami w dzienniku s¹ te na najwy¿szym (strategicznym) poziomie, odzwierciedlaj¹ce typowe dla aplikacji zdarzenia - jak np. logowanie do serwera HTTP. Niskopoziomowe (taktyczne) wpisy maj¹ u¿ytecznoœæ raczej ograniczon¹ czasowo - bo np. pe³ni¹ rolê pomocn¹ w poszukiwaniu konkretnego b³êdu - i celownoœæ pozostawienia generuj¹cych je instrukcji jest co najmniej w¹tpliwa.
+> Generalnie, najbardziej uÅ¼ytecznymi wpisami w dzienniku sÄ… te na najwyÅ¼szym (strategicznym) poziomie, odzwierciedlajÄ…ce typowe dla aplikacji zdarzenia - jak np. logowanie do serwera HTTP. Niskopoziomowe (taktyczne) wpisy majÄ… uÅ¼ytecznoÅ›Ä‡ raczej ograniczonÄ… czasowo - bo np. peÅ‚niÄ… rolÄ™ pomocnÄ… w poszukiwaniu konkretnego bÅ‚Ä™du - i celownoÅ›Ä‡ pozostawienia generujÄ…cych je instrukcji jest co najmniej wÄ…tpliwa.
 >
-> -- *Debugowanie. Jak wyszukiwaæ i naprawiaæ b³êdy w kodzie oraz im zapobiegaæ. Paul Butcher. Helion 2009.*
+> -- *Debugowanie. Jak wyszukiwaÄ‡ i naprawiaÄ‡ bÅ‚Ä™dy w kodzie oraz im zapobiegaÄ‡. Paul Butcher. Helion 2009.*
 
 ## ELK
 
 *Elasticsearch + Logstash + Kibana*
 
-- trzy niezale¿ne od siebie open-sourceowe projekty
+- trzy niezaleÅ¼ne od siebie open-sourceowe projekty
 - vendor - firma Elastic
 
-*ELK* wspomaga proces indeksowania plików logów (ale nie tylko) w jednym miejscu. Dziêki temu mo¿liwe jest wyszukiwanie w czasie rzeczywistym, analizowanie danych oraz przygotowywanie wizualizacji z informacji zawartych w logach. Jest szybki w du¿ych zbiorach danych, nawet takich zawieraj¹cych gigabajty informacji.
+*ELK* wspomaga proces indeksowania plikÃ³w logÃ³w (ale nie tylko) w jednym miejscu. DziÄ™ki temu moÅ¼liwe jest wyszukiwanie w czasie rzeczywistym, analizowanie danych oraz przygotowywanie wizualizacji z informacji zawartych w logach. Jest szybki w duÅ¼ych zbiorach danych, nawet takich zawierajÄ…cych gigabajty informacji.
 
 ![elk-flow.png](elk-flow.png)
 
@@ -116,20 +116,20 @@ Wykorzysytwane miêdzy innymi przez:
 
 *Indexing, storage and retrieval engine*
 
-- serwer bazy danych i jednoczeœnie silnik wyszukiwania (full-text search*)
-- bazuj¹cy na *Apache Lucene*
-- real-time - szybkie indexowanie danych, dostêp danych od razu
-- skalowalny, rozproszony, wysoko dostêpny
-- komunikacja odbywa siê za pomoc¹ JSON + RESTful API (requesty HTTP - GET, POST, PUT, DELETE)
-- brak okreœlonego schematu dla sk³adowanych dokumentów - JSON Documents
+- serwer bazy danych i jednoczeÅ›nie silnik wyszukiwania (full-text search*)
+- bazujÄ…cy na *Apache Lucene*
+- real-time - szybkie indexowanie danych, dostÄ™p danych od razu
+- skalowalny, rozproszony, wysoko dostÄ™pny
+- komunikacja odbywa siÄ™ za pomocÄ… JSON + RESTful API (requesty HTTP - GET, POST, PUT, DELETE)
+- brak okreÅ›lonego schematu dla skÅ‚adowanych dokumentÃ³w - JSON Documents
 
 #### Terminologia
 
 **Cluster** - grupa nodes
  
-**Node** - pojedyñcza instacja *Elasticsearch*
+**Node** - pojedyÅ„cza instacja *Elasticsearch*
 
-**Index** - grupa dokumentów, powi¹zanych ze sob¹ np:
+**Index** - grupa dokumentÃ³w, powiÄ…zanych ze sobÄ… np:
 
 - TwitterTweets (np. per tag),
 - FacebookPosts (np. per day),
@@ -137,21 +137,21 @@ Wykorzysytwane miêdzy innymi przez:
 
 **Document** - odpowiednik rekordu w RDBMS, JSON ({key:value})
 
-**Shard** - czêœæ indexu, która jest dystrybuowana pomiêdzy nodami, forma kopii zapasowej (w momencie gdy któryœ z node jest niedostêpny)
+**Shard** - czÄ™Å›Ä‡ indexu, ktÃ³ra jest dystrybuowana pomiÄ™dzy nodami, forma kopii zapasowej (w momencie gdy ktÃ³ryÅ› z node jest niedostÄ™pny)
 
-// dodaæ grafikê obrazuj¹c¹ terminologiê: https://s3.amazonaws.com/media-p.slid.es/uploads/szymontezewski/images/42225/Zrzut_ekranu_2013-07-2_o_20.47.51.png
+// dodaÄ‡ grafikÄ™ obrazujÄ…cÄ… terminologiÄ™: https://s3.amazonaws.com/media-p.slid.es/uploads/szymontezewski/images/42225/Zrzut_ekranu_2013-07-2_o_20.47.51.png
 
 #### Full-Text Search
 
-- sposób przeszukiwania danych tekstowych,
-- bazuje na analizie poszczególnych s³ów danej frazy w przeszukiwanym tekœcie
-- zasada dzia³ania:
+- sposÃ³b przeszukiwania danych tekstowych,
+- bazuje na analizie poszczegÃ³lnych sÅ‚Ã³w danej frazy w przeszukiwanym tekÅ›cie
+- zasada dziaÅ‚ania:
   - przetworzenie dokumentu tekstowego
-  - utworzenie wektora s³ów zawartych w dokumencie
-  - eliminacja stop-s³ów (usuwanie szumu "z, ale, od, tam")
-  - lematyzacja lub stemming (sprowadzanie do podstawowej formy: samochody > samochód)
+  - utworzenie wektora sÅ‚Ã³w zawartych w dokumencie
+  - eliminacja stop-sÅ‚Ã³w (usuwanie szumu "z, ale, od, tam")
+  - lematyzacja lub stemming (sprowadzanie do podstawowej formy: samochody > samochÃ³d)
   - utworzenie indeksu FTS
-- [Ÿród³o](http://kni.univ.rzeszow.pl/files/prezentacja_media_SPHINX.pdf)
+- [ÅºrÃ³dÅ‚o](http://kni.univ.rzeszow.pl/files/prezentacja_media_SPHINX.pdf)
 
 
 #### Wyszukiwanie w indexie
@@ -164,7 +164,7 @@ $: curl -XGET 'http://localhost:9200/{indexName}/_search?q={field}:{expectedValu
 $: curl -XGET 'http://localhost:9200/logstash-2015.09.15/_search?q=response:404'
 ```
 
-Przyk³adowa odpowiedŸ, z ¿¹dania */logstash-2015.09.15/_search?q=response:404*:
+PrzykÅ‚adowa odpowiedÅº, z Å¼Ä…dania */logstash-2015.09.15/_search?q=response:404*:
 
 ```json
 {
@@ -241,31 +241,31 @@ Przyk³adowa odpowiedŸ, z ¿¹dania */logstash-2015.09.15/_search?q=response:404*:
 *Log input slicer and dicer and output writer*
 
 - pipeline: inputs > filters > outputs
-- trzy odpowiedzialnoœci:
-  - inputs - agregowanie danych z ró¿nych Ÿróde³
-    - file, TCP, stdin, syslog, websocket, protokó³ Lmberjack
+- trzy odpowiedzialnoÅ›ci:
+  - inputs - agregowanie danych z rÃ³Å¼nych ÅºrÃ³deÅ‚
+    - file, TCP, stdin, syslog, websocket, protokÃ³Å‚ Lmberjack
   - filters - parsowanie danych do postaci znormalizowanej
     - grok, mutate, geoip, json_encode
-  - outputs - odsy³anie przetworzonych danych
+  - outputs - odsyÅ‚anie przetworzonych danych
     - elasticsearch, redis, mongoDB, irc, slack, file - csv
     
 ![logstash-flow.png](logstash-flow.png)
 
 ### Grok
 
-- text matcher - umo¿liwia parsowanie tekstu w celu wyodrêbnienia interesuj¹cych nas danych
+- text matcher - umoÅ¼liwia parsowanie tekstu w celu wyodrÄ™bnienia interesujÄ…cych nas danych
 - przetwarzanie nieustrukturyzowanych danych do ustrukturyzowanego formatu
-- oko³o 120 gotowych wzorców umo¿liwiaj¹cych wyodrêbnianie:
+- okoÅ‚o 120 gotowych wzorcÃ³w umoÅ¼liwiajÄ…cych wyodrÄ™bnianie:
   - daty, czasu
   - url, host,
   - uuid,
   - log levelu
-  - itd. [zobacz wiêcej](https://github.com/elastic/logstash/tree/v1.4.2/patterns)
-- mo¿emy definiowaæ w³asne wzorce
+  - itd. [zobacz wiÄ™cej](https://github.com/elastic/logstash/tree/v1.4.2/patterns)
+- moÅ¼emy definiowaÄ‡ wÅ‚asne wzorce
 
-Dostêpny jest debugger online dla Groka: [grokdebug.herokuapp.com](http://grokdebug.herokuapp.com)
+DostÄ™pny jest debugger online dla Groka: [grokdebug.herokuapp.com](http://grokdebug.herokuapp.com)
 
-Przyk³ad 1:
+PrzykÅ‚ad 1:
 
 ```
 Input:
@@ -285,7 +285,7 @@ Result:
 
 ```
 
-Przyk³ad 2:
+PrzykÅ‚ad 2:
 
 ```
 Input:
@@ -311,12 +311,12 @@ Result:
 
 *Data Displayer*
 
-- aplikacja webowa umo¿liwiaj¹ca wizualizacjê informacji zawartych w logach (przetworzonych poprzez filtry Logstash)
-- intuicyjny interfejs - nawet dla osób nie technicznych
-- umo¿liwia filtrowanie i wyszukiwanie danych
-- dostêp do nowych danych w Real-Time
-- mo¿liwoœæ generowania wykresów, list na podstawie danych - przy u¿yciu prostego kreatora
-- pulpity - zawieraj¹ce widgety - wyrkresy, listy - ³atwy sposób edycji (przeci¹gnij opuœæ, rozszerz)
+- aplikacja webowa umoÅ¼liwiajÄ…ca wizualizacjÄ™ informacji zawartych w logach (przetworzonych poprzez filtry Logstash)
+- intuicyjny interfejs - nawet dla osÃ³b nie technicznych
+- umoÅ¼liwia filtrowanie i wyszukiwanie danych
+- dostÄ™p do nowych danych w Real-Time
+- moÅ¼liwoÅ›Ä‡ generowania wykresÃ³w, list na podstawie danych - przy uÅ¼yciu prostego kreatora
+- pulpity - zawierajÄ…ce widgety - wyrkresy, listy - Å‚atwy sposÃ³b edycji (przeciÄ…gnij opuÅ›Ä‡, rozszerz)
 
 #### Log Details
 
@@ -339,7 +339,7 @@ Result:
 
 ## Praktyka
 
-Opis dotyczy uruchomienia serwera *ELK* oraz konfiguracji serwerów aplikacyjnych (*Nodes*) które za pomoc¹ *Logstash Forwarder* bêd¹ przekazywaæ logi do serwera *ELK*. Przedstawione w oparciu o system Linux Ubuntu 14.04 LTS.
+Opis dotyczy uruchomienia serwera *ELK* oraz konfiguracji serwerÃ³w aplikacyjnych (*Nodes*) ktÃ³re za pomocÄ… *Logstash Forwarder* bÄ™dÄ… przekazywaÄ‡ logi do serwera *ELK*. Przedstawione w oparciu o system Linux Ubuntu 14.04 LTS.
 
 ![simple-architecture.png](simple-architecture.png)
 
@@ -359,7 +359,7 @@ Predefined requirements dla serwera *ELK*:
 
 #### Docker ELK Stack
 
-Najprostrzym sposobem na rozpoczêcie przygody z *ELK Stack* jest uruchomienie gotowego kontenera ([Docker-Elk](https://github.com/deviantony/docker-elk)):
+Najprostrzym sposobem na rozpoczÄ™cie przygody z *ELK Stack* jest uruchomienie gotowego kontenera ([Docker-Elk](https://github.com/deviantony/docker-elk)):
 
 ```
 $: git clone git@github.com:deviantony/docker-elk.git
@@ -367,54 +367,54 @@ $: cd docker-elk
 $: docker-compose up -d
 ```
 
-Po prawid³owym uruchomieniu na przedstawionych portach zostaj¹ uruchomione nastêpuj¹ce us³ugi:
+Po prawidÅ‚owym uruchomieniu na przedstawionych portach zostajÄ… uruchomione nastÄ™pujÄ…ce usÅ‚ugi:
 
 - *5000*: Logstash TCP input
 - *9200*: Elasticsearch HTTP
 - *5601*: Kibana Web Interface
 
-Teraz wystarczy tylko otworzyæ adres [http://localhost:5061](http://localhost:5061) w przegl¹darce aby uzyskaæ dostêp do interfejsu Kibana.
+Teraz wystarczy tylko otworzyÄ‡ adres [http://localhost:5061](http://localhost:5061) w przeglÄ…darce aby uzyskaÄ‡ dostÄ™p do interfejsu Kibana.
 
 #### Wygenerowanie certyfikatu SSL
 
-Rekomendowana lokalizacja plików:
+Rekomendowana lokalizacja plikÃ³w:
 
 - certificates (.crt): ```/etc/pki/tls/certs/```
 - keys (.key): ```/etc/pki/tls/private/```
 
-Wygenerowane certyfikaty bêd¹ potrzebne dla *Logstash* (pliki .crt oraz .key) i *Logstash Forwarder* (tylko plik .crt).
+Wygenerowane certyfikaty bÄ™dÄ… potrzebne dla *Logstash* (pliki .crt oraz .key) i *Logstash Forwarder* (tylko plik .crt).
 
 ##### Localhost
 
-W przypadku kombinacji *ELK* server jako kontener Dockera + logstash-forwarder na tym samym hoœcie (localhost), wygenerowanie certyfikatu odbywa siê za pomoc¹ polecenia:
+W przypadku kombinacji *ELK* server jako kontener Dockera + logstash-forwarder na tym samym hoÅ›cie (localhost), wygenerowanie certyfikatu odbywa siÄ™ za pomocÄ… polecenia:
 
 ```
 $: cd /etc/pki/tls/
 $: openssl req -x509 -newkey rsa:2048 -keyout private/logstash-forwarder.key -out certs/logstash-forwarder.crt -nodes -days 3650
 ```
 
-Wa¿ne aby nastêpuj¹ce dane uzupe³niæ w nastêpuj¹cy sposób:
+WaÅ¼ne aby nastÄ™pujÄ…ce dane uzupeÅ‚niÄ‡ w nastÄ™pujÄ…cy sposÃ³b:
 
 ```
 Common name: localhost
 Email address: root@localhost
 ```
 
-Nastêpnie trzeba zamapowaæ lokalizacjê certyfikatów. Przed uruchomieniem ```docker-compose up``` nale¿y zmodyfikowaæ odrobinê plik *docker-compose.yml*:
+NastÄ™pnie trzeba zamapowaÄ‡ lokalizacjÄ™ certyfikatÃ³w. Przed uruchomieniem ```docker-compose up``` naleÅ¼y zmodyfikowaÄ‡ odrobinÄ™ plik *docker-compose.yml*:
 
 ```
 logstash:
   (...)
   volumes:
-    - /etc/pki/tls:/etc/pki/tls  # tê linijkê nale¿y dopisaæ
+    - /etc/pki/tls:/etc/pki/tls  # tÄ™ linijkÄ™ naleÅ¼y dopisaÄ‡
     - ./logstash/config:/etc/logstash/conf.d
 ```
 
-Rozwi¹zanie zaczerpniête z: https://github.com/cityindex-attic/logsearch/wiki/Lumberjack-Locally)
+RozwiÄ…zanie zaczerpniÄ™te z: https://github.com/cityindex-attic/logsearch/wiki/Lumberjack-Locally)
 
 ##### Other host
 
-Na serwerze *ELK*, nale¿y wygenerowaæ certyfikat:
+Na serwerze *ELK*, naleÅ¼y wygenerowaÄ‡ certyfikat:
 
 ```
 $: cd /etc/pki/tls/
@@ -424,7 +424,7 @@ $: openssl req -x509 -batch -nodes -newkey rsa:2048  -days 365 -keyout private/l
 $: openssl req -x509  -batch -nodes -newkey rsa:2048 -days 365 -keyout private/logstash-forwarder.key -out certs/logstash-forwarder.crt -subj /CN=logstash.example.com
 ```
 
-Nastêpnie plik *logstash-forwarder.crt* bêdzie tak¿e wykorzystywany na *Linux Node*. Najlepiej niech znajduje siê w takiej samej lokalizacji. Korzystaæ bêdzie z niego *logastash-forwarder*.
+NastÄ™pnie plik *logstash-forwarder.crt* bÄ™dzie takÅ¼e wykorzystywany na *Linux Node*. Najlepiej niech znajduje siÄ™ w takiej samej lokalizacji. KorzystaÄ‡ bÄ™dzie z niego *logastash-forwarder*.
 
 #### Konfiguracja Logstash
 
@@ -469,13 +469,13 @@ output {
 
 ### Nodes
 
-Serwer aplikacyjny powinien posiadaæ zainstalowan¹, skonfigurowan¹ oraz uruchomion¹ us³ugê *Logstash Forwarder*.
+Serwer aplikacyjny powinien posiadaÄ‡ zainstalowanÄ…, skonfigurowanÄ… oraz uruchomionÄ… usÅ‚ugÄ™ *Logstash Forwarder*.
 
 #### Logstash Forwarder
 
 @todo Instalacja
 
-Przyk³ad konfiguracji:
+PrzykÅ‚ad konfiguracji:
 
 ```
 $: sudo vi /etc/logstash-forwarder.conf
@@ -506,13 +506,13 @@ $: sudo vi /etc/logstash-forwarder.conf
 
 ```
 
-Po zmianie konfiguracji nale¿y zrestartowaæ us³ugê.
+Po zmianie konfiguracji naleÅ¼y zrestartowaÄ‡ usÅ‚ugÄ™.
 
 ```
 $: sudo service logstash-forwarder restart
 ```
 
-## ELK a skalowalnoœæ
+## ELK a skalowalnoÅ›Ä‡
 
 ![scalable-architecture.png](scalable-architecture.png)
 
