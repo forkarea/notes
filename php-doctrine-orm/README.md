@@ -7,10 +7,9 @@ Object Relational Mapper for PHP that sits on top of a powerful database abstrac
 Management of database schema:
 
 ```
-$: vendor/bin/doctrine orm:schema-tool:create
+$: vendor/bin/doctrine orm:schema-tool:create [--dump-sql]
 
-$: vendor/bin/doctrine orm:schema-tool:drop --force
+$: vendor/bin/doctrine orm:schema-tool:drop --force [--dump-sql]
 
-$: vendor/bin/doctrine orm:schema-tool:update --force
-$: vendor/bin/doctrine orm:schema-tool:update --force --dump-sql
+$: vendor/bin/doctrine orm:schema-tool:update --force [--dump-sql]
 ```
