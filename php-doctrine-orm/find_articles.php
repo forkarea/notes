@@ -12,3 +12,11 @@ foreach($articles as $article) {
 
 // fetch article by id
 $article = $entityManager->find('Entity\Article', 5);
+
+// fetch article
+$aricle = $entityManager->getRepository('Entity\Article')
+    ->findOneBy(['title' => 'Article title']);
+
+// find all articles for author id = 1
+$articles = $entityManager->getRepository('Entity\Article')
+    ->findBy(['author' => 1]);

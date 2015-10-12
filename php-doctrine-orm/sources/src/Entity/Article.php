@@ -18,6 +18,9 @@ class Article {
      **/
     protected $title;
     
+    /**
+     * @Column(type="text")
+     */
     protected $introduction;
     
     /**
@@ -25,6 +28,9 @@ class Article {
      **/
     protected $body;
     
+    /**
+     * @Column(type="datetime")
+     */
     protected $createdDate;
     
     public function getId() {
