@@ -19,7 +19,6 @@ warsztat: Sebastian Bergmann, Stefan Priebsch – thephp.cc
 - w takim wypadku testy jednostkowe nie s¹ tylko dokumentacj¹ dla programisty ale tak¿e dla biznesu
 - phpab – PHP Autoload Builder
 - PHPUnit - @depends tag
-
 - Prezentacja, programming w zakresie – DDD w TDD. Wyt³umaczenie koncepcji wzorca Repository.
 - Phary – composer/phpunit – nie w composer.json i si¹ganie per build a dostêpne globalnie lub w folderze build/bin. Narzêdzie sk³adowe projektu wrzucone w CVS.
 - Kasa zawsze w intigerach (groszach, z³ / 100 gr).  new Money(100, „PLN”)
