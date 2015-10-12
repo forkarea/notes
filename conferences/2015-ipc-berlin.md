@@ -73,23 +73,23 @@ Powi¹zane tematy to tak¿e: Hexagonal, Onion – Architecture, CQRS
 - Pamiêtaj o czyszczeniu logów z xhproofa (aby Twoja baza nie wa¿y³a potem 2.5TB)
 - Im wiêcej u¿ytkowników tym zmiejszaj iloœæ requestów które zapisujesz
 
-
-
 ## The Future of the Internet
 
 Przedstawienie ró¿nych wizji przysz³oœci - np wszczepiane chipy, wyostrzanie zmys³ów, zgrywanie œwiadomoœci, AI jako osobisty asystent cz³owieka, VR, AR.
 
 ## ECMAScript 6 for real
 
-w dniu dzisiejszym mo¿na to wykorzystaæ na ró¿nych przegl¹darkach które nie maj¹ do tego wsparcia
-pokaza³ technology stack i flow - co jest niezbêdne do testowania i urchomienia tego 
+- wykorzystywanie ECMAScript 6 w projektach produkcyjnych, pomimo braku wsparcia w przegl¹darkach
+- stack technologiczny i flow - co jest niezbêdne do testowania i uruchomienia
 
 ## The three Dimensions of Testing
 
-Bergmann przedstawi³ podzia³ testów na 3 wymiary - 
+Bergmann przedstawi³ podzia³ testów na 3 wymiary:
+
  - rola (np edge to edge testing) - nale¿y zawsze okreœliæ sobie po co chcemy wykonywaæ testy, 
  - scope (ile czêœci aplikacji potrzebne jest do uruchomienia testów), im mniej tym lepiej bo testy s¹ dok³adniejsze,
  - implementacja (narzêdzia i sposób pisania testów np phpunit + webdriver). 
+ 
 Zwróci³ uwagê na potrzebê robienia testów integracyjnych - poda³ przyk³ad rozbitej sondy marsjañskiej przez barak testów integracyjnych. 2 teamy kodzi³y modu³ GPS obliczaj¹cy trajektoriê wejœcia w atmosferê marsa. Jedni zakodzili w jednostkach metrycznych a drudzy w imperialnych. Dlatego trajektoria zosta³a Ÿle obliczona i sonda siê rozbi³a. Testy powinny byæ bardzo wra¿liwe na nieprawid³owe zachowania kodu i powinny jasno wskazywaæ miejsce w którym jest coœ nie tak. Kod testowy równie¿ powinien byæ pisany zgodnie z regu³ami clean code. Na koniec pojazd po phpspec - wg Bergmana jest tam za du¿o magii. 
 
 Jak obiekty gadaj¹ ze sob¹ przez mockowanie:
@@ -98,8 +98,9 @@ http://www.slideshare.net/everzet/design-how-your-objects-talk-through-mocking,
 
 ## Take care of your Logs with ELK
 
-elasticksearch, logstash, kibana, curator, heka, rsyslog, logstash-forwarder, logtail, monolog 
-aplikacje wspomagaj¹ce logowanie, pokaza³ konfiguracjê i jak to w rzeczywistoœci wygl¹da
+- Elasticsearch, Logstash, Kibana.
+- oraz narzêdzia poboczne curator, heka, rsyslog, logstash-forwarder, logtail, monolog 
+- aplikacje wspomagaj¹ce logowanie, pokaza³ konfiguracjê i jak to w rzeczywistoœci wygl¹da
 
 ## Extract till you drop
 
@@ -107,7 +108,7 @@ Refactor Legacy Code na ¿ywo - wykorzstanie mo¿liwoœci PHPStorm (skróty klawiszo
 
 ## Localize your Frontend
 
-laska zajmuj¹ca siê platform¹ jimdo - po³o¿y³a temat. Zaadresowa³a g³ówne problemy zwi¹zne z lokalizacj¹ frontendu. Formatowanie liczb, dat, czasu, piniêdzy, stringów. Mówi³a o narzêdziu wspmogaj¹cym lokalizowanie frontu - phraseup. Mówi³a o bibliotekach numeric.js, google closure, max ci powie, intl w przegl¹darce - koncept na razie nie rozwiniêty.
+Zaadresowano g³ówne problemy zwi¹zne z lokalizacj¹ frontendu. Formatowanie liczb, dat, czasu, pieniêdzy, stringów. Mówi³a o narzêdziu wspmogaj¹cym lokalizowanie frontu - phraseup. Mówi³a o bibliotekach numeric.js, google closure, max ci powie, intl w przegl¹darce - koncept na razie nie rozwiniêty.
 
 ## Decoupling the Model from the Framework
 
