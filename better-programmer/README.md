@@ -16,24 +16,24 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
 
 ## Spis treści
 
-- Podstawowe zasady
-- Rekrutacja
+- [Podstawowe zasady](#podstawowe-zasady)
+- [Rekrutacja](#rekrutacja)
 - ~~Testowanie oprogramowania~~
 - ~~Komentowanie kodu~~
 - ~~Standard kodowania~~
 - ~~Code Review~~
 - ~~Refaktoryzacja~~
 - ~~Wymiana i zdobywanie wiedzy~~
-- DOJO programowania
-- Automatyzacja
-- Bazy danych
-- Narzędzia
+- [DOJO programowania](#dojo-prgramowania)
+- [Automatyzacja](#automatyzacja)
+- [Bazy danych](#bazy-danych)
+- [Narzędzia](#narzedzia)
 - ~~Projekty i ich prowadzenie~~
-- Spotkania
+- [Spotkania](#spotkania)
 - ~~Szacowanie~~
 - ~~Zarządzanie czasem~~
-- Klient vs Pracodawca vs Programista
-- Współpraca
+- (Klient vs Pracodawca vs Programista)[#klient-vs-pracodawca-vs-programista]
+- (Współpraca)[#współpraca)
 - ~~Debugowanie~~
 - ~~Praca nad kodem~~
 - ~~Programowanie obiektowe~~
