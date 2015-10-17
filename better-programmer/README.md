@@ -23,7 +23,7 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
 - ~~Standard kodowania~~
 - ~~Code Review~~
 - ~~Refaktoryzacja~~
-- ~~Wymiana i zdobywanie wiedzy~~
+- [Wymiana i zdobywanie wiedzy](wymiana-i-zdobywanie-wiedzy)
 - [DOJO programowania](#dojo-prgramowania)
 - [Automatyzacja](#automatyzacja)
 - [Bazy danych](#bazy-danych)
@@ -32,8 +32,8 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
 - [Spotkania](#spotkania)
 - ~~Szacowanie~~
 - ~~Zarządzanie czasem~~
-- (Klient vs Pracodawca vs Programista)[#klient-vs-pracodawca-vs-programista]
-- (Współpraca)[#współpraca)
+- [Klient vs Pracodawca vs Programista](#klient-vs-pracodawca-vs-programista)
+- [Współpraca](#współpraca)
 - ~~Debugowanie~~
 - ~~Praca nad kodem~~
 - ~~Programowanie obiektowe~~
@@ -72,7 +72,32 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
   - **Code Review** - kandydat otrzymuje fragment kodu łamiący ogólnoprzyjete standardy i dobre praktyki. Jego zadaniem jest przeprowadzenie procesu Core Review, wytykając jak największa ilość uchybień i możliwych usprawnień.
   - **Live Coding** - podczas spotkania rekrutacyjnego kandydat otrzymuje zadanie/problem do rozwiązania na komputerze. Ma na to X czasu. Może to być kilka mniejszych zadań programistycznych np. przerobienie jakiegoś wzoru matematycznego na kod, operacje na tablicach itp.
   - **Zadanie z modelowania** - kandydat dostaje zadanie którego celem jest zaprojektowania systemu (pod względem architektury niższego lub wyższego poziomu - klasy/wzorce projektowe lub architektura elementów systemu - serewer www, serwer kolejki, aplikacja).
-  
+
+## Wymiana i zdobywanie wiedzy
+
+- Wymiana wiedzy - *Show And Tell*
+  - spotkanie podczas którego jedna osoba (lub więcej) opracowuje prezentację (najlepiej live) przedstawiająca interesujący temat (narzędzie, rozwiązanie problemu itp.)
+- Wymiana wiedzy - *Technical Meeting*
+  - spotkania dotyczące tego co dzieje się w projekcie, napotkanych problemów i zastosowanych rozwiązań - pod względem technicznym!
+  - jeżeli omawiacie na bieżąco występujące problemy to spotkanie niech będzie podsumowaniem wykonanych akcji
+  - notujcie gdzieś poruszone kwestie
+  - spotkanie powinno posiadać formę dyskusji
+- Miej mentora - kogoś kto doradzi Ci w rozwoju Twojej kariery jako programista
+- Dobrze jest pracować z lepszymi od siebie - wtedy najszybciej się uczysz, a przy okazji podświadomie starasz się nie odstawać od reszty, w drugą stronę działa to identycznie - "jeśli wejdziesz między wrony, musisz krakać tak jak one"
+- Prowadź bloga
+  - swojego prywatnego
+  - wewnątrz firmowego dotyczącego projektu i zespołu
+- Gromadź wiedzę która zdobywasz - prowadź swoja wiki, notuj je na Google Drive, Evernote
+- Posiadaj listę artykułów do przeczytania - może to być folder "READ LATER" z zakładkami w przeglądarce internetowej lub skorzystaj z getpocket.com
+- Obserwuj i czytaj blogi, zapisuj ważniejsze rzeczy tak aby w przyszłości móc do nich szybko powrócić
+- Twórz listę terminów, narzędzi, wzorców projektowych, rozwiązań itp. których jeszcze nie przyswoiłeś - tak aby w wolnej chwili wiedzieć o czym możesz poczytać
+- Według *Roberta C. Martina* minimalna lista rzeczy, które powinien wiedzieć każdy zawodowy twórca oprogramowania wygląda następująco:
+  - Wzorce projektowe - wszystkie 24 opisane w książce GOF i mieć doświadczenie z wieloma wzorcami opisywanymi w książkach POSA
+  - Zasady projektowania. Musisz znać zasady SOLID
+  - Metody. Metodologie - XP, Scrum, Lean, Kanban, wodospadu, analizy strukturalnej i projektowania strukturalnego
+  - Dziedziny. Korzystanie z TDD, projektowania obiektowego, programowania strukturalnego, ciągłej integracji i programowania w parach
+  - Artefakty. Umiejętność korzystania z UML, DFD, wykresów struktur, sieci Petriego, diagramów i tabel przejść stanów, diagramów przepływu oraz tabeli decyzji
+
 ##  DOJO programowania
 
 - *"Ćwiczenia wykonuje nie wtedy gdy Ci za to płacą. Wykonuj je po to aby uzyskać dobrą zapłatę za swoją pracę"* ~ Robert C. Martin
