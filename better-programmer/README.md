@@ -23,7 +23,7 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
 - ~~Standard kodowania~~
 - ~~Code Review~~
 - ~~Refaktoryzacja~~
-- [Wymiana i zdobywanie wiedzy](wymiana-i-zdobywanie-wiedzy)
+- [Wymiana i zdobywanie wiedzy](#wymiana-i-zdobywanie-wiedzy)
 - [DOJO programowania](#dojo-prgramowania)
 - [Automatyzacja](#automatyzacja)
 - [Bazy danych](#bazy-danych)
