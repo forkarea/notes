@@ -32,37 +32,24 @@ $: vendor/bin/doctrine orm:schema-tool:update --force [--dump-sql]
 
 ## Embeddables
 
-- columnPrefix:
+- klasa którą można wykorzystać w encji, ale sama w sobie encją nie jest
+- obejmowanie pól w wspólną "grupę" np:
+  - zakres dat ([zobacz przykład](embeddables-date-period.php))
+  - adres ([zobacz przykład](embeddables-address.php))
+  - pieniądze ([zobacz przykład](embeddables-money.php))
+- można wykorzystywać odniesienia do pól w DQLu
+- @columnPrefix:
   - domyślny - nazwa obiektu embedded ("Address" -> "address_")
   - własny prefix - "delivery_"
   - wyłączony - false
+- Doctrine automatycznie generuje pola z Embeddable (np. Price) to tabeli encji (np. Product)
 
-```php
-/** @Entity */
-class Order {
-    /** @Embedded(class="Address", columnPrefix="delivery_") */
-    private $deliveryAddress;
-}
+DQL examples:
 
-/** @Embeddable */
-class Address
-{
-    /** @Column(type="string") */
-    private $street;
+```sql
+SELECT r FROM Reservation r WHERE r.reservation.start = :myReservationStart;
 
-    /** @Column(type="string") */
-    private $postalCode;
+SELECT o FROM Order o WHERE o.delivery.city = :myCity;
 
-    /** @Column(type="string") */
-    private $city;
-
-    /** @Column(type="string") */
-    private $country;
-}
-```
-
-DQL example:
-
-```
-SELECT o FROM Order o WHERE o.deliveryAddress.city = :myCity
+SELECT p FROM Product p WHERE p.price.value > :myValue AND p.price.currency = :myCurrency;
 ```
