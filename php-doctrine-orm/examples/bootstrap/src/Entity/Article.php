@@ -33,11 +33,19 @@ class Article {
      */
     protected $createdDate;
     
+    public function __construct() {
+        $this->createdDate = new \DateTime(); 
+    }
+    
     public function getId() {
         return $this->id;
     }
     
-    public function setBody($body) {
+    public function setIntroduction($introduction) {
+        $this->introduction = $introduction;
+    }
+    
+     public function setBody($body) {
         $this->body = $body;
     }
     

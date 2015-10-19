@@ -34,18 +34,18 @@ $: vendor/bin/doctrine orm:schema-tool:update --force [--dump-sql]
 
 Zarządzanie artykułami:
 
-- [Create - Nowy artykuł](create_new_article.php)
-- [Read - Lista artykułów, pobranie pojedyńczego artykułu](find_articles.php)
-- [Update - Zaktualizuj informacje na temat artykułu](update_article.php)
-- [Delete - Usuń wybrany artykuł](delete_article.php)
+- [Create - Nowy artykuł](examples/crud/create_article.php)
+- [Read - Lista artykułów, pobranie pojedyńczego artykułu](examples/crud/read_article.php)
+- [Update - Zaktualizuj informacje na temat artykułu](examples/crud/update_article.php)
+- [Delete - Usuń wybrany artykuł](examples/crud/delete_article.php)
 
 ## Embeddables
 
 - klasa którą można wykorzystać w encji, ale sama w sobie encją nie jest
 - obejmowanie pól w wspólną "grupę" np:
-  - zakres dat ([zobacz przykład](embeddables-date-period.php))
-  - adres ([zobacz przykład](embeddables-address.php))
-  - pieniądze ([zobacz przykład](embeddables-money.php))
+  - zakres dat ([zobacz przykład](examples/embeddables/date-period.php))
+  - adres ([zobacz przykład](examples/embeddables/address.php))
+  - pieniądze ([zobacz przykład](examples/embeddables/money.php))
 - można wykorzystywać odniesienia do pól w DQLu
 - @columnPrefix:
   - domyślny - nazwa obiektu embedded ("Address" -> "address_")
