@@ -19,7 +19,6 @@ new Money(100, new Currency(Currency::USD));
 new PESEL('44051401458');
 
 new NIP('123-456-32-18');
-
 ```
 
 ```php
