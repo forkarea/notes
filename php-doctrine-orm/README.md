@@ -30,6 +30,15 @@ $: vendor/bin/doctrine orm:schema-tool:drop --force [--dump-sql]
 $: vendor/bin/doctrine orm:schema-tool:update --force [--dump-sql]
 ```
 
+## CRUD
+
+Zarządzanie artykułami:
+
+- [Create - Nowy artykuł](create_new_article.php)
+- [Read - Lista artykułów, pobranie pojedyńczego artykułu](find_articles.php)
+- [Update - Zaktualizuj informacje na temat artykułu](update_article.php)
+- [Delete - Usuń wybrany artykuł](delete_article.php)
+
 ## Embeddables
 
 - klasa którą można wykorzystać w encji, ale sama w sobie encją nie jest
