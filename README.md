@@ -7,9 +7,8 @@ Short notes about software development.
 * [Better Programmer](better-programmer) - Clean Code, Good Practices, Pragmatic Programmer
 * [Big Data - Introduction](big-data-introduction) - An introduction to Big Data
 * [Concepts Of Architecture](concepts-of-architecture) - Concepts of architecture for typical problems
-* [Conferences](conferences) - Notes From the Front Lines
+* [Conferences & Meetups & Trainings](conferences-meetups-trainings) - Notes From the Front Lines
 * [Domain-Driven Design](domain-driven-design) - Notes about DDD
-* [Elasticsearch](elasticsearch-training) - Search & Analyze Data in Real Time
 * [ELK - Zapanuj nad logami](elk-zapanuj-nad-logami) - Elasticsearch Logstash Kibana
 * [PHP - DateTime Class](php-datetime-class.md) - Representation of date and time
 * [PHP - Doctrine ORM](php-doctrine-orm) - Object Relational Mapper for PHP
