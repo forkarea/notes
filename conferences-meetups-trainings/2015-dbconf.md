@@ -47,7 +47,32 @@ Data: *23 - 25 października 2015*
 - Algorytmy złączeń MapReduce
   - Two-Way Joins (Reduce-Side Join, Map-Side Join, Broadcast Join)
   - Multi-Way Joins (Map-Side Join, Reduce-Side One-Shot Join, Reduce-Side Cascade Join)
-- Podsumownaie
+- Podsumowanie
   - używaj gotowych frameworków do złączeń - Hive, Pig
   - pisz kod w ostateczności
   - zwróć uwagę na inne modele programistyczne np. PACT
+  
+## Analiza wydźwięku - podejścia oraz przykłady użycia
+
+*Karol Chlasta, Antoni Sobkowicz*
+
+http://opi-lil.github.io
+
+- Analiza wydźwięku
+  - jakie emocje niesie ze sobą dany tekst
+  - klasyfikacja:
+    - pozytywny, neutralny, negatywny
+- Metody analizy
+  - metody słownikowe (słownik wydźwięku - jaki wydźwięk ma dane słowo)
+  - metody statystyczne
+  - metody przetwarzania języka naturalnego
+- Algorytmy
+  - Naive Bayes
+  - Maximum Entropy
+- Przykład - stack technologiczny oraz podejście badania wydźwięku nt. kandydatów podczas kampanii wyborczej na Prezydenta RP
+  - Twitter API, komentarze Gazeta, Onet, WP
+  - metoda słownikowa
+  - ręczne tworznie słowników z oznaczaniem wydźwięku poszczególnych słów (lepiej gdy ten proces robi kilka osób, możemy wyciągnąć średnią wydźwięku słowa)
+  - ile słów negatywnych, ile słów pozytywnych - budowanie indeksu naiwnego
+  - wysoki procent poprawności wydźwięku pomimo zastosowania prostych metod
+- Buzzword: Deep Learning
