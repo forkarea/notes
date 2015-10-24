@@ -6,121 +6,121 @@ Trendy: *Unit Testing*, *Domain-driven Development*, *Test-driven Development*, 
 
 ## Test-Driven Domain
 
-warsztat: Sebastian Bergmann, Stefan Priebsch – thephp.cc
+warsztat: Sebastian Bergmann, Stefan Priebsch â€“ thephp.cc
 
-- Bizness zale¿ny od technologii - LE - w dupie masz z jakiego skorzysztasz framerowka/liba ? Abstrakcja. Nieuzale¿nianie siê od technologii.
-- Migracje zf1->sf2 (rewrite ca³ego kodu), a powinismy zrobiæ write adapters do bissnes logic
-- UI -> Bussines <- Infrastructure (odcinamy siê od tego: framework, persistance – database)
-- Analogia do piwa, sk¹d jest (czy z baru, sklepu, etc) – nikogo z nas to nie interesuje, wa¿ne ze je mamy na wyciagniêcie reki i mo¿emy ugasic pragnienie. Bar – to API, implementacja interfejsu
-- Bussines opary o interface – wa¿ne co chcemy, nie wa¿ne w jaki sposób zostanie to zrealizowane ! (php 5.x w tym miejscu sssie, bo nie mo¿esz okreslic ze oczekujesz kolekcji obiektów Y)
+- Bizness zaleÅ¼ny od technologii - Å¹LE - w dupie masz z jakiego skorzysztasz framerowka/liba ? Abstrakcja. NieuzaleÅ¼nianie siÄ™ od technologii.
+- Migracje zf1->sf2 (rewrite caÅ‚ego kodu), a powinismy zrobiÄ‡ write adapters do bissnes logic
+- UI -> Bussines <- Infrastructure (odcinamy siÄ™ od tego: framework, persistance â€“ database)
+- Analogia do piwa, skÄ…d jest (czy z baru, sklepu, etc) â€“ nikogo z nas to nie interesuje, waÅ¼ne ze je mamy na wyciagniÄ™cie reki i moÅ¼emy ugasic pragnienie. Bar â€“ to API, implementacja interfejsu
+- Bussines opary o interface â€“ waÅ¼ne co chcemy, nie waÅ¼ne w jaki sposÃ³b zostanie to zrealizowane ! (php 5.x w tym miejscu sssie, bo nie moÅ¼esz okreslic ze oczekujesz kolekcji obiektÃ³w Y)
 - Interfejsy i adaptery, Dependency inversion, Inversion of Control
-- Co z libami zewnêtrznymi od których uzale¿niony jest nasz BL? Np. new Data(), new Moment(). Podobnie jak z FV – czyli kolejny adapter
-- „DDD” w PHPunit, bardziej opisowe testy, opisuj¹ce regu³y biznesu (np. PremiumContract: - runs for twelve months, - can be renewed at any time, - cannot be downgraded to standard contract), uruchomiony z testdox parameter, output moze posluzyc wtedy juz jako opis regul biznesu na wiki
-- w takim wypadku testy jednostkowe nie s¹ tylko dokumentacj¹ dla programisty ale tak¿e dla biznesu
-- phpab – PHP Autoload Builder
+- Co z libami zewnÄ™trznymi od ktÃ³rych uzaleÅ¼niony jest nasz BL? Np. new Data(), new Moment(). Podobnie jak z FV â€“ czyli kolejny adapter
+- â€DDDâ€ w PHPunit, bardziej opisowe testy, opisujÄ…ce reguÅ‚y biznesu (np. PremiumContract: - runs for twelve months, - can be renewed at any time, - cannot be downgraded to standard contract), uruchomiony z testdox parameter, output moze posluzyc wtedy juz jako opis regul biznesu na wiki
+- w takim wypadku testy jednostkowe nie sÄ… tylko dokumentacjÄ… dla programisty ale takÅ¼e dla biznesu
+- phpab â€“ PHP Autoload Builder
 - PHPUnit - @depends tag
-- Prezentacja, programming w zakresie – DDD w TDD. Wyt³umaczenie koncepcji wzorca Repository.
-- Phary – composer/phpunit – nie w composer.json i si¹ganie per build a dostêpne globalnie lub w folderze build/bin. Narzêdzie sk³adowe projektu wrzucone w CVS.
-- Kasa zawsze w intigerach (groszach, z³ / 100 gr).  new Money(100, „PLN”)
-- Daty nie timestapy! – DateTime Objecty z Timezonem
-- Uniezale¿niaæ kod od time() zahardkowanego w kodzie, zawsze przekazywaæ jako parametr
-- CR na koniec nie dotyczy³ TDD/DDD a ma³ych niewa¿nych gówien w stylu: startDate, endDate -> dateRange(s, e), brak modyfikatora dostêpu przed function etc.
-- Identyfikuj najwa¿niejsze elementy logiki biznesowej – to pierwsze co powinieneœ implementowaæ. Zamodeluj najwa¿niejsze Entity
+- Prezentacja, programming w zakresie â€“ DDD w TDD. WytÅ‚umaczenie koncepcji wzorca Repository.
+- Phary â€“ composer/phpunit â€“ nie w composer.json i siÄ…ganie per build a dostÄ™pne globalnie lub w folderze build/bin. NarzÄ™dzie skÅ‚adowe projektu wrzucone w CVS.
+- Kasa zawsze w intigerach (groszach, zÅ‚ / 100 gr).  new Money(100, â€PLNâ€)
+- Daty nie timestapy! â€“ DateTime Objecty z Timezonem
+- UniezaleÅ¼niaÄ‡ kod od time() zahardkowanego w kodzie, zawsze przekazywaÄ‡ jako parametr
+- CR na koniec nie dotyczyÅ‚ TDD/DDD a maÅ‚ych niewaÅ¼nych gÃ³wien w stylu: startDate, endDate -> dateRange(s, e), brak modyfikatora dostÄ™pu przed function etc.
+- Identyfikuj najwaÅ¼niejsze elementy logiki biznesowej â€“ to pierwsze co powinieneÅ› implementowaÄ‡. Zamodeluj najwaÅ¼niejsze Entity
 
-Powi¹zane tematy to tak¿e: Hexagonal, Onion – Architecture, CQRS
+PowiÄ…zane tematy to takÅ¼e: Hexagonal, Onion â€“ Architecture, CQRS
 
 ## Composer Best Practices
 
-- Omówienie semantic versioning
-- Przedstawienie “script” w Composerze. Aby zapisaæ skróty do komend, np. potem tylko „composer test” i uruchamiaj¹ siê testy aplikacji
-- Commitowanie composer.lock (nie zgadzam siê). Aby by³a powtarzalna instalacja u ka¿dego. Pamiêtaæ o nie deployowaniu go na serwer produkcyjny – mo¿na to potem wyszukaæ via gogle
-- Omówienie problemu konfliktu zale¿noœci – vendor 1 korzystac z pack1.0 a vendor 2 korzysta z pack2.0 – problem nie do rozwi¹zania
+- OmÃ³wienie semantic versioning
+- Przedstawienie â€œscriptâ€ w Composerze. Aby zapisaÄ‡ skrÃ³ty do komend, np. potem tylko â€composer testâ€ i uruchamiajÄ… siÄ™ testy aplikacji
+- Commitowanie composer.lock (nie zgadzam siÄ™). Aby byÅ‚a powtarzalna instalacja u kaÅ¼dego. PamiÄ™taÄ‡ o nie deployowaniu go na serwer produkcyjny â€“ moÅ¼na to potem wyszukaÄ‡ via gogle
+- OmÃ³wienie problemu konfliktu zaleÅ¼noÅ›ci â€“ vendor 1 korzystac z pack1.0 a vendor 2 korzysta z pack2.0 â€“ problem nie do rozwiÄ…zania
 
-## Cloud Development with a service of SasS – A Stroy to Continous Improvement
+## Cloud Development with a service of SasS â€“ A Stroy to Continous Improvement
 
-- Azure – rozwi¹zanie na wszystko – nawet development który powinien odbywaæ siê w Cloudzie :stuck_out_tongue_winking_eye:
-- Vagrant, Wirtualne maszyny to z³o
-- Przejœcie w Clouda mo¿e wi¹zaæ siê ze zmian¹ modelu biznesowego – np. Przechodzimy bo bêdziemy robiæ z naszej apki SasS
+- Azure â€“ rozwiÄ…zanie na wszystko â€“ nawet development ktÃ³ry powinien odbywaÄ‡ siÄ™ w Cloudzie :stuck_out_tongue_winking_eye:
+- Vagrant, Wirtualne maszyny to zÅ‚o
+- PrzejÅ›cie w Clouda moÅ¼e wiÄ…zaÄ‡ siÄ™ ze zmianÄ… modelu biznesowego â€“ np. Przechodzimy bo bÄ™dziemy robiÄ‡ z naszej apki SasS
 
 ## Five weird Tricks to become a better Developer
 
-- Myœl
-- B¹dŸ empatyczny
-- Masz do³a, brak Ci motywacji – odetnij siê na chwile od developmentu, zrób sobie przerwê, zajmij siê czymœ innym
-- B¹dŸ pragmatyczny
-- Poœwiêæ czasem wiêcej czasu, zautomatyzuj proces, u¿ywaj m¹drze narzêdzi, czytaj komunikaty – abyœ nie musia³ co uruchomienie softu klikaæ „zamknij” w okienku z tipami, po prostu je wy³¹cz
+- MyÅ›l
+- BÄ…dÅº empatyczny
+- Masz doÅ‚a, brak Ci motywacji â€“ odetnij siÄ™ na chwile od developmentu, zrÃ³b sobie przerwÄ™, zajmij siÄ™ czymÅ› innym
+- BÄ…dÅº pragmatyczny
+- PoÅ›wiÄ™Ä‡ czasem wiÄ™cej czasu, zautomatyzuj proces, uÅ¼ywaj mÄ…drze narzÄ™dzi, czytaj komunikaty â€“ abyÅ› nie musiaÅ‚ co uruchomienie softu klikaÄ‡ â€zamknijâ€ w okienku z tipami, po prostu je wyÅ‚Ä…cz
 
 ## Deep Dive into Browser Performance
 
-- Performance przegl¹darki jest bardzo wa¿ny, to jest to co widzi u¿ytkownik – czyli to co na niego jest najwa¿niejsze
-- Minimalizowaæ lookupy DNS
-- Optymalizacja CSSów – zmiejszanie iloœci selektorów CSS, usuwanie nieu¿ywanych
-- JS – minifikacja, konkatenacja, standard
+- Performance przeglÄ…darki jest bardzo waÅ¼ny, to jest to co widzi uÅ¼ytkownik â€“ czyli to co na niego jest najwaÅ¼niejsze
+- MinimalizowaÄ‡ lookupy DNS
+- Optymalizacja CSSÃ³w â€“ zmiejszanie iloÅ›ci selektorÃ³w CSS, usuwanie nieuÅ¼ywanych
+- JS â€“ minifikacja, konkatenacja, standard
 - Gzipowanie outputu
-- Minimalizacja repaintów (to o czym gadali tak¿e koledzy z Ukrainy)
-- Nie u¿ywaæ XPath
-- Profilowaæ, profilowaæ, profilowaæ – nie tylko lokalnie
+- Minimalizacja repaintÃ³w (to o czym gadali takÅ¼e koledzy z Ukrainy)
+- Nie uÅ¼ywaÄ‡ XPath
+- ProfilowaÄ‡, profilowaÄ‡, profilowaÄ‡ â€“ nie tylko lokalnie
 
 ## Modernize your PHP Codes
 
-- Przedstawienie nowych featurów od PHP 5.3 do 5.6 (namespaces, traits – generalnie g³ówne zmiany)
+- Przedstawienie nowych featurÃ³w od PHP 5.3 do 5.6 (namespaces, traits â€“ generalnie gÅ‚Ã³wne zmiany)
 
 ## Profiling with XHProof
 
-- Omówienie czym jest, ¿e ma mo¿liwoœæ zrzucania danych do – MySQL, MongoDb, Przedstawi³ narzêdzie do wyœwietlania logów (te standardowe)
-- Nie profiluj tylko lokalnie, profiluj te¿ zdalnie – co któryœ request, na rzeczywistych danych
-- Pamiêtaj o czyszczeniu logów z xhproofa (aby Twoja baza nie wa¿y³a potem 2.5TB)
-- Im wiêcej u¿ytkowników tym zmiejszaj iloœæ requestów które zapisujesz
+- OmÃ³wienie czym jest, Å¼e ma moÅ¼liwoÅ›Ä‡ zrzucania danych do â€“ MySQL, MongoDb, PrzedstawiÅ‚ narzÄ™dzie do wyÅ›wietlania logÃ³w (te standardowe)
+- Nie profiluj tylko lokalnie, profiluj teÅ¼ zdalnie â€“ co ktÃ³ryÅ› request, na rzeczywistych danych
+- PamiÄ™taj o czyszczeniu logÃ³w z xhproofa (aby Twoja baza nie waÅ¼yÅ‚a potem 2.5TB)
+- Im wiÄ™cej uÅ¼ytkownikÃ³w tym zmiejszaj iloÅ›Ä‡ requestÃ³w ktÃ³re zapisujesz
 
 ## The Future of the Internet
 
-Przedstawienie ró¿nych wizji przysz³oœci - np wszczepiane chipy, wyostrzanie zmys³ów, zgrywanie œwiadomoœci, AI jako osobisty asystent cz³owieka, VR, AR.
+Przedstawienie rÃ³Å¼nych wizji przyszÅ‚oÅ›ci - np wszczepiane chipy, wyostrzanie zmysÅ‚Ã³w, zgrywanie Å›wiadomoÅ›ci, AI jako osobisty asystent czÅ‚owieka, VR, AR.
 
 ## ECMAScript 6 for real
 
-- wykorzystywanie ECMAScript 6 w projektach produkcyjnych, pomimo braku wsparcia w przegl¹darkach
-- stack technologiczny i flow - co jest niezbêdne do testowania i uruchomienia
+- wykorzystywanie ECMAScript 6 w projektach produkcyjnych, pomimo braku wsparcia w przeglÄ…darkach
+- stack technologiczny i flow - co jest niezbÄ™dne do testowania i uruchomienia
 
 ## The three Dimensions of Testing
 
-Bergmann przedstawi³ podzia³ testów na 3 wymiary:
+Bergmann przedstawiÅ‚ podziaÅ‚ testÃ³w na 3 wymiary:
 
- - rola (np edge to edge testing) - nale¿y zawsze okreœliæ sobie po co chcemy wykonywaæ testy, 
- - scope (ile czêœci aplikacji potrzebne jest do uruchomienia testów), im mniej tym lepiej bo testy s¹ dok³adniejsze,
- - implementacja (narzêdzia i sposób pisania testów np phpunit + webdriver). 
+ - rola (np edge to edge testing) - naleÅ¼y zawsze okreÅ›liÄ‡ sobie po co chcemy wykonywaÄ‡ testy, 
+ - scope (ile czÄ™Å›ci aplikacji potrzebne jest do uruchomienia testÃ³w), im mniej tym lepiej bo testy sÄ… dokÅ‚adniejsze,
+ - implementacja (narzÄ™dzia i sposÃ³b pisania testÃ³w np phpunit + webdriver). 
  
-Zwróci³ uwagê na potrzebê robienia testów integracyjnych - poda³ przyk³ad rozbitej sondy marsjañskiej przez barak testów integracyjnych. 2 teamy kodzi³y modu³ GPS obliczaj¹cy trajektoriê wejœcia w atmosferê marsa. Jedni zakodzili w jednostkach metrycznych a drudzy w imperialnych. Dlatego trajektoria zosta³a Ÿle obliczona i sonda siê rozbi³a. Testy powinny byæ bardzo wra¿liwe na nieprawid³owe zachowania kodu i powinny jasno wskazywaæ miejsce w którym jest coœ nie tak. Kod testowy równie¿ powinien byæ pisany zgodnie z regu³ami clean code. Na koniec pojazd po phpspec - wg Bergmana jest tam za du¿o magii. 
+ZwrÃ³ciÅ‚ uwagÄ™ na potrzebÄ™ robienia testÃ³w integracyjnych - podaÅ‚ przykÅ‚ad rozbitej sondy marsjaÅ„skiej przez barak testÃ³w integracyjnych. 2 teamy kodziÅ‚y moduÅ‚ GPS obliczajÄ…cy trajektoriÄ™ wejÅ›cia w atmosferÄ™ marsa. Jedni zakodzili w jednostkach metrycznych a drudzy w imperialnych. Dlatego trajektoria zostaÅ‚a Åºle obliczona i sonda siÄ™ rozbiÅ‚a. Testy powinny byÄ‡ bardzo wraÅ¼liwe na nieprawidÅ‚owe zachowania kodu i powinny jasno wskazywaÄ‡ miejsce w ktÃ³rym jest coÅ› nie tak. Kod testowy rÃ³wnieÅ¼ powinien byÄ‡ pisany zgodnie z reguÅ‚ami clean code. Na koniec pojazd po phpspec - wg Bergmana jest tam za duÅ¼o magii. 
 
-Jak obiekty gadaj¹ ze sob¹ przez mockowanie:
-po co siê mockuje, Rodzaje mocków, solid - jak dziêki testom wy³apaæ b³êdy zwi¹zane z SOLID, nowy tool do mockowania w phpunit - prophecy, 
+Jak obiekty gadajÄ… ze sobÄ… przez mockowanie:
+po co siÄ™ mockuje, Rodzaje mockÃ³w, solid - jak dziÄ™ki testom wyÅ‚apaÄ‡ bÅ‚Ä™dy zwiÄ…zane z SOLID, nowy tool do mockowania w phpunit - prophecy, 
 http://www.slideshare.net/everzet/design-how-your-objects-talk-through-mocking,
 
 ## Take care of your Logs with ELK
 
 - Elasticsearch, Logstash, Kibana.
-- oraz narzêdzia poboczne curator, heka, rsyslog, logstash-forwarder, logtail, monolog 
-- aplikacje wspomagaj¹ce logowanie, pokaza³ konfiguracjê i jak to w rzeczywistoœci wygl¹da
+- oraz narzÄ™dzia poboczne curator, heka, rsyslog, logstash-forwarder, logtail, monolog 
+- aplikacje wspomagajÄ…ce logowanie, pokazaÅ‚ konfiguracjÄ™ i jak to w rzeczywistoÅ›ci wyglÄ…da
 
 ## Extract till you drop
 
-Refactor Legacy Code na ¿ywo - wykorzstanie mo¿liwoœci PHPStorm (skróty klawiszowe) z PHPUnit i CodeCoverage
+Refactor Legacy Code na Å¼ywo - wykorzstanie moÅ¼liwoÅ›ci PHPStorm (skrÃ³ty klawiszowe) z PHPUnit i CodeCoverage
 
 ## Localize your Frontend
 
-Zaadresowano g³ówne problemy zwi¹zne z lokalizacj¹ frontendu. Formatowanie liczb, dat, czasu, pieniêdzy, stringów. Mówi³a o narzêdziu wspmogaj¹cym lokalizowanie frontu - phraseup. Mówi³a o bibliotekach numeric.js, google closure, max ci powie, intl w przegl¹darce - koncept na razie nie rozwiniêty.
+Zaadresowano gÅ‚Ã³wne problemy zwiÄ…zne z lokalizacjÄ… frontendu. Formatowanie liczb, dat, czasu, pieniÄ™dzy, stringÃ³w. MÃ³wiÅ‚a o narzÄ™dziu wspmogajÄ…cym lokalizowanie frontu - phraseup. MÃ³wiÅ‚a o bibliotekach numeric.js, google closure, max ci powie, intl w przeglÄ…darce - koncept na razie nie rozwiniÄ™ty.
 
 ## Decoupling the Model from the Framework
 
-Gadka o Event driven design. Na pocz¹tku nale¿y sobie wylistowaæ jakie zdarzenia domenowe maj¹ miejsce w naszym systemie, a nastêpnie zamodelowaæ sobie ca³y flow propagacji eventów i ich obs³ugi.
+Gadka o Event driven design. Na poczÄ…tku naleÅ¼y sobie wylistowaÄ‡ jakie zdarzenia domenowe majÄ… miejsce w naszym systemie, a nastÄ™pnie zamodelowaÄ‡Â sobie caÅ‚y flow propagacji eventÃ³w i ich obsÅ‚ugi.
 
 ## PHP 7: What changed internally?
 
-Miêso - w jaki sposób zoptymalizowano core nowego php ¿e uzyskano 2 krotny wzrost wydajnoœci. Goœæ omówi³ ró¿nice (php 5.5 vs php 7) w strukturach danych typów danych w php 
+MiÄ™so - w jaki sposÃ³b zoptymalizowano core nowego php Å¼e uzyskano 2 krotny wzrost wydajnoÅ›ci. GoÅ›Ä‡ omÃ³wiÅ‚ rÃ³Å¼nice (php 5.5 vs php 7) w strukturach danych typÃ³w danych w php 
 
 ## Surviving the next Upgrade
 
-Stefan opowiedzia³ o problemie zale¿noœci w projektach. Wskaza³ problem aktualizowania vendora którego wykorzystujemy w projekcie. Nie powinno byæ sytu³acji kiedy nasz biznes zale¿y od kogoœ innego i nie mamy nad tym tak naprawdê ¿adnej kontroli. Pokaza³ jak do tego dobrze podchodziæ (najlepiej unikaæ). Przekazywanie ca³ego kontenera DI np do kontrollera nie jest dobrym pomys³em. Poda³ przyk³ad z symfony kod $this->get('mailer'); nie wiadomo co zwraca. Lepiej zrobiæ metodê getMailer() gdzie mo¿na zdefiniowaæ sobie konkretnie co metoda ma zwróciæ, a najlepiej wstrzykiwaæ zale¿noœæ przez konstruktor. Zawsze nale¿y konkretnie definiowaæ zale¿noœci. Aby odzieliæ nasz¹ domenê od frameworka nale¿y definiowaæ interfejs który bêdzie odzwierciedla³ potrzeby logiki domenowej a nastêpnie pisaæ do tego adaptery. Dziêki temu zmiana w zale¿nych komponentach frameworka poci¹gnie za sob¹ jedynie koniecznoœæ zmiany adaptera a nie interfejsu naszej domeny. 
+Stefan opowiedziaÅ‚ o problemie zaleÅ¼noÅ›ci w projektach. WskazaÅ‚ problem aktualizowania vendora ktÃ³rego wykorzystujemy w projekcie. Nie powinno byÄ‡ sytuÅ‚acji kiedy nasz biznes zaleÅ¼y od kogoÅ› innego i nie mamy nad tym tak naprawdÄ™ Å¼adnej kontroli. PokazaÅ‚ jak do tego dobrze podchodziÄ‡ (najlepiej unikaÄ‡). Przekazywanie caÅ‚ego kontenera DI np do kontrollera nie jest dobrym pomysÅ‚em. PodaÅ‚ przykÅ‚ad z symfony kod $this->get('mailer'); nie wiadomo co zwraca. Lepiej zrobiÄ‡ metodÄ™ getMailer() gdzie moÅ¼na zdefiniowaÄ‡ sobie konkretnie co metoda ma zwrÃ³ciÄ‡, a najlepiej wstrzykiwaÄ‡ zaleÅ¼noÅ›Ä‡Â przez konstruktor. Zawsze naleÅ¼y konkretnie definiowaÄ‡ zaleÅ¼noÅ›ci. Aby odzieliÄ‡ naszÄ… domenÄ™ od frameworka naleÅ¼y definiowaÄ‡ interfejs ktÃ³ry bÄ™dzie odzwierciedlaÅ‚ potrzeby logiki domenowej a nastÄ™pnie pisaÄ‡ do tego adaptery. DziÄ™ki temu zmiana w zaleÅ¼nych komponentach frameworka pociÄ…gnie za sobÄ… jedynie koniecznoÅ›Ä‡ zmiany adaptera a nie interfejsu naszej domeny. 
 
 ## Optimizing the Performance of Mobile Web Apps
 
-Ogólnie head of development mobidev wywar³ bardzo s³abe wra¿enie. Panowie pokazali kilka przydatnych tipów które mo¿na wykorzystaæ podczas tworzenia aplikacji mobilnej. Pokazali flow jak wygl¹da generowanie strony html w przegl¹darce. Pokazali problem z repaintem elementów layoutu podczas robienia animacji. Pokazali jak przenosiæ operacje do gpu które jesty wydajniejsze przy niektórych animacjach. Wykorzystanie wzorców projektowych Flyweight i Observer.
+OgÃ³lnie head of development mobidev wywarÅ‚ bardzo sÅ‚abe wraÅ¼enie. Panowie pokazali kilka przydatnych tipÃ³w ktÃ³re moÅ¼na wykorzystaÄ‡ podczas tworzenia aplikacji mobilnej. Pokazali flow jak wyglÄ…da generowanie strony html w przeglÄ…darce. Pokazali problem z repaintem elementÃ³w layoutu podczas robienia animacji. Pokazali jak przenosiÄ‡ operacje do gpu ktÃ³re jesty wydajniejsze przy niektÃ³rych animacjach. Wykorzystanie wzorcÃ³w projektowych Flyweight i Observer.

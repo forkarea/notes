@@ -1,4 +1,4 @@
-# dBConf 2015 - 
+# dBConf 2015 - Hucisko
 
 Data: *23 - 25 października 2015*
 
@@ -29,5 +29,25 @@ Data: *23 - 25 października 2015*
 *Marcin Bardź*
 
 - Palm Os - PDB - format ciągle wykorzystywany w przypadku ebooków
-- LevelDB - key-value storage system
+- LevelDB - key-value storage system, Google
 - BSON - Binary JSON
+
+## Złączenia w modelu Map/Reduce
+
+*Maciej Penar*
+
+- MapReduce
+  - Map - grupowanie
+  - Reduce - agregacja
+  - Flow: Map -> Shuffle (internal in Hadoop) -> Reduce
+- Standardowe sposoby złączeń
+  - Nested Loops Join
+  - Sort-Merge Join
+  - Hash Join
+- Algorytmy złączeń MapReduce
+  - Two-Way Joins (Reduce-Side Join, Map-Side Join, Broadcast Join)
+  - Multi-Way Joins (Map-Side Join, Reduce-Side One-Shot Join, Reduce-Side Cascade Join)
+- Podsumownaie
+  - używaj gotowych frameworków do złączeń - Hive, Pig
+  - pisz kod w ostateczności
+  - zwróć uwagę na inne modele programistyczne np. PACT
