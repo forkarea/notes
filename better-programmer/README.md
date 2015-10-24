@@ -116,6 +116,7 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
   - na poziomie statycznej analizy kodu
   - na poziomie testowania - jednostkowego, akceptacyjnego (w oparciu o acceptance criteria), funkcjonalnego
 - Zwróć uwagę na zrównoleglenie procesów automatycznych. W przypadku testów automatycznych opartych o Selenium można wykorzystać Selenium-Grid w celu równoległego uruchomienia testów na różnych komputerach (z różnymi przeglądarkami, systemami operacyjnymi).
+- Wykorzystaj *.bash_profile* dodając do niego np. aliasy dla długich poleceń. Jako przykład może posłużyć Ci:https://jtreminio.com/2012/04/my-bash-aliases-file/
 
 ## Baza danych
 
