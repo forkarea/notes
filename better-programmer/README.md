@@ -63,7 +63,9 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
 
 **Zasada Pareto (zasada 80/20)** - 20% pracy przynosi 80% zysku.
 
-**KISS** - Keep It Simple, Stupid. 
+**KISS** - Keep It Simple, Stupid.
+
+**Too Many Targets** - Skupiaj się na jednej rzeczy. Rozpocznij ją i skończ. Nie zostawiaj rzeczy częściowo zrealizowanych - ciężko się do nich wraca.
 
 ## Rekrutacja
 
@@ -97,6 +99,14 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
   - Metody. Metodologie - XP, Scrum, Lean, Kanban, wodospadu, analizy strukturalnej i projektowania strukturalnego
   - Dziedziny. Korzystanie z TDD, projektowania obiektowego, programowania strukturalnego, ciągłej integracji i programowania w parach
   - Artefakty. Umiejętność korzystania z UML, DFD, wykresów struktur, sieci Petriego, diagramów i tabel przejść stanów, diagramów przepływu oraz tabeli decyzji
+- "Nie mam czasu" - nie jest wymówką, prawdopodobnie źle zarządzasz swoim czasem. MUSISZ mieć czas na rozwój, naukę nowych technologii/narzędzi, w innym wypadku - wypadniesz z gry.
+- Wymyślaj MAŁE i PROSTE projekty które możesz szybko zrealizować w nieznanych Ci językach programowania, z wykorzystaniem nieznanych Ci narzędzi. To świetna okazja na naukę czegoś nowego. Przykłady takich projektów? Proszę:
+  - komunikacja z API - np. GitHub, Twitter,
+  - analiza wydźwięku komentarzy - np. znajdujących się w bazie noSQL,
+  - RealTime Chat - np. websockets, TCP/IP,
+  - klient któregoś z protokołów - np. HTTP, IRC, FTP,
+  - lista ToDo (nazywana ostatnio nowym "Hello Worldem" programowania)
+- Jednak nie nauczysz się niczego, jeżeli będzie próbował nauczyć się wszystkiego.
 
 ##  DOJO programowania
 
@@ -116,7 +126,8 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
   - na poziomie statycznej analizy kodu
   - na poziomie testowania - jednostkowego, akceptacyjnego (w oparciu o acceptance criteria), funkcjonalnego
 - Zwróć uwagę na zrównoleglenie procesów automatycznych. W przypadku testów automatycznych opartych o Selenium można wykorzystać Selenium-Grid w celu równoległego uruchomienia testów na różnych komputerach (z różnymi przeglądarkami, systemami operacyjnymi).
-- Wykorzystaj *.bash_profile* dodając do niego np. aliasy dla długich poleceń. Jako przykład może posłużyć Ci:https://jtreminio.com/2012/04/my-bash-aliases-file/
+- Wykorzystaj *.bash_profile* dodając do niego np. aliasy dla długich poleceń. Jako przykład może posłużyć Ci: https://jtreminio.com/2012/04/my-bash-aliases-file/
+- Ciężko jest zbudować coś "na już" od zera. Naucz się korzystać z Boilerplate Code, a nawet stówrz własny z ulubionym zestawem narzędzi - wtedy start nad koncepcyjnym rozwiązaniem będzie o wiele łatwiejszy i szybszy. Po co, po raz kolejny tworzyć konfigurację z często używanymi rozwiązaniami dla Grunta, Bowera, Composera itp?
 
 ## Baza danych
 
