@@ -17,10 +17,7 @@ Data: *23 - 25 października 2015*
 - Model Data Vault:
   - *Hub* - pozwalajaca na identyfikacje bytu danych, np. pracownik z numerem PESEL,
   - *Satelita* - opisuje byty: hub, link, atrybuty opisowe np. zarobki pracownika,
-  - *Link* - powiązania, np. huba Klient z hubem Produkt poprzez transakcję Sprzedaż,
-- Przykład pokazany na prezentacji:
-  - rewizjonowanie danych
-  - dodawanie nowego źródła danych = dodawanie po prostu kolejnych satelit
+  - *Link* - powiązania, np. huba Klient z hubem Produkt poprzez transakcję Sprzedaż
 - Narzędzia
   - Benchmark TPC H 
 
@@ -76,3 +73,77 @@ http://opi-lil.github.io
   - ile słów negatywnych, ile słów pozytywnych - budowanie indeksu naiwnego
   - wysoki procent poprawności wydźwięku pomimo zastosowania prostych metod
 - Buzzword: Deep Learning
+
+## PostgreSQL jako baza NoSQL
+
+*Szymon Lipiński*
+
+- rodzaje noSQL
+  - baza klucz-wartość
+    - get(key) -> value
+    - put(key, value)
+    - delete(key)
+  - baza kolumnowa
+  - baza dokumentowa
+  - baza grafowa
+- logika biznesowa
+  - zapisana w aplikacji
+  - brak reguł w bazie danych
+    - ktoś może bezpośrednio wrzucić nieprawidłowe dane do tabel
+    - np. mail wprowadzony w aplikacji jest normalizowany do postaci: LOWER(mail)
+    - np. nowa aplikacja - programista nie zna reguł, wrzuca wartości prost do bazy = mamy nieprawidłowe dane
+- JSON vs JSONB
+  - json - tekst, zawsze parsowany
+  - jsonb - forma binarna, wolniejszy INSERT, szybsze przetwarzanie
+- PostgreSQL jako noSQL - pole o typie "json"
+  - ```CREATE TABLE products (data JSON);```
+  - pole *data* będzie teraz przyjmować tylko dane w formacie JSON
+  
+Format odwoływania się do pola w JSON:
+
+```
+(JSON_STRING->>'FIELD_NAME')::TYPE
+
+(data->>'id')::integer
+```
+
+Dane typ *string* nie wymagają rzutowania.
+
+Ograniczenia dla poszczególnych pól JSONa umieszczonego w kolumnie *data*:
+
+```sql
+// table definition
+
+CREATE TABLE products (
+  data JSON,
+  CONSTRAINT validate_id CHECK ((data->>'id')::integer >= 1 AND (data->>'id') IS NOT NULL ),
+  CONSTRAINT validate_name CHECK (length(data->>'name') > 0 AND (data->>'name') IS NOT NULL ),
+  CONSTRAINT validate_description CHECK (length(data->>'description') > 0  AND (data->>'description') IS NOT NULL ),
+  CONSTRAINT validate_price CHECK ((data->>'price')::decimal >= 0.0 AND (data->>'price') IS NOT NULL),
+  CONSTRAINT validate_currency CHECK (data->>'currency' = 'dollars' AND (data->>'currency') IS NOT NULL),
+  CONSTRAINT validate_in_stock CHECK ((data->>'in_stock')::integer >= 0 AND (data->>'in_stock') IS NOT NULL )
+}
+
+// unique indexes
+
+CREATE UNIQUE INDEX ui_products_id ON products((data->>'id'));
+CREATE UNIQUE INDEX ui_products_name ON products((data->>'name'));
+```
+
+Wyszukiwanie po konkretnym polu zawartym w JSON:
+
+``sql
+SELECT * FROM products WHERE (data->>'in_stock')::integer > 0 ORDER BY (data->>'price')::decimal DESC LIMIT 1;
+```
+
+## Better than yesterday - ładowanie hurtowni w czasie rzeczywistym* z wykorzystaniem metodologii Data Vault
+
+*Mateusz Jerzyk*
+
+## PostgreSQL na wysokich obrotach
+
+*Adam Buraczewski*
+
+## MySQL 5.7
+
+*Marcin Szałowicz*
