@@ -132,7 +132,7 @@ CREATE UNIQUE INDEX ui_products_name ON products((data->>'name'));
 
 Wyszukiwanie po konkretnym polu zawartym w JSON:
 
-``sql
+```sql
 SELECT * FROM products WHERE (data->>'in_stock')::integer > 0 ORDER BY (data->>'price')::decimal DESC LIMIT 1;
 ```
 
