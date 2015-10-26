@@ -2,6 +2,8 @@
 
 Data: *23 - 25 października 2015*
 
+Trendy: *Data Vault*, *PostgreSQL*, *Business Intelligence*, *WareHouse*.
+
 ## Data Vault, czyli z głową w chmurze
 
 *Adrian Najczuk*
@@ -19,7 +21,7 @@ Data: *23 - 25 października 2015*
   - *Satelita* - opisuje byty: hub, link, atrybuty opisowe np. zarobki pracownika,
   - *Link* - powiązania, np. huba Klient z hubem Produkt poprzez transakcję Sprzedaż
 - Narzędzia
-  - Benchmark TPC H 
+  - Benchmark TPC H
 
 ## 15 lat męczarni, czyli moje boje z mobilnymi bazami danych
 
@@ -140,6 +142,21 @@ SELECT * FROM products WHERE (data->>'in_stock')::integer > 0 ORDER BY (data->>'
 
 *Mateusz Jerzyk*
 
+- Data Vault - Zalety
+  - elastyczne podejście do DataWarehouse
+  - łatwa zmiana zasad biznesowych
+  - skalowalność
+  - dane historyczne
+  - szybkie wyszukiwanie błędów
+- Data Vault - wady
+  - dużo tabel
+  - nieczytelny dla biznesu
+  - mnóstwo złączeń (JOIN)
+- ładujemy HUBy -> Load Satelit + Load Links (ładowanie współbierzne) - Load Links Satelites
+- Narzędzia
+  - Talend*
+  - Cognos Framework Manager
+
 ## PostgreSQL na wysokich obrotach
 
 *Adam Buraczewski*
@@ -148,7 +165,7 @@ SELECT * FROM products WHERE (data->>'in_stock')::integer > 0 ORDER BY (data->>'
 
 *Marcin Szałowicz*
 
-- MySQL 5.7.9 w liczbach
+- MySQL 5.7 w liczbach
   - 1007 nowych testów
   - 365 worklogów
   - 2812 poprawionych bugów
