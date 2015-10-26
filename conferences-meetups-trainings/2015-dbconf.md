@@ -161,6 +161,62 @@ SELECT * FROM products WHERE (data->>'in_stock')::integer > 0 ORDER BY (data->>'
 
 *Adam Buraczewski*
 
+- Czemu PostgreSQL?
+  - SQL, XML, JSON, FTS, języki proceduralne
+  - kilkaset równoległych klientów to nie problem
+  - mały narzut
+  - bezpieczeństwo danych
+  - Open Source - dobrej jakości kod + społeczność
+- Problemy w większych instancjach
+  - monitoring - wydajnościowy, I/O
+  - tuning serwera
+  - czynności administracyjne - backup, replikacja, load balancing, upgrade wersji PostgreSQL, upgrade schematu bazy danych
+- Wady
+  - połączenie do bazy danych = sesja = proces = 1 rdzeń CPU
+  - zapytania skomplikowane nie są rozkładane pomiędzy CPU
+  - nie używa wątków
+  - nawiązywanie połączenia jest kosztowne (uruchomienie podprocesu który wykonuje sporo czynności wstępnych)
+  - statyczna alokacja pamięci współdzielonej (od razu na starcie) - nie można jej zmienić bez restartu (używana jest m.in jako cache)
+  - replikacja master - slave działa tylko w obrębie tej samej wersji np. 9.4 z 9.3 nie będzie działać
+- Monitoring
+  - Stats Collector
+    - kto jest połączony do której bazy co robi, ile to trwa
+    - wykorzystanie: baz, tabel, indeksów, funkcji
+  - SQL - tabele pg_locks, pg_stat_activity
+  - [pg_activity](https://github.com/julmon/pg_activity/)
+- Analiza wydajności
+  - *ANALYZE* - budowanie statystyk tabel
+  - *EXPLAIN* - plan zapytania
+  - *EXPLAIN ANALYZE*
+  - projekty
+    - [pg_qualstats](https://github.com/dalibo/pg_qualstats)
+    - [hypopg](https://github.com/dalibo/hypopg)
+    - [pgbadger](https://github.com/dalibo/pgbadger)
+    - [PoWA](http://dalibo.github.io/powa) - PostgreSQL Workload Analyzer
+      - Stats Collector
+      - Real-time Graphs
+      - Performance Charts
+- Sprzątanie bazy
+  - PostgreSQL - UPDATE wykonuje jako DELETE + INSERT
+  - odzyskanie miejsca = VACUUM
+  - VACUUM FULL - blokuje tabele, przepisuje zawartość do nowego pliku
+  - [pg_repack](https://github.com/reorg/pg_repack) - *reorganize tables with minimal locks*
+- Emergency - tryb single
+  - ```postgres --single -D data nazwa```
+- Przestrzenie tabel - pozwalają na rozmieszczenie obiektów bazy danych na różnych fizycznych dyskach
+- Load Balancing
+  - [pgpoll](http://www.pgpool.net/)
+    - connection pooling (tworzy X połączeń a potem je "rozdaje")
+    - load balancing
+    - logical replication
+    - własny cache (może pominąć wykonywanie zapytań SQL bezpośrednio na serwerze PostgreSQL)
+    - przełączanie pomiędzy serwerami w momencie faila
+  - [PgBouncer](https://pgbouncer.github.io/) - connecion pooling
+- Kopie bezpieczeństwa
+  - [Barman](http://www.pgbarman.org/)
+    - zarządzanie backupami
+    - Point-in-Time-Recovery
+
 ## MySQL 5.7
 
 *Marcin Szałowicz*
