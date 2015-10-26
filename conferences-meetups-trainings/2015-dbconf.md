@@ -147,3 +147,35 @@ SELECT * FROM products WHERE (data->>'in_stock')::integer > 0 ORDER BY (data->>'
 ## MySQL 5.7
 
 *Marcin Szałowicz*
+
+- MySQL 5.7.9 w liczbach
+  - 1007 nowych testów
+  - 365 worklogów
+  - 2812 poprawionych bugów
+  - 26k -> 56k per sec connect/disconnect
+- InnoDB
+  - Integration with memcached (już wcześniej)
+  - online buffer pool resizing
+  - buffer pull - dump add load
+  - faster CREATER INDEX
+  - obsługa indeksów R-Trees
+- Strict Mode
+  - aktualnie domyślnie włączony
+  - deprecated SQL modes: ERROR_FOR_DIVISION_BY_ZERO, NO_ZERO_DATE, NO_ZERO_IN_DATE
+- GIS - przechowywanie danych geometrycznych
+  - InnoDB R-Trees
+  - Boost::Geometry
+  - Geohash - input/output
+  - GeoJSON - input/output
+- JSON
+  - jako natywny typ danych
+  - walidacja poprawności zapisywanego JSONa
+  - funkcje jsn_*
+  - indeksowanie konkretnego pola z JSONa - wirtualna kolumna
+- mysqlpump
+  - ma zastąpić mysqldump
+  - działa wielowątkowo = szybszy niż mysqldump
+- usunięto
+  - mysqlbug, mysql_zap, mysql_waitpid, mysqlhotcopy
+- native syslog support
+- całkowita ucieczka od MyISAM
