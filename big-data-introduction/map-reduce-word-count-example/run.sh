@@ -1,0 +1,1 @@
+php map.php < lorem-ipsum.txt | php reduce.php
