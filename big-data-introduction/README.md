@@ -8,9 +8,17 @@ Wprowadzenie w świat Big Data
 - trudne przetwarzanie i analiza
 - rezultat analizy może być wartościowy - prowadzący do zdobycia nowej wiedzy
 
-Model 3V i 4V - opisuje czym jest Big Data.
+> Big data is like teenage sex:
+> everyone talks about it,
+> nobody really knows how to do it,
+> everyone thinks everyone else is doing it,
+> so everyone claims the are doing it.
+>
+> -- *Dan Ariely, Duke University*
 
-### Model 3V
+Big Data - zbiory danych, których nie jesteśmy w stanie analizować z użyciem tradycyjnych narzędzi (np. baza danych) ze względu na swoją skalę.
+
+### Big Data według modelu 3V
 
 *2001 rok, META Group - aktualnie Gartner*
 
@@ -20,10 +28,9 @@ Model 3V i 4V - opisuje czym jest Big Data.
 
 [Laney Douglas: 3D Data Management: Controlling Data Volume, Velocity and Variety](http://blogs.gartner.com/doug-laney/files/2012/01/ad949-3D-Data-Management-Controlling-Data-Volume-Velocity-and-Variety.pdf)
 
-### Model 4V
+### Big Data według modelu 4V
 
-- 3V
-- *value* - weryfikacja - danych, wniosków, założeń
+- model 3V + *value* - weryfikacja (danych, wniosków, założeń)
 
 ## MapReduce
 
