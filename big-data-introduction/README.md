@@ -18,7 +18,9 @@ Wprowadzenie w świat Big Data
 
 W oparciu o uzyskane dane można:
 
-- podjmować decyzje biznesowe
+- podjmować decyzje biznesowe, a dzięki nim:
+  - zwiększać zyski
+  - redukować koszta
 - prognozować - np. stan giełdy
 - rekomendować - e-commerce
 - uczyć - sztuczna inteligencja
@@ -30,15 +32,18 @@ Big Data - zbiory danych, których nie jesteśmy w stanie analizować z użyciem
 
 *2001 rok, META Group - aktualnie Gartner*
 
-- *volume* - duża ilość danych (MB, GB, TB, PB)
-- *velocity* - szybkość - napływania nowych danych, analizy (batch, periodic, near Real Time, Real Time)
-- *variety* - duża różnorodność danych (różne źródła, różne formaty - database, photo, audio, social media, video, mobile)
+- *volume* - duża ilość danych
+  - ```MB -> GB -> TB -> PB```
+- *velocity* - szybkość - napływania nowych danych, analizy
+  - ```batch -> periodic -> near Real Time -> Real Time```
+- *variety* - duża różnorodność danych - różne źródła, formaty
+  - ```database -> photo, audio -> social media, video, mobile```
 
 [Laney Douglas: 3D Data Management: Controlling Data Volume, Velocity and Variety](http://blogs.gartner.com/doug-laney/files/2012/01/ad949-3D-Data-Management-Controlling-Data-Volume-Velocity-and-Variety.pdf)
 
 ### Big Data według modelu 4V
 
-- model 3V + *value* - weryfikacja (danych, wniosków, założeń, zdybywanie wiedzy)
+- model 3V + *value* - weryfikacja (danych, wniosków, założeń, zdobywanie wiedzy)
 
 ### Przykład Big Data
 
@@ -59,8 +64,8 @@ Big Data - zbiory danych, których nie jesteśmy w stanie analizować z użyciem
 
 - [StackExchange](https://archive.org/details/stackexchange)
 - [Wikipedia](https://en.wikipedia.org/wiki/Wikipedia:Database_download)
-- [Milion Song Dataset](http://labrosa.ee.columbia.edu/millionsong/)
-- Twitter (API, Streaming API)
+- [Milion Song Dataset](http://labrosa.ee.columbia.edu/millionsong)
+- Twitter (REST API, Streaming API)
 
 ## MapReduce
 
@@ -86,10 +91,19 @@ Przykłady:
 - Open Source
 - korzysta z paradygmatu MapReduce
 
-### TODO
+### HDFS
 
-- HDFS
-- Hive, HBase, Pig, Cassandra
+- rozproszony system plików
+- nie wymaga specjalnego sprzętu - uruchamiany na przeciętnych maszynach
+- strumieniowy dostęp do danych
+
+### Pig
+
+-
+
+*TODO*
+
+- Hive, HBase, Cassandra
 - Chukwa, ZooKeeper, Avro, Flume, Sqoop, Thrift
 
 Pipelines of batch jobs:
