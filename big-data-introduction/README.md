@@ -68,6 +68,7 @@ Big Data - zbiory danych, których nie jesteśmy w stanie analizować z użyciem
 - Twitter
   - [REST API](https://dev.twitter.com/rest/public)
   - [Streaming API](https://dev.twitter.com/streaming/overview)
+- [GitHub API](https://developer.github.com/v3/)
 
 ## MapReduce
 
@@ -123,4 +124,6 @@ Przykłady:
 ## Wizualizacja
 
 - [D3.js - Data-Driven Documents](http://d3js.org)
-- [Hue](http://gethue.com)
+- [Hue](http://gethue.com)\
+
+Przykład: [future-of-development.azurewebsites.net](http://future-of-development.azurewebsites.net)
