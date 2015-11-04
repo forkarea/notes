@@ -18,7 +18,7 @@ Wprowadzenie w świat Big Data
 
 W oparciu o uzyskane dane można:
 
-- podjmować decyzje biznesowe, a dzięki nim:
+- podejmować decyzje biznesowe, a dzięki nim:
   - zwiększać zyski
   - redukować koszta
 - prognozować - np. stan giełdy
@@ -65,7 +65,9 @@ Big Data - zbiory danych, których nie jesteśmy w stanie analizować z użyciem
 - [StackExchange](https://archive.org/details/stackexchange)
 - [Wikipedia](https://en.wikipedia.org/wiki/Wikipedia:Database_download)
 - [Milion Song Dataset](http://labrosa.ee.columbia.edu/millionsong)
-- Twitter (REST API, Streaming API)
+- Twitter
+  - [REST API](https://dev.twitter.com/rest/public)
+  - [Streaming API](https://dev.twitter.com/streaming/overview)
 
 ## MapReduce
 
@@ -88,30 +90,37 @@ Przykłady:
 ### Hadoop
 
 - rozproszony system do przetwarzania informacji
-- Open Source
 - korzysta z paradygmatu MapReduce
+- fault-tolerant
+- łatwa skalowalność - szybkie dokładanie kolejnego węzła Hadoop
+- projekt Open Source
+- Hadoop Core to:
+  - HDFS
+  - YARN
+  - MapReduce
+  - Hadoop Common
 
 ### HDFS
 
 - rozproszony system plików
 - nie wymaga specjalnego sprzętu - uruchamiany na przeciętnych maszynach
 - strumieniowy dostęp do danych
+- skoncentrowany na obsługę dużych plików
 
-### Pig
+### Avro
 
--
+- system serializacji danych w uniwersalnym formacie
+- cross programming language
 
-*TODO*
+### Inne
 
-- Hive, HBase, Cassandra
-- Chukwa, ZooKeeper, Avro, Flume, Sqoop, Thrift
+- Pig, Hive, HBase, Cassandra
+- Chukwa, ZooKeeper, Flume, Sqoop, Thrift
+- Pipelines of batch jobs:
+  - Oozie
+  - [Lugi](https://github.com/spotify/luigi)
 
-Pipelines of batch jobs:
+## Wizualizacja
 
-- Oozie
-- Lugi - https://github.com/spotify/luigi
-
-Wizualizacja:
-
-- D3.js
-- Hue - http://gethue.com/
+- [D3.js - Data-Driven Documents](http://d3js.org)
+- [Hue](http://gethue.com)
