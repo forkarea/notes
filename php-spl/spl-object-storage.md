@@ -9,7 +9,7 @@ Kontekst przykładów
 ```php
 $os = new SplObjectStorage();
 
-for($i = 1; $i <= 3; $i++) {
+for ($i = 1; $i <= 3; $i++) {
     $object = new StdClass();
     $object->name = 'Object - '.$i;
 
@@ -21,6 +21,15 @@ Dodaj obiekt do storage
 
 ```php
 $os->attach(new StdClass());
+```
+
+Usuń obiekt z storage
+
+```php
+$stdObject = new StdClass();
+$os->attach($stdObject);
+
+$os->detach($stdObject);
 ```
 
 Ilość obiektów w storage
@@ -35,7 +44,9 @@ Dodaj wszystkie obiekty z innej instancji SplObjectStorage
 $os2 = new SplObjectStorage();
 $os2->attach(new StdClass);
 $os2->attach(new StdClass);
+
 $os->addAll($os2);
+
 echo $os->count(); // 5
 ```
 
@@ -43,7 +54,7 @@ Iterowanie po dodanych obiektach
 
 ```php
 foreach($os as $item) {
-    echo $item->name.PHP_EOL;
+    echo $item->name . PHP_EOL;
 }
 ```
 
@@ -51,6 +62,7 @@ Sprawdź czy w storage istnieje konkretny obiekt
 
 ```php
 $newObject = new StdClass();
+
 var_dump($os->contains($newObject)); // false
 $os->attach($newObject);
 var_dump($os->contains($newObject)); // true
