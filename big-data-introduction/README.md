@@ -124,6 +124,6 @@ Przykłady:
 ## Wizualizacja
 
 - [D3.js - Data-Driven Documents](http://d3js.org)
-- [Hue](http://gethue.com)\
+- [Hue](http://gethue.com)
 
 Przykład: [future-of-development.azurewebsites.net](http://future-of-development.azurewebsites.net)
