@@ -67,6 +67,8 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
 
 **Too Many Targets** - Skupiaj się na jednej rzeczy. Rozpocznij ją i skończ. Nie zostawiaj rzeczy częściowo zrealizowanych - ciężko się do nich wraca.
 
+**Latency Numbers Every Programmer Should Know** - [via Jonas Bonér](https://gist.github.com/jboner/2841832)
+
 ## Rekrutacja
 
 - Warto zadbać o listę przygotowanych pytań, które zadajemy każdemu kandydatowi. Pod każdą z technologii (z której nasza wiedza pozwala na rekrutowanie :-)) przygotowujemy pytania o formie otwartej. Ważne aby pytania pogrupować według poziomu - rozpoczynając od tych najłatwiejszych, kończąc na tych najtrudniejszych. Takie pogrupowanie bardzo pomaga w przełamywaniu pierwszych lodów dodatkowo dajesz czas kandydatowi na obycie się z Twoją własną osobą.
