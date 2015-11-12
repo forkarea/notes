@@ -11,6 +11,7 @@ Short notes about software development.
 * [D3.js - Data-Driven Documents](d3js) - Manipulating documents based on data (*in progress...*)
 * [Domain-Driven Design](domain-driven-design) - Notes about DDD (*in progress...*)
 * [ELK - Zapanuj nad logami](elk-zapanuj-nad-logami) - Elasticsearch Logstash Kibana
+* [PHP - Bitwise Operators](php-bitwise-operators.md) - Evaluation and manipulation of specific bits within an integer
 * [PHP - DateTime Class](php-datetime-class.md) - Representation of date and time
 * [PHP - Doctrine ORM](php-doctrine-orm) - Object Relational Mapper for PHP (*in progress...*)
 * [PHP - Memcached](php-memcached) - High-performance, distributed memory object caching system
