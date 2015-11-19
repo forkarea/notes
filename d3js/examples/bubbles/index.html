@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../_static/app.css">
+</head>
+<body>
+    <div class="container">
+        <h1>D3.js - Bubbles</h1><hr>
+        <div id="svg"></div>
+    </div>
+
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/d3.js"></script>
+    <script src="../_static/d3.legend.js"></script>
+    
+    <script src="draw.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var psv = d3.dsv(' ', 'text/plain');
+            psv('results.txt', function(data) {
+                drawChart(data);
+            });
+        });
+    </script>
+</body>
+</html>

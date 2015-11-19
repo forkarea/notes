@@ -4,9 +4,32 @@ D3.js is a JavaScript library for manipulating documents based on data.
 
 ## Examples
 
-- Line chart
-- Pie chart
-- Word Cloud
+- [Bubbles](examples/bubbles)
+- [Line Chart](examples/lines)
+- [Pie Chart](examples/pie)
+- [Word Cloud](examples/word-cloud)
+
+## Colors
+
+```js
+// defined
+var c10 = d3.scale.category10();
+var c20 = d3.scale.category20();
+var c20b = d3.scale.category20b();
+var c20c = d3.scale.category20c();
+
+// own
+function my_colores(n) {
+  var colores = ['gray', 'black', 'red', 'maroon', 'yellow', 'olive', 'green', 'aqua', 'blue', 'pink', 'purple'];
+  return colores[n % colores.length];
+}
+
+// usage
+element.attr('fill', c10);
+element.attr('fill', c20);
+
+element.attr('fill', function(d, i) { return my_colores(i); });
+```
 
 ## Loading data
 
