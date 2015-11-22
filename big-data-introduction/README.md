@@ -70,56 +70,22 @@ Big Data - zbiory danych, których nie jesteśmy w stanie analizować z użyciem
   - [Streaming API](https://dev.twitter.com/streaming/overview)
 - [GitHub API](https://developer.github.com/v3/)
 
-## MapReduce
-
-Trzy etapy:
-
-- Map - przetwarzanie danych wejściowych do postaci ```klucz : wartość```
-- Shuffle - sortowanie i grupowanie danych względem kluczy
-- Reduce - łączenie danych, przygotowanie ostatecznego wyniku
-
-```
-Input -> Map -> Shuffle -> Reduce
-```
-
-Przykłady:
-
-- [Word Count Example](map-reduce-word-count-example/)
-
 ## Narzędzia
 
-### Hadoop
-
-- rozproszony system do przetwarzania informacji
-- korzysta z paradygmatu MapReduce
-- fault-tolerant
-- łatwa skalowalność - szybkie dokładanie kolejnego węzła Hadoop
-- projekt Open Source
-- Hadoop Core to:
-  - HDFS
-  - YARN
-  - MapReduce
-  - Hadoop Common
-
-### HDFS
-
-- rozproszony system plików
-- nie wymaga specjalnego sprzętu - uruchamiany na przeciętnych maszynach
-- strumieniowy dostęp do danych
-- skoncentrowany na obsługę dużych plików
-
-### Avro
-
-- system serializacji danych w uniwersalnym formacie
-- cross programming language
+- [Apache Hadoop](hadoop.md)
+- [Apache Pig](pig.md) 
 
 ### Inne
 
-- Pig, Hive, HBase, Cassandra
+- Ambari
+- Hive, HBase, Cassandra
 - Chukwa, ZooKeeper, Flume, Sqoop, Thrift
 - Pipelines of batch jobs:
   - Oozie
   - [Lugi](https://github.com/spotify/luigi)
+- Avro
+  - system serializacji danych w uniwersalnym formacie
+  - cross programming language
 
 ## Wizualizacja
 
