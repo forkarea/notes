@@ -20,6 +20,20 @@
 - strumieniowy dostêp do danych
 - skoncentrowany na obs³ugê du¿ych plików
 
+### Przydatne polecenia
+
+```shell
+# Lists the contents of a directory
+$: hdfs dfs -ls
+
+# Copy file from local file system to the HDFS
+$: hdfs dfs -put localfile.ext ./hdfsfile.ext
+$: hdfs dfs -put /local/directory ./hdfs/directory
+
+# Copy files from HDFS to the local file system
+$: hdfs dfs -put ./hdfsfile.ext localfile.ext
+```
+
 ## MapReduce
 
 ### Trzy etapy MapReduce
