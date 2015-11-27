@@ -69,3 +69,13 @@ Big Data - zbiory danych, których nie jesteśmy w stanie analizować z użyciem
   - [REST API](https://dev.twitter.com/rest/public)
   - [Streaming API](https://dev.twitter.com/streaming/overview)
 - [GitHub API](https://developer.github.com/v3/)
+
+### Model ETL
+
+*Extract, Transform and Load*
+
+- pozyskanie danych ze źródeł zewnętrznych 
+- przekształcenie danych 
+- załadowanie danych do bazy danych 
+
+Przykładowe narzędzia: Talend, SQL Server Integration Services

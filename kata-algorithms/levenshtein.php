@@ -3,7 +3,7 @@
 // Levenshtein distance:
 // https://en.wikipedia.org/wiki/Levenshtein_distance
 
-// Internal implementation in PHP (does not support for utf8 string)
+// Internal implementation in PHP (does not support utf)
 // http://php.net/manual/en/function.levenshtein.php
 
 function distance($word1, $word2) {
