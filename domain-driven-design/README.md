@@ -1,13 +1,16 @@
 # Domain-Driven Design
 
-Notatki na temat DDD
+Notatki na temat DDD.
 
-## Co to jest DDD?
+## DDD - a co to jest?
+
+*@todo*
 
 ## Index
 
-* [Value Objects](value-objects.md)
-* [Aggregate](aggregate.md)
+- [Aggregate](aggregate.md)
+- [Entity](entity.md)
+- [Value Objects](value-objects.md)
 
 ## Przykładowa separacja w projekcie
 

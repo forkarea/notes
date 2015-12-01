@@ -2,10 +2,29 @@
 
 ## Notatki
 
-Reprezentują byty, które nie posiadają własnej tożsamości i nie zmieniają wewnętrznego stanu - są obiektami
-*immutable* czyli po utworzeniu instacji obiektu *Value Object* nie ma możliwości zmodyfikowania jego właściwości.
+- reprezentują byty, które nie posiadają własnej tożsamości i nie zmieniają wewnętrznego stanu - są obiektami
+*immutable* czyli po utworzeniu instacji obiektu *Value Object* nie ma możliwości zmodyfikowania jego właściwości,
+- *Value Object* może składać się z innych *Value Object* (przykład z VO *Money*),
+- zawiera walidację, która defakto powinna być powielona/sprawdzona w warstwie aplikacyjnej, tak aby walidacja VO była ostatecznością (np. gdy programista zapomni o jej implementacji w warstwie wyżej),
+- Side-Effect-Free, czyli zwracanie wyniku operacji bez modyfikowania aktualnej instancji obiektu - poprzez zwrócenie nowego obiektu, np. "dodawania" dwóch VO.
 
-Przykład zastosowania:
+```php
+// side-effect-free
+// ...
+public function add(Money $money)
+{
+    if ($this->currency !== $money->currency) {
+        throw new InvalidArgumentException('Cant add money with different currency!');
+    }
+    
+    $amount = $this->amount + $money->amount;
+    
+    return new Money($amount, $this->currency);
+}
+```
+
+## Przykład zastosowania:
+
 - id, guid,
 - adres e-mail
 - pesel, nip, regon,
@@ -35,7 +54,7 @@ final class UserGuid
     private function guard($guid)
     {
         if (!empty($guid) || !preg_match('/^\{?[A-Z0-9]{8}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{12}\}?$/', $guid)) {
-            throw new \InvalidArgumentException("Invalid guid.");
+            throw new \InvalidArgumentException('Invalid guid.');
         }
     }
 }
