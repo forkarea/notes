@@ -9,6 +9,7 @@ Short notes about software development.
 - [D3.js - Data-Driven Documents](d3js) - Manipulating documents based on data (*in progress...*)
 - [Domain-Driven Design](domain-driven-design) - Notes about DDD (*in progress...*)
 - [ELK - Zapanuj nad logami](elk-zapanuj-nad-logami) - Elasticsearch Logstash Kibana
+- [Websocket WAMP](https://github.com/adrianpietka/websocket-wamp) - The Web Application Messaging Protocol
 
 ### Big Data
 
@@ -29,7 +30,6 @@ Short notes about software development.
 - [Memcached](php-memcached) - High-performance, distributed memory object caching system
 - [PHP-DI](php-di) - The Dependency Injection Container for humans
 - [SPL](php-spl) - Standard PHP Library (*in progress...*)
-- [WAMP](php-wamp.md) - The Web Application Messaging Protocol (*in progress...*)
 - [Validate JSON schema](php-validate-json-schema.md) - Validate JSON Schema in PHP
 
 ## Contact
