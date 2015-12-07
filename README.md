@@ -30,7 +30,8 @@ Short notes about software development.
 - [Doctrine ORM](php-doctrine-orm) - Object Relational Mapper for PHP (*in progress...*)
 - [Memcached](php-memcached) - High-performance, distributed memory object caching system
 - [PHP-DI](php-di) - The Dependency Injection Container for humans
-- [SPL](php-spl) - Standard PHP Library (*in progress...*)
+- SPL - Standard PHP Library
+  - [SPL - SplObjectStorage](php-spl/spl-object-storage.md) - Object map
 - [Validate JSON schema](php-validate-json-schema.md) - Validate JSON Schema in PHP
 
 ## Contact
