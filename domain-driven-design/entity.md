@@ -2,9 +2,9 @@
 
 ## Notatki
 
-Reprezentacja bytów posiadaj¹cych to¿samoœci - unikalny identyfikator.
+Reprezentacja bytÃ³w posiadajÄ…cych toÅ¼samoÅ›ci - unikalny identyfikator.
 
-## Przyk³ad
+## PrzykÅ‚ad
 
 ```php
 namespace BusinessName/Domain/Entity;
