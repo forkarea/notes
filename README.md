@@ -24,6 +24,7 @@ Short notes about software development.
 
 ### PHP
 
+- [PHP 7 Features](php-7-features) - Code examples for the new features in PHP 7
 - [Bitwise Operators](php-bitwise-operators.md) - Evaluation and manipulation of specific bits within an integer
 - [DateTime Class](php-datetime-class.md) - Representation of date and time
 - [Doctrine ORM](php-doctrine-orm) - Object Relational Mapper for PHP (*in progress...*)
