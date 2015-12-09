@@ -1,140 +1,140 @@
-# Zarz¹dzanie sob¹ w czasie
+# Zarzï¿½dzanie sobï¿½ w czasie
 
-## Pu³apki
+## Puï¿½apki
 
-- nic nie muszê zmieniaæ
-- mogê zrobiæ wszystko na raz
-- gdy czujê, ¿e siê napracowa³em - jest dobrze
+- nic nie muszï¿½ zmieniaï¿½
+- mogï¿½ zrobiï¿½ wszystko na raz
+- gdy czujï¿½, ï¿½e siï¿½ napracowaï¿½em - jest dobrze
 
 ## Nowe nawyki
 
-- dyskomfort na pocz¹tku
+- dyskomfort na poczï¿½tku
 - ... dyskomfort mija po pewnym czasie :-)
 
 ## Konsekwencja
 
-Wymówka -> Nie polemizuj -> Zrób to!
+Wymï¿½wka -> Nie polemizuj -> Zrï¿½b to!
 
 ## Cele
 
-Simple - prosty, wiadomo co nale¿y zrobiæ
-Measurable - jak to zmierzê
-Achievable - osi¹galne? dlaczego?
+Simple - prosty, wiadomo co naleï¿½y zrobiï¿½
+Measurable - jak to zmierzï¿½
+Achievable - osiï¿½galne? dlaczego?
 Relevant - realistyczny, istotne dla mnie?
 Timely-defined - mierzalny w czasie
 
-## Czas to zasób
+## Czas to zasï¿½b
 
-- mo¿na prawie wszystko osi¹gn¹æ maj¹c czas
+- moï¿½na prawie wszystko osiï¿½gnï¿½ï¿½ majï¿½c czas
 - ile kosztuje moja godzina?
-- co zrobiê w ci¹gu godziny?
-- faktyczny koszt towarów i us³ug
+- co zrobiï¿½ w ciï¿½gu godziny?
+- faktyczny koszt towarï¿½w i usï¿½ug
 - prawo alternatywy
 
 ## Zasada Pareto
 
 > 20% akcji jest odpowiedzialne za 80% sukcesu
 
-## Dzia³anie vs Planowanie
+## Dziaï¿½anie vs Planowanie
 
-> Kiedy planujesz nie dzia³aj,
-> kiedy dzia³asz nie planuj.
+> Kiedy planujesz nie dziaï¿½aj,
+> kiedy dziaï¿½asz nie planuj.
 
 ## Ego a cele
 
-- myœlenie o czymœ co nie ma sensu
-- k³ótnie
+- myï¿½lenie o czymï¿½ co nie ma sensu
+- kï¿½ï¿½tnie
 - rezygnacja z powodu strachu
-- koncentracja na wra¿eniu ("szpan")
+- koncentracja na wraï¿½eniu ("szpan")
 
-> "A po co ja to robiê?"
+> "A po co ja to robiï¿½?"
 
 ## Planowanie
 
-- nie wszystko jest w g³owie
+- nie wszystko jest w gï¿½owie
 - rozdziel problem na mniejsze
-- ró¿ne stany emocjonalne (czasem siê chce, a czasem nie)
+- rï¿½ne stany emocjonalne (czasem siï¿½ chce, a czasem nie)
 
-### Jak planowaæ?
+### Jak planowaï¿½?
 
-- cele d³ugoplanowe (praca, zdrowie, hobby, pasje, rozwój, relacje)
-- miesiêczne
+- cele dï¿½ugoplanowe (praca, zdrowie, hobby, pasje, rozwï¿½j, relacje)
+- miesiï¿½czne
 - tygodniowe
 - dzienne
 
-Cel d³ugofalowy dziel na cele miesiêczne, te na tygodniowe, a tygodniowe na dzienne. Dziel i zwyciê¿aj.
+Cel dï¿½ugofalowy dziel na cele miesiï¿½czne, te na tygodniowe, a tygodniowe na dzienne. Dziel i zwyciï¿½aj.
 
 ## Notatki
 
-- lista co zrobiæ
-- rzeczy do przemyœlenia
-- pomys³y
-- wiedza (ksi¹¿ki, artyku³y)
-- eventy - co zrobiæ z podzia³em np. checklista z punktami
+- lista co zrobiï¿½
+- rzeczy do przemyï¿½lenia
+- pomysï¿½y
+- wiedza (ksiï¿½ï¿½ki, artykuï¿½y)
+- eventy - co zrobiï¿½ z podziaï¿½em np. checklista z punktami
 
 ## Priorytety
 
-- A - najwa¿niejsze,
-- B - wa¿ne, odpad³y w selekcji do A,
-- C - mo¿na wykonaæ po A i B
+- A - najwaï¿½niejsze,
+- B - waï¿½ne, odpadï¿½y w selekcji do A,
+- C - moï¿½na wykonaï¿½ po A i B
 
 ## Macierz Eisenhowera
 
-x | Wa¿ne | Nie wa¿ne
---|-------|----------
-Pilne | Dokoñczenie implementacji nowej funkcjonalnoœci | Zapisanie siê na szkolenie
-Nie pilne | Wdro¿enie nowej wersji FV | Sprawdzenie iloœci mo¿liwych wejœæ na karnecie basenowym
+|   | Waï¿½ne | Nie waï¿½ne |
+| ------------- | ------------- | ------------- |
+| Pilne | Dokoï¿½czenie implementacji nowej funkcjonalnoï¿½ci | Zapisanie siï¿½ na szkolenie |
+| Nie pilne | Wdroï¿½enie nowej wersji FV | Sprawdzenie iloï¿½ci moï¿½liwych wejï¿½ï¿½ na karnecie basenowym |
 
-Wa¿ne = sytuacje krytyczne
+Waï¿½ne = sytuacje krytyczne
 
-## Lista 3 najwa¿niejszych czynnoœci
+## Lista 3 najwaï¿½niejszych czynnoï¿½ci
 
-- per dzieñ
-- zwi¹zane z celem (np. d³ugofalowym)
+- per dzieï¿½
+- zwiï¿½zane z celem (np. dï¿½ugofalowym)
 - priorytety ABC
 
-## Wydajnoœæ
+## Wydajnoï¿½ï¿½
 
-- *multitasking* - jest z³y. Rób jedn¹ rzecz na raz. Prócz czynnoœci które siê nie wykluczaj¹, np. audiobook - æwiczenia na si³owni.
+- *multitasking* - jest zï¿½y. Rï¿½b jednï¿½ rzecz na raz. Prï¿½cz czynnoï¿½ci ktï¿½re siï¿½ nie wykluczajï¿½, np. audiobook - ï¿½wiczenia na siï¿½owni.
 - nawodnienie sprzyja koncentracji
-- z³odzieje czasu - np. robienie porz¹dku na biurku i w komputerze zamiast skupienie siê zadaniu
+- zï¿½odzieje czasu - np. robienie porzï¿½dku na biurku i w komputerze zamiast skupienie siï¿½ zadaniu
 - zmiana zadania ~ 1h
 - niech nikt nie przeszkadza...
-- przerwy - zrobiæ coœ innego (oderwanie siê od celu nad którym siê staramy skupiæ - kawa, æwiczenia)
+- przerwy - zrobiï¿½ coï¿½ innego (oderwanie siï¿½ od celu nad ktï¿½rym siï¿½ staramy skupiï¿½ - kawa, ï¿½wiczenia)
 
 ## Prokrastynacja
 
-... czyli odk³adanie rzeczy na póŸniej
+... czyli odkï¿½adanie rzeczy na pï¿½niej
 
 ### Efekt Zeigarnik 
 
-Nie lubiê czegoœ robiæ -> Robiê to przez X minut -> Po tym czasie dzia³am dalej lub przerywam.
+Nie lubiï¿½ czegoï¿½ robiï¿½ -> Robiï¿½ to przez X minut -> Po tym czasie dziaï¿½am dalej lub przerywam.
 
-Istnieje wiêksze prawdopodobieñstwo, ¿e bêdê to kontynuowa³ (mniej mi siê nie chce). Ju¿ to zacz¹³em, poci¹gnê to dalej aby byæ bli¿ej koñca.
+Istnieje wiï¿½ksze prawdopodobieï¿½stwo, ï¿½e bï¿½dï¿½ to kontynuowaï¿½ (mniej mi siï¿½ nie chce). Juï¿½ to zaczï¿½ï¿½em, pociï¿½gnï¿½ to dalej aby byï¿½ bliï¿½ej koï¿½ca.
 
 ## Tips&Tricks
 
-- telefon vs SMS (krótka rozmowa vs 10 smsów),
-- asertywnoœæ - nie bój siê mówiæ NIE, masz sporo swoich spraw,
+- telefon vs SMS (krï¿½tka rozmowa vs 10 smsï¿½w),
+- asertywnoï¿½ï¿½ - nie bï¿½j siï¿½ mï¿½wiï¿½ NIE, masz sporo swoich spraw,
 - komunikatory - 2h rozmowy bez celu,
-- sprawdzanie maila i innych inboxów - jak najmniej ich, najlepiej kierowaæ wszystko w jedno miejsce, sprawdzaæ cyklicznie np. o 8:00, 12:00, 15:00
-- robienie przy okazji - np. nie lubie staæ w korku, ale sprawdzam wtedy inboxa :-)
-- nagrywanie w TV - aby omin¹æ reklamy, zobaczyæ póŸniej
-- audiobook - mo¿emy s³uchaæ w samochodzie, podczas æwiczeñ
-- lista zawsze przy sobie - z pomys³ami, z TODO, aby szybko coœ dopisaæ
+- sprawdzanie maila i innych inboxï¿½w - jak najmniej ich, najlepiej kierowaï¿½ wszystko w jedno miejsce, sprawdzaï¿½ cyklicznie np. o 8:00, 12:00, 15:00
+- robienie przy okazji - np. nie lubie staï¿½ w korku, ale sprawdzam wtedy inboxa :-)
+- nagrywanie w TV - aby ominï¿½ï¿½ reklamy, zobaczyï¿½ pï¿½niej
+- audiobook - moï¿½emy sï¿½uchaï¿½ w samochodzie, podczas ï¿½wiczeï¿½
+- lista zawsze przy sobie - z pomysï¿½ami, z TODO, aby szybko coï¿½ dopisaï¿½
 - robienie gdy nikt nie robi - np. zakupy o 23 w Tesco :-)
 
-## 10 cytatów nt. zarz¹dzania czasem
+## 10 cytatï¿½w nt. zarzï¿½dzania czasem
 
-- Ty siê spóŸniasz, czas nigdy.
+- Ty siï¿½ spï¿½niasz, czas nigdy.
 - Nigdy nie odzyskasz czasu straconego.
-- Czas to pieni¹dz.
-- Nigdy nie odk³adaj do jutra tego, co mo¿esz zrobiæ dzisiaj.
-- Ten, kto wstaje póŸno, musi gnaæ przez ca³y dzieñ i nadrabiaæ swoje sprawy w nocy.
-- Jedno dziœ równa siê dwa jutra.
-- Wczesne chodzenie spaæ i wczesne wstawanie czyni¹ cz³owieka zdrowym, zamo¿nym i m¹drym.
-- Dobrze zrobione jest lepsze ni¿ dobrze powiedziane.
-- Je¿eli kochasz ¿ycie, nie traæ czasu, bo z czasu sk³ada siê ¿ycie.
-- Nie starzeje siê ten, kto nie ma na to czasu.
+- Czas to pieniï¿½dz.
+- Nigdy nie odkï¿½adaj do jutra tego, co moï¿½esz zrobiï¿½ dzisiaj.
+- Ten, kto wstaje pï¿½no, musi gnaï¿½ przez caï¿½y dzieï¿½ i nadrabiaï¿½ swoje sprawy w nocy.
+- Jedno dziï¿½ rï¿½wna siï¿½ dwa jutra.
+- Wczesne chodzenie spaï¿½ i wczesne wstawanie czyniï¿½ czï¿½owieka zdrowym, zamoï¿½nym i mï¿½drym.
+- Dobrze zrobione jest lepsze niï¿½ dobrze powiedziane.
+- Jeï¿½eli kochasz ï¿½ycie, nie traï¿½ czasu, bo z czasu skï¿½ada siï¿½ ï¿½ycie.
+- Nie starzeje siï¿½ ten, kto nie ma na to czasu.
 
 *Benjamin Franklin*, via http://lifehacking.pl/benjamin-franklin-10-cytatow-nt-zarzadzania-czasem/
