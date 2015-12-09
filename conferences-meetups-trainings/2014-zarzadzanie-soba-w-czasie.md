@@ -123,3 +123,18 @@ Istnieje wiêksze prawdopodobieñstwo, ¿e bêdê to kontynuowa³ (mniej mi siê nie ch
 - audiobook - mo¿emy s³uchaæ w samochodzie, podczas æwiczeñ
 - lista zawsze przy sobie - z pomys³ami, z TODO, aby szybko coœ dopisaæ
 - robienie gdy nikt nie robi - np. zakupy o 23 w Tesco :-)
+
+## 10 cytatów nt. zarz¹dzania czasem
+
+- Ty siê spóŸniasz, czas nigdy.
+- Nigdy nie odzyskasz czasu straconego.
+- Czas to pieni¹dz.
+- Nigdy nie odk³adaj do jutra tego, co mo¿esz zrobiæ dzisiaj.
+- Ten, kto wstaje póŸno, musi gnaæ przez ca³y dzieñ i nadrabiaæ swoje sprawy w nocy.
+- Jedno dziœ równa siê dwa jutra.
+- Wczesne chodzenie spaæ i wczesne wstawanie czyni¹ cz³owieka zdrowym, zamo¿nym i m¹drym.
+- Dobrze zrobione jest lepsze ni¿ dobrze powiedziane.
+- Je¿eli kochasz ¿ycie, nie traæ czasu, bo z czasu sk³ada siê ¿ycie.
+- Nie starzeje siê ten, kto nie ma na to czasu.
+
+*Benjamin Franklin*, via http://lifehacking.pl/benjamin-franklin-10-cytatow-nt-zarzadzania-czasem/
