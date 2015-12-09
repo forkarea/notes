@@ -80,7 +80,7 @@ Cel d³ugofalowy dziel na cele miesiêczne, te na tygodniowe, a tygodniowe na dzie
 
 ## Macierz Eisenhowera
 
-- | Wa¿ne | Nie wa¿ne
+x | Wa¿ne | Nie wa¿ne
 --|-------|----------
 Pilne | Dokoñczenie implementacji nowej funkcjonalnoœci | Zapisanie siê na szkolenie
 Nie pilne | Wdro¿enie nowej wersji FV | Sprawdzenie iloœci mo¿liwych wejœæ na karnecie basenowym
