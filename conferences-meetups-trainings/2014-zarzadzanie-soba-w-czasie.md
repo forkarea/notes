@@ -1,125 +1,125 @@
-# Zarz¹dzanie sob¹ w czasie
+# ZarzÄ…dzanie sobÄ… w czasie
 
-## Pu³apki
+## PuÅ‚apki
 
-- nic nie muszê zmieniaæ
-- mogê zrobiæ wszystko na raz
-- gdy czujê, ¿e siê napracowa³em - jest dobrze
+- nic nie muszÄ™ zmieniaÄ‡
+- mogÄ™ zrobiÄ‡ wszystko na raz
+- gdy czujÄ™, Å¼e siÄ™ napracowaÅ‚em - jest dobrze
 
 ## Nowe nawyki
 
-- dyskomfort na pocz¹tku
+- dyskomfort na poczÄ…tku
 - ... dyskomfort mija po pewnym czasie :-)
 
 ## Konsekwencja
 
-Wymówka -> Nie polemizuj -> Zrób to!
+WymÃ³wka -> Nie polemizuj -> ZrÃ³b to!
 
 ## Cele
 
-Simple - prosty, wiadomo co nale¿y zrobiæ
-Measurable - jak to zmierzê
-Achievable - osi¹galne? dlaczego?
+Simple - prosty, wiadomo co naleÅ¼y zrobiÄ‡
+Measurable - jak to zmierzÄ™
+Achievable - osiÄ…galne? dlaczego?
 Relevant - realistyczny, istotne dla mnie?
 Timely-defined - mierzalny w czasie
 
-## Czas to zasób
+## Czas to zasÃ³b
 
-- mo¿na prawie wszystko osi¹gn¹æ maj¹c czas
+- moÅ¼na prawie wszystko osiÄ…gnÄ…Ä‡ majÄ…c czas
 - ile kosztuje moja godzina?
-- co zrobiê w ci¹gu godziny?
-- faktyczny koszt towarów i us³ug
+- co zrobiÄ™ w ciÄ…gu godziny?
+- faktyczny koszt towarÃ³w i usÅ‚ug
 - prawo alternatywy
 
 ## Zasada Pareto
 
 > 20% akcji jest odpowiedzialne za 80% sukcesu
 
-## Dzia³anie vs Planowanie
+## DziaÅ‚anie vs Planowanie
 
-> Kiedy planujesz nie dzia³aj,
-> kiedy dzia³asz nie planuj.
+> Kiedy planujesz nie dziaÅ‚aj,
+> kiedy dziaÅ‚asz nie planuj.
 
 ## Ego a cele
 
-- myœlenie o czymœ co nie ma sensu
-- k³ótnie
+- myÅ›lenie o czymÅ› co nie ma sensu
+- kÅ‚Ã³tnie
 - rezygnacja z powodu strachu
-- koncentracja na wra¿eniu ("szpan")
+- koncentracja na wraÅ¼eniu ("szpan")
 
-> "A po co ja to robiê?"
+> "A po co ja to robiÄ™?"
 
 ## Planowanie
 
-- nie wszystko jest w g³owie
+- nie wszystko jest w gÅ‚owie
 - rozdziel problem na mniejsze
-- ró¿ne stany emocjonalne (czasem siê chce, a czasem nie)
+- rÃ³Å¼ne stany emocjonalne (czasem siÄ™ chce, a czasem nie)
 
-### Jak planowaæ?
+### Jak planowaÄ‡?
 
-- cele d³ugoplanowe (praca, zdrowie, hobby, pasje, rozwój, relacje)
-- miesiêczne
+- cele dÅ‚ugoplanowe (praca, zdrowie, hobby, pasje, rozwÃ³j, relacje)
+- miesiÄ™czne
 - tygodniowe
 - dzienne
 
-Cel d³ugofalowy dziel na cele miesiêczne, te na tygodniowe, a tygodniowe na dzienne. Dziel i zwyciê¿aj.
+Cel dÅ‚ugofalowy dziel na cele miesiÄ™czne, te na tygodniowe, a tygodniowe na dzienne. Dziel i zwyciÄ™Å¼aj.
 
 ## Notatki
 
-- lista co zrobiæ
-- rzeczy do przemyœlenia
-- pomys³y
-- wiedza (ksi¹¿ki, artyku³y)
-- eventy - co zrobiæ z podzia³em np. checklista z punktami
+- lista co zrobiÄ‡
+- rzeczy do przemyÅ›lenia
+- pomysÅ‚y
+- wiedza (ksiÄ…Å¼ki, artykuÅ‚y)
+- eventy - co zrobiÄ‡ z podziaÅ‚em np. checklista z punktami
 
 ## Priorytety
 
-- A - najwa¿niejsze,
-- B - wa¿ne, odpad³y w selekcji do A,
-- C - mo¿na wykonaæ po A i B
+- A - najwaÅ¼niejsze,
+- B - waÅ¼ne, odpadÅ‚y w selekcji do A,
+- C - moÅ¼na wykonaÄ‡ po A i B
 
 ## Macierz Eisenhowera
 
-x | Wa¿ne | Nie wa¿ne
---|-------|----------
-Pilne | Dokoñczenie implementacji nowej funkcjonalnoœci | Zapisanie siê na szkolenie
-Nie pilne | Wdro¿enie nowej wersji FV | Sprawdzenie iloœci mo¿liwych wejœæ na karnecie basenowym
+|   | WaÅ¼ne | Nie waÅ¼ne |
+| ------------- | ------------- | ------------- |
+| Pilne | DokoÅ„czenie implementacji nowej funkcjonalnoÅ›ci | Zapisanie siÄ™ na szkolenie |
+| Nie pilne | WdroÅ¼enie nowej wersji FV | Sprawdzenie iloÅ›ci moÅ¼liwych wejÅ›Ä‡ na karnecie basenowym |
 
-Wa¿ne = sytuacje krytyczne
+WaÅ¼ne = sytuacje krytyczne
 
-## Lista 3 najwa¿niejszych czynnoœci
+## Lista 3 najwaÅ¼niejszych czynnoÅ›ci
 
-- per dzieñ
-- zwi¹zane z celem (np. d³ugofalowym)
+- per dzieÅ„
+- zwiÄ…zane z celem (np. dÅ‚ugofalowym)
 - priorytety ABC
 
-## Wydajnoœæ
+## WydajnoÅ›Ä‡
 
-- *multitasking* - jest z³y. Rób jedn¹ rzecz na raz. Prócz czynnoœci które siê nie wykluczaj¹, np. audiobook - æwiczenia na si³owni.
+- *multitasking* - jest zÅ‚y. RÃ³b jednÄ… rzecz na raz. PrÃ³cz czynnoÅ›ci ktÃ³re siÄ™ nie wykluczajÄ…, np. audiobook - Ä‡wiczenia na siÅ‚owni.
 - nawodnienie sprzyja koncentracji
-- z³odzieje czasu - np. robienie porz¹dku na biurku i w komputerze zamiast skupienie siê zadaniu
+- zÅ‚odzieje czasu - np. robienie porzÄ…dku na biurku i w komputerze zamiast skupienie siÄ™ zadaniu
 - zmiana zadania ~ 1h
 - niech nikt nie przeszkadza...
-- przerwy - zrobiæ coœ innego (oderwanie siê od celu nad którym siê staramy skupiæ - kawa, æwiczenia)
+- przerwy - zrobiÄ‡ coÅ› innego (oderwanie siÄ™ od celu nad ktÃ³rym siÄ™ staramy skupiÄ‡ - kawa, Ä‡wiczenia)
 
 ## Prokrastynacja
 
-... czyli odk³adanie rzeczy na póŸniej
+... czyli odkÅ‚adanie rzeczy na pÃ³Åºniej
 
 ### Efekt Zeigarnik 
 
-Nie lubiê czegoœ robiæ -> Robiê to przez X minut -> Po tym czasie dzia³am dalej lub przerywam.
+Nie lubiÄ™ czegoÅ› robiÄ‡ -> RobiÄ™ to przez X minut -> Po tym czasie dziaÅ‚am dalej lub przerywam.
 
-Istnieje wiêksze prawdopodobieñstwo, ¿e bêdê to kontynuowa³ (mniej mi siê nie chce). Ju¿ to zacz¹³em, poci¹gnê to dalej aby byæ bli¿ej koñca.
+Istnieje wiÄ™ksze prawdopodobieÅ„stwo, Å¼e bÄ™dÄ™ to kontynuowaÅ‚ (mniej mi siÄ™ nie chce). JuÅ¼ to zaczÄ…Å‚em, pociÄ…gnÄ™ to dalej aby byÄ‡ bliÅ¼ej koÅ„ca.
 
 ## Tips&Tricks
 
-- telefon vs SMS (krótka rozmowa vs 10 smsów),
-- asertywnoœæ - nie bój siê mówiæ NIE, masz sporo swoich spraw,
+- telefon vs SMS (krÃ³tka rozmowa vs 10 smsÃ³w),
+- asertywnoÅ›Ä‡ - nie bÃ³j siÄ™ mÃ³wiÄ‡ NIE, masz sporo swoich spraw,
 - komunikatory - 2h rozmowy bez celu,
-- sprawdzanie maila i innych inboxów - jak najmniej ich, najlepiej kierowaæ wszystko w jedno miejsce, sprawdzaæ cyklicznie np. o 8:00, 12:00, 15:00
-- robienie przy okazji - np. nie lubie staæ w korku, ale sprawdzam wtedy inboxa :-)
-- nagrywanie w TV - aby omin¹æ reklamy, zobaczyæ póŸniej
-- audiobook - mo¿emy s³uchaæ w samochodzie, podczas æwiczeñ
-- lista zawsze przy sobie - z pomys³ami, z TODO, aby szybko coœ dopisaæ
+- sprawdzanie maila i innych inboxÃ³w - jak najmniej ich, najlepiej kierowaÄ‡ wszystko w jedno miejsce, sprawdzaÄ‡ cyklicznie np. o 8:00, 12:00, 15:00
+- robienie przy okazji - np. nie lubie staÄ‡ w korku, ale sprawdzam wtedy inboxa :-)
+- nagrywanie w TV - aby ominÄ…Ä‡ reklamy, zobaczyÄ‡ pÃ³Åºniej
+- audiobook - moÅ¼emy sÅ‚uchaÄ‡ w samochodzie, podczas Ä‡wiczeÅ„
+- lista zawsze przy sobie - z pomysÅ‚ami, z TODO, aby szybko coÅ› dopisaÄ‡
 - robienie gdy nikt nie robi - np. zakupy o 23 w Tesco :-)
