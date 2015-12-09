@@ -1,140 +1,140 @@
-# Zarz�dzanie sob� w czasie
+# Zarządzanie sobą w czasie
 
-## Pu�apki
+## Pułapki
 
-- nic nie musz� zmienia�
-- mog� zrobi� wszystko na raz
-- gdy czuj�, �e si� napracowa�em - jest dobrze
+- nic nie muszę zmieniać
+- mogę zrobić wszystko na raz
+- gdy czuję, że się napracowałem - jest dobrze
 
 ## Nowe nawyki
 
-- dyskomfort na pocz�tku
+- dyskomfort na początku
 - ... dyskomfort mija po pewnym czasie :-)
 
 ## Konsekwencja
 
-Wym�wka -> Nie polemizuj -> Zr�b to!
+Wymówka -> Nie polemizuj -> Zrób to!
 
 ## Cele
 
-Simple - prosty, wiadomo co nale�y zrobi�
-Measurable - jak to zmierz�
-Achievable - osi�galne? dlaczego?
+Simple - prosty, wiadomo co należy zrobić
+Measurable - jak to zmierzę
+Achievable - osiągalne? dlaczego?
 Relevant - realistyczny, istotne dla mnie?
 Timely-defined - mierzalny w czasie
 
-## Czas to zas�b
+## Czas to zasób
 
-- mo�na prawie wszystko osi�gn�� maj�c czas
+- można prawie wszystko osiągnąć mając czas
 - ile kosztuje moja godzina?
-- co zrobi� w ci�gu godziny?
-- faktyczny koszt towar�w i us�ug
+- co zrobię w ciągu godziny?
+- faktyczny koszt towarów i usług
 - prawo alternatywy
 
 ## Zasada Pareto
 
 > 20% akcji jest odpowiedzialne za 80% sukcesu
 
-## Dzia�anie vs Planowanie
+## Działanie vs Planowanie
 
-> Kiedy planujesz nie dzia�aj,
-> kiedy dzia�asz nie planuj.
+> Kiedy planujesz nie działaj,
+> kiedy działasz nie planuj.
 
 ## Ego a cele
 
-- my�lenie o czym� co nie ma sensu
-- k��tnie
+- myślenie o czymś co nie ma sensu
+- kłótnie
 - rezygnacja z powodu strachu
-- koncentracja na wra�eniu ("szpan")
+- koncentracja na wrażeniu ("szpan")
 
-> "A po co ja to robi�?"
+> "A po co ja to robię?"
 
 ## Planowanie
 
-- nie wszystko jest w g�owie
+- nie wszystko jest w głowie
 - rozdziel problem na mniejsze
-- r�ne stany emocjonalne (czasem si� chce, a czasem nie)
+- różne stany emocjonalne (czasem się chce, a czasem nie)
 
-### Jak planowa�?
+### Jak planować?
 
-- cele d�ugoplanowe (praca, zdrowie, hobby, pasje, rozw�j, relacje)
-- miesi�czne
+- cele długoplanowe (praca, zdrowie, hobby, pasje, rozwój, relacje)
+- miesięczne
 - tygodniowe
 - dzienne
 
-Cel d�ugofalowy dziel na cele miesi�czne, te na tygodniowe, a tygodniowe na dzienne. Dziel i zwyci�aj.
+Cel długofalowy dziel na cele miesięczne, te na tygodniowe, a tygodniowe na dzienne. Dziel i zwyciężaj.
 
 ## Notatki
 
-- lista co zrobi�
-- rzeczy do przemy�lenia
-- pomys�y
-- wiedza (ksi��ki, artyku�y)
-- eventy - co zrobi� z podzia�em np. checklista z punktami
+- lista co zrobić
+- rzeczy do przemyślenia
+- pomysły
+- wiedza (książki, artykuły)
+- eventy - co zrobić z podziałem np. checklista z punktami
 
 ## Priorytety
 
-- A - najwa�niejsze,
-- B - wa�ne, odpad�y w selekcji do A,
-- C - mo�na wykona� po A i B
+- A - najważniejsze,
+- B - ważne, odpadły w selekcji do A,
+- C - można wykonać po A i B
 
 ## Macierz Eisenhowera
 
-|   | Wa�ne | Nie wa�ne |
+|   | Ważne | Nie ważne |
 | ------------- | ------------- | ------------- |
-| Pilne | Doko�czenie implementacji nowej funkcjonalno�ci | Zapisanie si� na szkolenie |
-| Nie pilne | Wdro�enie nowej wersji FV | Sprawdzenie ilo�ci mo�liwych wej�� na karnecie basenowym |
+| Pilne | Dokończenie implementacji nowej funkcjonalności | Zapisanie się na szkolenie |
+| Nie pilne | Wdrożenie nowej wersji FV | Sprawdzenie ilości możliwych wejść na karnecie basenowym |
 
-Wa�ne = sytuacje krytyczne
+Ważne = sytuacje krytyczne
 
-## Lista 3 najwa�niejszych czynno�ci
+## Lista 3 najważniejszych czynności
 
-- per dzie�
-- zwi�zane z celem (np. d�ugofalowym)
+- per dzień
+- związane z celem (np. długofalowym)
 - priorytety ABC
 
-## Wydajno��
+## Wydajność
 
-- *multitasking* - jest z�y. R�b jedn� rzecz na raz. Pr�cz czynno�ci kt�re si� nie wykluczaj�, np. audiobook - �wiczenia na si�owni.
+- *multitasking* - jest zły. Rób jedną rzecz na raz. Prócz czynności które się nie wykluczają, np. audiobook - ćwiczenia na siłowni.
 - nawodnienie sprzyja koncentracji
-- z�odzieje czasu - np. robienie porz�dku na biurku i w komputerze zamiast skupienie si� zadaniu
+- złodzieje czasu - np. robienie porządku na biurku i w komputerze zamiast skupienie się zadaniu
 - zmiana zadania ~ 1h
 - niech nikt nie przeszkadza...
-- przerwy - zrobi� co� innego (oderwanie si� od celu nad kt�rym si� staramy skupi� - kawa, �wiczenia)
+- przerwy - zrobić coś innego (oderwanie się od celu nad którym się staramy skupić - kawa, ćwiczenia)
 
 ## Prokrastynacja
 
-... czyli odk�adanie rzeczy na p�niej
+... czyli odkładanie rzeczy na później
 
 ### Efekt Zeigarnik 
 
-Nie lubi� czego� robi� -> Robi� to przez X minut -> Po tym czasie dzia�am dalej lub przerywam.
+Nie lubię czegoś robić -> Robię to przez X minut -> Po tym czasie działam dalej lub przerywam.
 
-Istnieje wi�ksze prawdopodobie�stwo, �e b�d� to kontynuowa� (mniej mi si� nie chce). Ju� to zacz��em, poci�gn� to dalej aby by� bli�ej ko�ca.
+Istnieje większe prawdopodobieństwo, że będę to kontynuował (mniej mi się nie chce). Już to zacząłem, pociągnę to dalej aby być bliżej końca.
 
 ## Tips&Tricks
 
-- telefon vs SMS (kr�tka rozmowa vs 10 sms�w),
-- asertywno�� - nie b�j si� m�wi� NIE, masz sporo swoich spraw,
+- telefon vs SMS (krótka rozmowa vs 10 smsów),
+- asertywność - nie bój się mówić NIE, masz sporo swoich spraw,
 - komunikatory - 2h rozmowy bez celu,
-- sprawdzanie maila i innych inbox�w - jak najmniej ich, najlepiej kierowa� wszystko w jedno miejsce, sprawdza� cyklicznie np. o 8:00, 12:00, 15:00
-- robienie przy okazji - np. nie lubie sta� w korku, ale sprawdzam wtedy inboxa :-)
-- nagrywanie w TV - aby omin�� reklamy, zobaczy� p�niej
-- audiobook - mo�emy s�ucha� w samochodzie, podczas �wicze�
-- lista zawsze przy sobie - z pomys�ami, z TODO, aby szybko co� dopisa�
+- sprawdzanie maila i innych inboxów - jak najmniej ich, najlepiej kierować wszystko w jedno miejsce, sprawdzać cyklicznie np. o 8:00, 12:00, 15:00
+- robienie przy okazji - np. nie lubie stać w korku, ale sprawdzam wtedy inboxa :-)
+- nagrywanie w TV - aby ominąć reklamy, zobaczyć później
+- audiobook - możemy słuchać w samochodzie, podczas ćwiczeń
+- lista zawsze przy sobie - z pomysłami, z TODO, aby szybko coś dopisać
 - robienie gdy nikt nie robi - np. zakupy o 23 w Tesco :-)
 
-## 10 cytat�w nt. zarz�dzania czasem
+## 10 cytatów nt. zarządzania czasem
 
-- Ty si� sp�niasz, czas nigdy.
+- Ty się spóźniasz, czas nigdy.
 - Nigdy nie odzyskasz czasu straconego.
-- Czas to pieni�dz.
-- Nigdy nie odk�adaj do jutra tego, co mo�esz zrobi� dzisiaj.
-- Ten, kto wstaje p�no, musi gna� przez ca�y dzie� i nadrabia� swoje sprawy w nocy.
-- Jedno dzi� r�wna si� dwa jutra.
-- Wczesne chodzenie spa� i wczesne wstawanie czyni� cz�owieka zdrowym, zamo�nym i m�drym.
-- Dobrze zrobione jest lepsze ni� dobrze powiedziane.
-- Je�eli kochasz �ycie, nie tra� czasu, bo z czasu sk�ada si� �ycie.
-- Nie starzeje si� ten, kto nie ma na to czasu.
+- Czas to pieniądz.
+- Nigdy nie odkładaj do jutra tego, co możesz zrobić dzisiaj.
+- Ten, kto wstaje późno, musi gnać przez cały dzień i nadrabiać swoje sprawy w nocy.
+- Jedno dziś równa się dwa jutra.
+- Wczesne chodzenie spać i wczesne wstawanie czynią człowieka zdrowym, zamożnym i mądrym.
+- Dobrze zrobione jest lepsze niż dobrze powiedziane.
+- Jeżeli kochasz życie, nie trać czasu, bo z czasu składa się życie.
+- Nie starzeje się ten, kto nie ma na to czasu.
 
 *Benjamin Franklin*, via http://lifehacking.pl/benjamin-franklin-10-cytatow-nt-zarzadzania-czasem/
