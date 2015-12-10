@@ -89,4 +89,4 @@ var_dump($os);
 
 ## Przykład użycia
 
-Implementacja wzorca *Observer* przy użyciu *SPL* (*SplObserver*, *SplSubject*, *SplObjectStorage*).
+[Implementacja wzorca *Observer* przy użyciu *SPL* (*SplObserver*, *SplSubject*, *SplObjectStorage*)](spl-observer-pattern.php)
