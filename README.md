@@ -20,6 +20,7 @@ Short notes about software development.
 ### Kata
 
 - [Algorithms](kata-algorithms) - Practicing algorithms
+- [AngularJS](kata-angularjs) - Practicing AngularJS
 - [Concepts](kata-concepts) - Concepts of architecture and solutions for typical problems
 
 ### PHP
