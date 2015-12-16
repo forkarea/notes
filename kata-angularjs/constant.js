@@ -1,3 +1,5 @@
+// Defining an application configuration
+
 var app = angular.module('LoremIpsumApp', []);
 
 app.constant('config', {
