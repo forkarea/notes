@@ -23,6 +23,12 @@ Short notes about software development.
 - [AngularJS](kata-angularjs) - Practicing AngularJS
 - [Concepts](kata-concepts) - Concepts of architecture and solutions for typical problems
 
+### MySQL
+
+- [Dump](mysql/dump.md)
+- [Log queries](mysql/log-queries.md)
+- [Query Cache](mysql/query-cache.md)
+
 ### PHP
 
 - [PHP 7 Features](php-7-features) - Code examples for the new features in PHP 7
