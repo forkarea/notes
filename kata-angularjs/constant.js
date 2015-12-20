@@ -1,4 +1,4 @@
-// Defining an application configuration
+// Defining an AngularJS application configuration
 
 var app = angular.module('LoremIpsumApp', []);
 

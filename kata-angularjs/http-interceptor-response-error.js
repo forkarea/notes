@@ -1,4 +1,4 @@
-// Catch HTTP 401 with Angular.js interceptor
+// Catch HTTP 401 with AngularJS interceptor
 
 var app = angular.module('LoremIpsumApp', []);
 
