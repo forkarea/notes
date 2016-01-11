@@ -88,10 +88,10 @@ Przykładowe narzędzia: Talend, SQL Server Integration Services
 
 Poziomy wizualizacji:
 
-1) Wyświetlanie pojedyńczych rekordów - listy, szczegóły rekordu, wyszukiwanie
-2) Wykresy - wyodrębnienie wartości rekordów, agregacja danych
-3) Raporty - łączenie - powiązania i trendy, opisywanie, interakcje
-4) Predykcje - przewidywanie, rekomendacja, wnioskowanie, uczenie się
+1. Wyświetlanie pojedyńczych rekordów - listy, szczegóły rekordu, wyszukiwanie
+2. Wykresy - wyodrębnienie wartości rekordów, agregacja danych
+3. Raporty - łączenie - powiązania i trendy, opisywanie, interakcje
+4. Predykcje - przewidywanie, rekomendacja, wnioskowanie, uczenie się
 
 Narzędzia przydatne do wizualizowania danych:
 
