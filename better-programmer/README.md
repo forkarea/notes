@@ -22,7 +22,7 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
 - ~~Komentowanie kodu~~
 - ~~Standard kodowania~~
 - ~~Code Review~~
-- ~~Refaktoryzacja~~
+- [Refaktoryzacja](#refaktoryzacja)
 - [Wymiana i zdobywanie wiedzy](#wymiana-i-zdobywanie-wiedzy)
 - [DOJO programowania](#dojo-prgramowania)
 - [Automatyzacja](#automatyzacja)
@@ -81,7 +81,7 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
 
 ### Co daje nam refaktoryzacja?
 
-- poprawia jakoś kodu, a tym samym oprogramowania
+- poprawia jakość kodu, a tym samym oprogramowania
 - kod jest bardziej czytelny, można go szybciej zrozumieć
 
 ### Zagrożenia jakie niesie za sobą refaktoryzacja
@@ -95,11 +95,11 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
 
 ### Jak unikać ryzyka?
 
-- małe kroki! małe commity!
+- małe kroki, małe commity
 - systematycznie wykonuj refaktoryzację
 - musimy wiedzieć kiedy zacząć, kiedy kończyć, kiedy nie refaktoryzować
 - ustalaj osiągalne cele w kwestii refaktoryzacji (zasada S.M.A.R.T)
-- pamiętaj, że refaktoryzacja nie poprawia błędów funkcjonalnych!
+- pamiętaj, że refaktoryzacja nie poprawia błędów funkcjonalnych
 
 ### Na co zwracać uwagę?
 
@@ -207,11 +207,13 @@ Zawartość ekranu rzutowana jest na ścianę. Jedna osoba pisze test i siada na
   - Jeżeli w którymś z fragmentów kodu napotykasz błąd, nie identyfikuj go z osobą która go popełniła.
   - Nie ustrzegaj się poprawy błędów w kodzie który nie został napisany przez Ciebie.
   - Pamiętaj to kod zespołu - każdy z członków odpowiada za całość, a nie tylko za wybrane fragmenty.
-- Praca w parach to:
-  - Efektywny sposób rozwiązywania problemów - nawet jeżeli jeden z programistów jest znużony pracą nad problemem
-  - Dobry moment na dokonywanie inspekcji kodu na bieżąco
-  - Świetny sposób na dzielenie się wiedza
-  - Odpowiedni czas na poznawanie rożnych (nieznanych Ci) części systemu
-  - Pamiętaj - co dwie głowy to nie jedna!
 - Bądź częścią zespołu nie samotnikiem z słuchawkami na uszach - jako zespół np. siedźcie razem, twarzą do siebie czyli tworząc okrąg - tak aby podsłuchać mamrotanie kolegi, prowadzić spontaniczną werbalna i niewerbalna komunikacje
 - Nucz się przyjmować pomoc oraz o nią prosić. Jeżeli siedzisz z zespołem w jednym pokoju wstań i powiedz "Potrzebuje pomocy". Wykorzystaj dostępne Ci media - StackOverflow, Facebook, Twitter, fora internetowe, e-mail, telefon. *"Zdecydownie nieprofesjonalne jest stanie w miejscu, podczas gdy pomoc jest tak łatwo dostępna"* ~ Robert C. Martin
+
+### Praca w parach
+  
+- Efektywny sposób rozwiązywania problemów - nawet jeżeli jeden z programistów jest znużony pracą nad problemem
+- Dobry moment na dokonywanie inspekcji kodu na bieżąco
+- Świetny sposób na dzielenie się wiedza
+- Odpowiedni czas na poznawanie rożnych (nieznanych Ci) części systemu
+- Pamiętaj - co dwie głowy to nie jedna!
