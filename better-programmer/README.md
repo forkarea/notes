@@ -86,26 +86,30 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
 
 ### Zagrożenia jakie niesie za sobą refaktoryzacja
 
-- duża refaktoryzacja wprowadzona wraz z wprowadzeniem nowej funkcjonalności, wykonaj te czynności osobno!
+- duża refaktoryzacja wykonana wraz z wprowadzeniem nowej funkcjonalności
+  - bałagan w commitach, wykonaj te czynności osobno!
   - zrób refaktoryzację -> commit,
   - zaimplementuj nową funkcjonalność -> commit
+- późno wprowadzona refaktoryzacja jest ciężka do przeprowadzenia i nie koniecznie musi przynieść korzyści ponieważ możemy mieć za dużo do zrobienia
+- testy też się refaktoryzuje - cykl refactor metodyki TDD nie dotyczy tylko produkcyjnego kodu
+
+### Jak unikać ryzyka?
+
+- małe kroki! małe commity!
+- systematycznie wykonuj refaktoryzację
+- musimy wiedzieć kiedy zacząć, kiedy kończyć, kiedy nie refaktoryzować
+- ustalaj osiągalne cele w kwestii refaktoryzacji (zasada S.M.A.R.T)
+- pamiętaj, że refaktoryzacja nie poprawia błędów funkcjonalnych!
 
 ### Na co zwracać uwagę?
 
 - magic numbers - zmiana na stałe, zmienne
-- klarmy w ```if``` są ważne! nawet dla *jednolinijkowca*
+- klarmy dla instrukcji warunkowej ```if``` są bardzo ważne! nawet dla *jednolinijkowca*, ich brak sprawia problemy z czytelnością kodu
 - długi metody/funkcje - rozbij na kilka mniejszych
 - zamień ```switch``` na *wzorzec strategii*
   
 ## Wymiana i zdobywanie wiedzy
 
-- Wymiana wiedzy - *Show And Tell*
-  - spotkanie podczas którego jedna osoba (lub więcej) opracowuje prezentację (najlepiej live) przedstawiająca interesujący temat (narzędzie, rozwiązanie problemu itp.)
-- Wymiana wiedzy - *Technical Meeting*
-  - spotkania dotyczące tego co dzieje się w projekcie, napotkanych problemów i zastosowanych rozwiązań - pod względem technicznym!
-  - jeżeli omawiacie na bieżąco występujące problemy to spotkanie niech będzie podsumowaniem wykonanych akcji
-  - notujcie gdzieś poruszone kwestie
-  - spotkanie powinno posiadać formę dyskusji
 - Miej mentora - kogoś kto doradzi Ci w rozwoju Twojej kariery jako programista
 - Dobrze jest pracować z lepszymi od siebie - wtedy najszybciej się uczysz, a przy okazji podświadomie starasz się nie odstawać od reszty, w drugą stronę działa to identycznie - "jeśli wejdziesz między wrony, musisz krakać tak jak one"
 - Prowadź bloga
@@ -130,12 +134,31 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
   - lista ToDo (nazywana ostatnio nowym "Hello Worldem" programowania)
 - Jednak nie nauczysz się niczego, jeżeli będzie próbował nauczyć się wszystkiego.
 
+### Wymiana wiedzy - *Show And Tell*
+  - spotkanie podczas którego jedna osoba (lub więcej) opracowuje prezentację (najlepiej live) przedstawiająca interesujący temat (narzędzie, rozwiązanie problemu itp.)
+
+### Wymiana wiedzy - *Technical Meeting*
+  - spotkania dotyczące tego co dzieje się w projekcie, napotkanych problemów i zastosowanych rozwiązań - pod względem technicznym!
+  - jeżeli omawiacie na bieżąco występujące problemy to spotkanie niech będzie podsumowaniem wykonanych akcji
+  - notujcie gdzieś poruszone kwestie
+  - spotkanie powinno posiadać formę dyskusji
+
 ##  DOJO programowania
 
-- *"Ćwiczenia wykonuje nie wtedy gdy Ci za to płacą. Wykonuj je po to aby uzyskać dobrą zapłatę za swoją pracę"* ~ Robert C. Martin
-- **Kata** - Jedna osoba pisze kod, reszta uczestników powtarza za nim te czynności. Ćwiczenie polega na rozwiązywaniu dobrze znanego problemu. Nie chodzi o wymyślenie rozwiązania problemu - rozwiązanie jest dobrze znane, ale o wyćwiczenie związanych z nim ruchów oraz decyzji. Celem jest także dążenie do perfekcji - powtarzasz ćwiczenie raz za razem. Dobre na nauczenie się skrótów klawiszowych IDE, idiomów nawigacyjnych, TDD oraz CI.
-- **Wasa** - Dwóch programistów odgrywa role agresora a drugi próbuje się bronić. Jeden z nich pisze test jednostkowy, drugi musi sprawić, że zostanie on zaliczony. Zmieniając się co jakiś czas rolami. Proces, który może wspomagać naukę takich metodologii jak TDD.
-- **Randori** - Zawartość ekranu rzutowana jest na ścianę. Jedna osoba pisze test i siada na swoje miejsce. Następna osoba sprawia, że test zostaje zaliczony i pisze kolejny test. Można powtarzać w odpowiedniej kolejności lub poszczególne osoby mogą się po prostu zgłaszać, jeżeli czują taką potrzebę.
+*"Ćwiczenia wykonuje nie wtedy gdy Ci za to płacą. Wykonuj je po to aby uzyskać dobrą zapłatę za swoją pracę"* ~ Robert C. Martin
+
+### Kata
+
+Jedna osoba pisze kod, reszta uczestników powtarza za nim te czynności. Ćwiczenie polega na rozwiązywaniu dobrze znanego problemu. Nie chodzi o wymyślenie rozwiązania problemu - rozwiązanie jest dobrze znane, ale o wyćwiczenie związanych z nim ruchów oraz decyzji. Celem jest także dążenie do perfekcji - powtarzasz ćwiczenie raz za razem. Dobre na nauczenie się skrótów klawiszowych IDE, idiomów nawigacyjnych, TDD oraz CI.
+
+### Wasa
+
+Dwóch programistów odgrywa role agresora a drugi próbuje się bronić. Jeden z nich pisze test jednostkowy, drugi musi sprawić, że zostanie on zaliczony. Zmieniając się co jakiś czas rolami. Proces, który może wspomagać naukę takich metodologii jak TDD.
+
+### Randori
+
+Zawartość ekranu rzutowana jest na ścianę. Jedna osoba pisze test i siada na swoje miejsce. Następna osoba sprawia, że test zostaje zaliczony i pisze kolejny test. Można powtarzać w odpowiedniej kolejności lub poszczególne osoby mogą się po prostu zgłaszać, jeżeli czują taką potrzebę.
+
 - [devblogi.pl/2010/10/ostateczne-programistyczne-kata.html](http://www.devblogi.pl/2010/10/ostateczne-programistyczne-kata.html)
 - [solidsoft.wordpress.com/2010/12/09/czym-jest-coding-dojo-i-code-kata](https://solidsoft.wordpress.com/2010/12/09/czym-jest-coding-dojo-i-code-kata/)
 
