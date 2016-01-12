@@ -77,6 +77,26 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
   - **Live Coding** - podczas spotkania rekrutacyjnego kandydat otrzymuje zadanie/problem do rozwiązania na komputerze. Ma na to X czasu. Może to być kilka mniejszych zadań programistycznych np. przerobienie jakiegoś wzoru matematycznego na kod, operacje na tablicach itp.
   - **Zadanie z modelowania** - kandydat dostaje zadanie którego celem jest zaprojektowania systemu (pod względem architektury niższego lub wyższego poziomu - klasy/wzorce projektowe lub architektura elementów systemu - serewer www, serwer kolejki, aplikacja).
 
+## Refaktoryzacja
+
+### Co daje nam refaktoryzacja?
+
+- poprawia jakoś kodu, a tym samym oprogramowania
+- kod jest bardziej czytelny, można go szybciej zrozumieć
+
+### Zagrożenia jakie niesie za sobą refaktoryzacja
+
+- duża refaktoryzacja wprowadzona wraz z wprowadzeniem nowej funkcjonalności, wykonaj te czynności osobno!
+  - zrób refaktoryzację -> commit,
+  - zaimplementuj nową funkcjonalność -> commit
+
+### Na co zwracać uwagę?
+
+- magic numbers - zmiana na stałe, zmienne
+- klarmy w ```if``` są ważne! nawet dla *jednolinijkowca*
+- długi metody/funkcje - rozbij na kilka mniejszych
+- zamień ```switch``` na *wzorzec strategii*
+  
 ## Wymiana i zdobywanie wiedzy
 
 - Wymiana wiedzy - *Show And Tell*
