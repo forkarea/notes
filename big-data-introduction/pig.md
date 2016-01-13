@@ -84,6 +84,16 @@ text = LOAD 'wordcount.txt' AS (line:chararray);
 stock = LOAD 'stock.csv' using PigStorage(',') AS (product:chararray, price:float, category:chararray);
 ```
 
+### STORE
+
+Syntax: ```STORE alias INTO 'directory' [USING function];```
+
+Zapisanie danych w okreœlonym formacie do wskazanego folderu.
+
+```pig
+STORE wordcount INTO 'wordcount-result' USING PigStorage(',');
+```
+
 ### DESCRIBE
 
 Schemat relacji.
@@ -254,3 +264,7 @@ stock: Store(fakefile:org.apache.pig.builtin.PigStorage) - scope-24
     |---stock: Load(file:///home/bigdata/stock.csv:PigStorage(',')) - scope-13--------
 Global sort: false
 ```
+
+## Przyk³ady:
+
+- [Word Count Example](pig-word-count-example/)
