@@ -48,6 +48,7 @@ $: pig -x mapreduce
 ## Uruchamianie
 
 - interactive - pow³oka Grunt
+  - podobny do IPython
   - je¿eli nie podamy skryptu do uruchomienia
   - z tego trybu mo¿na tak¿e uruchomiæ skrypty za pomoc¹ poleceñ run i exec
   - uzupe³nianie kodu (tab), historia instrukcji
@@ -56,3 +57,138 @@ $: pig -x mapreduce
   - ```pig scriptname.pig```
 - PigServer
   - uruchamianie skryptów z poziomu kodu Javy (klasy: PigServer, PigRunner)
+  
+## Pig Latin
+
+### LOAD
+
+Syntax: ```LOAD 'data' [USING function] [AS schema];```
+
+Wczytywanie danych, wynikiem jest relacja (zestaw krotek, krotka = wiersz danych).
+
+*Za³adowanie pliku, bez schematu (```DESCRIBE text; ``` zwróci "Schema for text unknown."):*
+
+```
+text = LOAD 'wordcount.txt';
+```
+
+*Za³adowanie pliku z ustawieniem schematu (ka¿dy wiersz pliku jest tablic¹ znaków w formacie UTF-16):*
+
+```
+text = LOAD 'wordcount.txt' AS (line:chararray);
+```
+
+*Za³adowanie pliku z ustawieniem separatora:*
+
+```
+stock = LOAD 'stock.csv' using PigStorage(',') AS (product:chararray, price:float, category:chararray);
+```
+
+### TOKENIZE
+
+Rozbija tablicê znaków na zbiór s³ów.
+
+```pig
+text = LOAD 'wordcount.txt' AS (line:chararray);
+words = FOREACH text GENERATE TOKENIZE(line) AS word;
+
+DUMP words;
+-- ({(Lorem),(ipsum),(dolor)})
+-- ({(Next),(line),(with),(text)})
+```
+
+### DESCRIBE
+
+Schemat relacji.
+
+```
+DESCRIBE stock;
+```
+
+```
+stock: {product: chararray,price: float,category: chararray}
+```
+
+### DUMP
+
+Zrzut relacji.
+
+```
+DUMP stock;
+```
+
+```
+(product1,100.0,category1)
+(product2,200.11,category1)
+(product3,245.44,category2)
+(product1,100.0,category1)
+(product2,200.11,category1)
+```
+
+### EXPLAIN
+
+Plan logiczny, fizyczny oraz zadania w modelu MapReduce.
+
+```
+EXPLAIN stock;
+```
+
+*Logical Plan:*
+
+```
+stock: (Name: LOStore Schema: product#13:chararray,price#14:float,category#15:chararray)
+|
+|---stock: (Name: LOForEach Schema: product#13:chararray,price#14:float,category#15:chararray)
+    |   |
+    |   (Name: LOGenerate[false,false,false] Schema: product#13:chararray,price#14:float,category#15:chararray)ColumnPrune:InputUids=[13, 14, 15]ColumnPrune:OutputUids=[13, 14, 15]
+    |   |   |
+    |   |   (Name: Cast Type: chararray Uid: 13)
+    |   |   |---product:(Name: Project Type: bytearray Uid: 13 Input: 0 Column: (*))
+    |   |   (Name: Cast Type: float Uid: 14)
+    |   |   |---price:(Name: Project Type: bytearray Uid: 14 Input: 1 Column: (*))
+    |   |   (Name: Cast Type: chararray Uid: 15)
+    |   |   |---category:(Name: Project Type: bytearray Uid: 15 Input: 2 Column: (*))
+    |   |
+    |   |---(Name: LOInnerLoad[0] Schema: product#13:bytearray)
+    |   |---(Name: LOInnerLoad[1] Schema: price#14:bytearray)
+    |   |---(Name: LOInnerLoad[2] Schema: category#15:bytearray)
+    |
+    |---stock: (Name: LOLoad Schema: product#13:bytearray,price#14:bytearray,category#15:bytearray)RequiredFields:null
+```
+
+*Physical Plan:*
+
+```
+stock: Store(fakefile:org.apache.pig.builtin.PigStorage) - scope-24
+|
+|---stock: New For Each(false,false,false)[bag] - scope-23
+    |   |
+    |   Cast[chararray] - scope-15
+    |   |---Project[bytearray][0] - scope-14
+    |   Cast[float] - scope-18
+    |   |---Project[bytearray][1] - scope-17
+    |   Cast[chararray] - scope-21
+    |   |---Project[bytearray][2] - scope-20
+    |
+    |---stock: Load(file:///home/bigdata/stock.csv:PigStorage(',')) - scope-13
+```
+
+*Map Reduce Plan:*
+
+```
+MapReduce node scope-25
+Map Plan
+stock: Store(fakefile:org.apache.pig.builtin.PigStorage) - scope-24
+|
+|---stock: New For Each(false,false,false)[bag] - scope-23
+    |   |
+    |   Cast[chararray] - scope-15
+    |   |---Project[bytearray][0] - scope-14
+    |   Cast[float] - scope-18
+    |   |---Project[bytearray][1] - scope-17
+    |   Cast[chararray] - scope-21 
+    |   |---Project[bytearray][2] - scope-20
+    |
+    |---stock: Load(file:///home/bigdata/stock.csv:PigStorage(',')) - scope-13--------
+Global sort: false
+```
