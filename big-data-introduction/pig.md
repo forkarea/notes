@@ -68,20 +68,60 @@ Wczytywanie danych, wynikiem jest relacja (zestaw krotek, krotka = wiersz danych
 
 *Za³adowanie pliku, bez schematu (```DESCRIBE text; ``` zwróci "Schema for text unknown."):*
 
-```
+```pig
 text = LOAD 'wordcount.txt';
 ```
 
 *Za³adowanie pliku z ustawieniem schematu (ka¿dy wiersz pliku jest tablic¹ znaków w formacie UTF-16):*
 
-```
+```pig
 text = LOAD 'wordcount.txt' AS (line:chararray);
 ```
 
 *Za³adowanie pliku z ustawieniem separatora:*
 
-```
+```pig
 stock = LOAD 'stock.csv' using PigStorage(',') AS (product:chararray, price:float, category:chararray);
+```
+
+### DESCRIBE
+
+Schemat relacji.
+
+```pig
+DESCRIBE stock;
+
+-- stock: {product: chararray,price: float,category: chararray}
+```
+
+### DUMP
+
+Zrzut relacji.
+
+```pig
+DUMP stock;
+
+-- (product1,100.0,category1)
+-- (product2,200.11,category1)
+-- (product3,245.44,category2)
+-- (product1,100.0,category1)
+-- (product2,200.11,category1)
+```
+
+### FOREACH
+
+Modyfikacja pól w relacji, przekszta³canie relacji.
+
+```pig
+text = LOAD 'wordcount.txt' AS (line:chararray);
+chars_per_line = FOREACH text GENERATE SIZE(line) AS chars;
+
+DUMP chars_per_line;
+
+-- (16)
+-- (48)
+-- (89)
+-- (81)
 ```
 
 ### TOKENIZE
@@ -93,43 +133,65 @@ text = LOAD 'wordcount.txt' AS (line:chararray);
 words = FOREACH text GENERATE TOKENIZE(line) AS word;
 
 DUMP words;
+
 -- ({(Lorem),(ipsum),(dolor)})
 -- ({(Next),(line),(with),(text)})
 ```
 
-### DESCRIBE
+### FLATTEN
 
-Schemat relacji.
+Sp³aczenie struktury. Usuwa zagnie¿d¿enia ze zbiorów i krotek.
 
-```
-DESCRIBE stock;
+```pig
+text = LOAD 'wordcount.txt' AS (line:chararray);
+words = FOREACH text GENERATE FLATTEN(TOKENIZE(line)) AS word;
+
+DUMP words;
+
+-- (Lorem)
+-- (ipsum)
+-- (dolor)
+-- (Next)
+-- (line)
+-- (with)
+-- (text)
 ```
 
-```
-stock: {product: chararray,price: float,category: chararray}
+### GROUP
+
+Grupowanie krotek w relacji wzglêdem wskazanego pola.
+
+```pig
+text = LOAD 'wordcount.txt' AS (line:chararray);
+words = FOREACH text GENERATE FLATTEN(TOKENIZE(line)) AS word;
+grouped = GROUP words BY word;
+
+DUMP grouped;
+
+-- (the,{(the),(the),(the)})
 ```
 
-### DUMP
+### ORDER
 
-Zrzut relacji.
+Sortuj krotki w relacji wzgêdem wskazanego pola i kolejnoœci.
 
-```
-DUMP stock;
+```pig
+sorted = ORDER counts BY total DESC;
 ```
 
-```
-(product1,100.0,category1)
-(product2,200.11,category1)
-(product3,245.44,category2)
-(product1,100.0,category1)
-(product2,200.11,category1)
+### LIMIT
+
+Limituj relacjê do wskazanej iloœæi krotek.
+
+```pig
+limited = LIMIT sorted 10;
 ```
 
 ### EXPLAIN
 
 Plan logiczny, fizyczny oraz zadania w modelu MapReduce.
 
-```
+```pig
 EXPLAIN stock;
 ```
 
