@@ -60,6 +60,8 @@ $: pig -x mapreduce
   
 ## Pig Latin
 
+[Pig Function Cheat Sheet](https://www.qubole.com/resources/cheatsheet/pig-function-cheat-sheet/)
+
 ### LOAD
 
 Syntax: ```LOAD 'data' [USING function] [AS schema];```
@@ -165,6 +167,33 @@ DUMP words;
 -- (line)
 -- (with)
 -- (text)
+```
+
+### FILTER
+
+Stwórz now¹ relacjê z krotek które spe³niaj¹ warunek.
+
+```pig
+text = LOAD 'wordcount.txt' AS (line:chararray);
+words = FOREACH text GENERATE FLATTEN(TOKENIZE(line)) AS word;
+filtred = FILTER words BY SIZE(word) > 3L;
+```
+
+### LOWER
+
+Zamieñ wszystkie litery na ma³e.
+
+```pig
+text = LOAD 'wordcount.txt' AS (line:chararray);
+lower_text = FOREACH text GENERATE LOWER(line) AS line;
+```
+
+### SIZE
+
+Iloœæ znaków, bajtów, pól - w zale¿noœci od typu danych. Zwraca 64-bit integer.
+
+```pig
+SIZE(word) > 10L
 ```
 
 ### GROUP
