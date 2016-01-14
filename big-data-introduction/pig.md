@@ -57,7 +57,22 @@ $: pig -x mapreduce
   - ```pig scriptname.pig```
 - PigServer
   - uruchamianie skryptów z poziomu kodu Javy (klasy: PigServer, PigRunner)
-  
+
+## S³ownik
+
+- relation (relacja) - is a bag (more specifically, an outer bag).
+- bag (kolekcja) - is a collection of tuples ```{(19,2), (18,1)}```
+- tuple (krotka) - is an ordered set of fields ```(19,2)```
+- field (pole) - is a piece of data
+
+## Skróty dla interactive mode
+
+- \d alias - DUMP
+- \de alias - DESCRIBE
+- \e alias - EXPLAIN
+- \i alias - ILLUSTRATE
+- \q - QUIT
+
 ## Pig Latin
 
 [Pig Function Cheat Sheet](https://www.qubole.com/resources/cheatsheet/pig-function-cheat-sheet/)
@@ -66,7 +81,7 @@ $: pig -x mapreduce
 
 Syntax: ```LOAD 'data' [USING function] [AS schema];```
 
-Wczytywanie danych, wynikiem jest relacja (zestaw krotek, krotka = wiersz danych).
+Wczytywanie danych, wynikiem jest relacja.
 
 *Za³adowanie pliku, bez schematu (```DESCRIBE text; ``` zwróci "Schema for text unknown."):*
 
@@ -179,6 +194,14 @@ words = FOREACH text GENERATE FLATTEN(TOKENIZE(line)) AS word;
 filtred = FILTER words BY SIZE(word) > 3L;
 ```
 
+### DISTINCT
+
+Usuñ powtarzaj¹ce siê krotki z relacji.
+
+```pig
+unique = DISTINCT words;
+```
+
 ### LOWER
 
 Zamieñ wszystkie litery na ma³e.
@@ -225,6 +248,23 @@ Limituj relacjê do wskazanej iloœæi krotek.
 ```pig
 limited = LIMIT sorted 10;
 ```
+
+### REGISTER
+
+Rejestracja bibliotek u¿ytkownika (User-Defined Functions).
+
+```pig
+REGISTER jyson-1.0.2.jar;
+REGISTER 'reddit.py' USING jython AS redditUdf;
+
+-- ...
+
+reddits = FOREACH data GENERATE redditUdf.parseReddit(item);
+```
+
+### ILLUSTRATE
+
+
 
 ### EXPLAIN
 
@@ -296,4 +336,5 @@ Global sort: false
 
 ## Przyk³ady:
 
-- [Word Count Example](pig-word-count-example/)
+- [Word Count](pig-word-count-example/)
+- [Using UDF from PiggyBank JAR](pig-udf-piggybank-example/)
