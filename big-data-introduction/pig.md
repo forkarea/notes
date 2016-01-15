@@ -1,20 +1,20 @@
 # Big Data - Apache Pig
 
-- platforma wspomagaj¹ca analizê du¿ych zbiorów danych
-- sk³ada siê z dwóch elementów:
-  - skryptowy jêzyk Pig Latin do zapisywania przep³ywu danych,
-  - œrodowiska uruchomieniowe - lokalne (JVM), rozproszone
-- udostêpnia wysokopoziomowy jêzyk Pig Latin umo¿liwiaj¹cy przeprowadzanie operacji - przekszta³cania danych wejœciowych w wyjœciowe
-- wszystko co napisane w Pig Latin i tak jest przekszta³cane do modelu MapReduce - transparentnie dla programisty
-- posiada tryb interaktywny u³atwiaj¹cy debugowanie skryptu przed jego uruchomieniem dla pe³nego zbioru danych
+- platforma wspomagajÄ…ca analizÄ™ duÅ¼ych zbiorÃ³w danych
+- skÅ‚ada siÄ™ z dwÃ³ch elementÃ³w:
+  - skryptowy jÄ™zyk Pig Latin do zapisywania przepÅ‚ywu danych,
+  - Å›rodowiska uruchomieniowe - lokalne (JVM), rozproszone
+- udostÄ™pnia wysokopoziomowy jÄ™zyk Pig Latin umoÅ¼liwiajÄ…cy przeprowadzanie operacji - przeksztaÅ‚cania danych wejÅ›ciowych w wyjÅ›ciowe
+- wszystko co napisane w Pig Latin i tak jest przeksztaÅ‚cane do modelu MapReduce - transparentnie dla programisty
+- posiada tryb interaktywny uÅ‚atwiajÄ…cy debugowanie skryptu przed jego uruchomieniem dla peÅ‚nego zbioru danych
 
 ## Tryby wykonywania
 
 ### Local Mode
 
-- dzia³a na maszynie JVM
-- korzysta z lokalnego systemu plików
-- dobry dla ma³ych plików - testowania
+- dziaÅ‚a na maszynie JVM
+- korzysta z lokalnego systemu plikÃ³w
+- dobry dla maÅ‚ych plikÃ³w - testowania
 
 ```
 # interactive mode
@@ -26,10 +26,10 @@ $: pig -x local scriptname.pig
 
 ### MapReduce Mode
 
-- przekszta³ca skrypt zapisany w jêzyku Pig Latin do modelu MapReduce
+- przeksztaÅ‚ca skrypt zapisany w jÄ™zyku Pig Latin do modelu MapReduce
 - uruchamia je w klastrze opartym o Apache Hadoop
-- wersja Apache Pig musi byæ zgodna z wersj¹ Apache Hadoop
-- nalezy ustawiæ konfiguracjê w pliku conf/pig.properties (w katalogu instalacji Apache Pig)
+- wersja Apache Pig musi byÄ‡ zgodna z wersjÄ… Apache Hadoop
+- nalezy ustawiÄ‡ konfiguracjÄ™ w pliku conf/pig.properties (w katalogu instalacji Apache Pig)
 
 ```
 fs.defaultFs:hdfs://localhost/
@@ -37,7 +37,7 @@ mapreduce.framework.name=yarn
 yarn.resourcemanager.address=localhost:8032
 ```
 
-Tryb MapReduce jest domyœlny. Uruchomienie Apache Pig w tym trybie nie wymaga dodatkowych argumentów.
+Tryb MapReduce jest domyÅ›lny. Uruchomienie Apache Pig w tym trybie nie wymaga dodatkowych argumentÃ³w.
 
 ```
 $: pig
@@ -47,25 +47,25 @@ $: pig -x mapreduce
 
 ## Uruchamianie
 
-- interactive - pow³oka Grunt
+- interactive - powÅ‚oka Grunt
   - podobny do IPython
-  - je¿eli nie podamy skryptu do uruchomienia
-  - z tego trybu mo¿na tak¿e uruchomiæ skrypty za pomoc¹ poleceñ run i exec
-  - uzupe³nianie kodu (tab), historia instrukcji
-  - tryb nadaj¹cy siê do testów
-- batch - bezpoœrednie uruchamianie skryptów
+  - jeÅ¼eli nie podamy skryptu do uruchomienia
+  - z tego trybu moÅ¼na takÅ¼e uruchomiÄ‡ skrypty za pomocÄ… poleceÅ„ run i exec
+  - uzupeÅ‚nianie kodu (tab), historia instrukcji
+  - tryb nadajÄ…cy siÄ™ do testÃ³w
+- batch - bezpoÅ›rednie uruchamianie skryptÃ³w
   - ```pig scriptname.pig```
 - PigServer
-  - uruchamianie skryptów z poziomu kodu Javy (klasy: PigServer, PigRunner)
+  - uruchamianie skryptÃ³w z poziomu kodu Javy (klasy: PigServer, PigRunner)
 
-## S³ownik
+## SÅ‚ownik
 
 - relation (relacja) - is a bag (more specifically, an outer bag).
 - bag (kolekcja) - is a collection of tuples ```{(19,2), (18,1)}```
 - tuple (krotka) - is an ordered set of fields ```(19,2)```
 - field (pole) - is a piece of data
 
-## Skróty dla interactive mode
+## SkrÃ³ty dla interactive mode
 
 - \d alias - DUMP
 - \de alias - DESCRIBE
@@ -83,19 +83,19 @@ Syntax: ```LOAD 'data' [USING function] [AS schema];```
 
 Wczytywanie danych, wynikiem jest relacja.
 
-*Za³adowanie pliku, bez schematu (```DESCRIBE text; ``` zwróci "Schema for text unknown."):*
+*ZaÅ‚adowanie pliku, bez schematu (```DESCRIBE text; ``` zwrÃ³ci "Schema for text unknown."):*
 
 ```pig
 text = LOAD 'wordcount.txt';
 ```
 
-*Za³adowanie pliku z ustawieniem schematu (ka¿dy wiersz pliku jest tablic¹ znaków w formacie UTF-16):*
+*ZaÅ‚adowanie pliku z ustawieniem schematu (kaÅ¼dy wiersz pliku jest tablicÄ… znakÃ³w, UTF):*
 
 ```pig
 text = LOAD 'wordcount.txt' AS (line:chararray);
 ```
 
-*Za³adowanie pliku z ustawieniem separatora:*
+*ZaÅ‚adowanie pliku z ustawieniem separatora:*
 
 ```pig
 stock = LOAD 'stock.csv' using PigStorage(',') AS (product:chararray, price:float, category:chararray);
@@ -105,7 +105,7 @@ stock = LOAD 'stock.csv' using PigStorage(',') AS (product:chararray, price:floa
 
 Syntax: ```STORE alias INTO 'directory' [USING function];```
 
-Zapisanie danych w okreœlonym formacie do wskazanego folderu.
+Zapisanie danych w okreÅ›lonym formacie do wskazanego folderu.
 
 ```pig
 STORE wordcount INTO 'wordcount-result' USING PigStorage(',');
@@ -137,7 +137,7 @@ DUMP stock;
 
 ### FOREACH
 
-Modyfikacja pól w relacji, przekszta³canie relacji.
+Modyfikacja pÃ³l w relacji, przeksztaÅ‚canie relacji.
 
 ```pig
 text = LOAD 'wordcount.txt' AS (line:chararray);
@@ -153,7 +153,7 @@ DUMP chars_per_line;
 
 ### TOKENIZE
 
-Rozbija tablicê znaków na zbiór s³ów.
+Rozbija tablicÄ™ znakÃ³w na zbiÃ³r sÅ‚Ã³w.
 
 ```pig
 text = LOAD 'wordcount.txt' AS (line:chararray);
@@ -167,7 +167,7 @@ DUMP words;
 
 ### FLATTEN
 
-Sp³aczenie struktury. Usuwa zagnie¿d¿enia ze zbiorów i krotek.
+SpÅ‚aczenie struktury. Usuwa zagnieÅ¼dÅ¼enia ze zbiorÃ³w i krotek.
 
 ```pig
 text = LOAD 'wordcount.txt' AS (line:chararray);
@@ -184,9 +184,26 @@ DUMP words;
 -- (text)
 ```
 
+### LOWER
+
+ZamieÅ„ wszystkie litery na maÅ‚e.
+
+```pig
+text = LOAD 'wordcount.txt' AS (line:chararray);
+lower_text = FOREACH text GENERATE LOWER(line) AS line;
+```
+
+### SIZE
+
+IloÅ›Ä‡ znakÃ³w, bajtÃ³w, pÃ³l - w zaleÅ¼noÅ›ci od typu danych. Zwraca 64-bit integer.
+
+```pig
+SIZE(line) > 10L
+```
+
 ### FILTER
 
-Stwórz now¹ relacjê z krotek które spe³niaj¹ warunek.
+StwÃ³rz nowÄ… relacjÄ™ z krotek ktÃ³re speÅ‚niajÄ… warunek.
 
 ```pig
 text = LOAD 'wordcount.txt' AS (line:chararray);
@@ -196,32 +213,15 @@ filtred = FILTER words BY SIZE(word) > 3L;
 
 ### DISTINCT
 
-Usuñ powtarzaj¹ce siê krotki z relacji.
+UsuÅ„ powtarzajÄ…ce siÄ™ krotki z relacji.
 
 ```pig
 unique = DISTINCT words;
 ```
 
-### LOWER
-
-Zamieñ wszystkie litery na ma³e.
-
-```pig
-text = LOAD 'wordcount.txt' AS (line:chararray);
-lower_text = FOREACH text GENERATE LOWER(line) AS line;
-```
-
-### SIZE
-
-Iloœæ znaków, bajtów, pól - w zale¿noœci od typu danych. Zwraca 64-bit integer.
-
-```pig
-SIZE(word) > 10L
-```
-
 ### GROUP
 
-Grupowanie krotek w relacji wzglêdem wskazanego pola.
+Grupowanie krotek w relacji wzglÄ™dem wskazanego pola.
 
 ```pig
 text = LOAD 'wordcount.txt' AS (line:chararray);
@@ -235,7 +235,7 @@ DUMP grouped;
 
 ### ORDER
 
-Sortuj krotki w relacji wzgêdem wskazanego pola i kolejnoœci.
+Sortuj krotki w relacji wzgÄ™dem wskazanego pola i kolejnoÅ›ci.
 
 ```pig
 sorted = ORDER counts BY total DESC;
@@ -243,7 +243,7 @@ sorted = ORDER counts BY total DESC;
 
 ### LIMIT
 
-Limituj relacjê do wskazanej iloœæi krotek.
+Limituj relacjÄ™ do wskazanej iloÅ›Ä‡i krotek.
 
 ```pig
 limited = LIMIT sorted 10;
@@ -251,7 +251,7 @@ limited = LIMIT sorted 10;
 
 ### REGISTER
 
-Rejestracja bibliotek u¿ytkownika (User-Defined Functions).
+Rejestracja bibliotek uÅ¼ytkownika (User-Defined Functions).
 
 ```pig
 REGISTER jyson-1.0.2.jar;
@@ -264,7 +264,11 @@ reddits = FOREACH data GENERATE redditUdf.parseReddit(item);
 
 ### ILLUSTRATE
 
+Prezentacja step-by-step przeksztaÅ‚ceÅ„ relacji do momentu otrzymania wÅ‚aÅ›ciwego wyniku
 
+```pig
+ILLUSTRATE stock; 
+```
 
 ### EXPLAIN
 
@@ -334,7 +338,7 @@ stock: Store(fakefile:org.apache.pig.builtin.PigStorage) - scope-24
 Global sort: false
 ```
 
-## Przyk³ady:
+## PrzykÅ‚ady:
 
 - [Word Count](pig-word-count-example/)
 - [Using UDF from PiggyBank JAR](pig-udf-piggybank-example/)
