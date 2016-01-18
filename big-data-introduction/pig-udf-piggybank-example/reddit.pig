@@ -7,9 +7,7 @@ reddit = LOAD 'reddit-small.csv'
 grouped = GROUP reddit BY (subreddit, user);
 
 total_scores = FOREACH grouped GENERATE
-    FLATTEN(reddit.subreddit) AS subreddit,
-    FLATTEN(reddit.user) AS user,
-    SUM(reddit.score) AS total_score;
+    group, SUM(reddit.score) AS total_score;
 
 results = DISTINCT total_scores;
 
