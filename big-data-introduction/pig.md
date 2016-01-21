@@ -341,4 +341,5 @@ Global sort: false
 ## Przykłady:
 
 - [Word Count](pig-word-count-example/)
-- [Using UDF from PiggyBank JAR](pig-udf-piggybank-example/)
+- [Using UDF (Java) from PiggyBank JAR](pig-udf-piggybank-example/)
+- [Using UDF (Python) from jyson](pig-udf-jyson-example/)
