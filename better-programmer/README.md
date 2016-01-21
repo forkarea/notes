@@ -79,10 +79,13 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
 
 ## Refaktoryzacja
 
+@TODO czym jest refaktoryzacji
+
 ### Co daje nam refaktoryzacja?
 
 - poprawia jakość kodu, a tym samym oprogramowania
 - kod jest bardziej czytelny, można go szybciej zrozumieć
+- może wpłynąć na szybsze wprowadzanie kolejnych zmian w oprogramowaniu (wpływa na to m.in czytelność kodu, jego ujednolicenie)
 
 ### Zagrożenia jakie niesie za sobą refaktoryzacja
 
@@ -92,10 +95,12 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
   - zaimplementuj nową funkcjonalność -> commit
 - późno wprowadzona refaktoryzacja jest ciężka do przeprowadzenia i nie koniecznie musi przynieść korzyści ponieważ możemy mieć za dużo do zrobienia
 - testy też się refaktoryzuje - cykl refactor metodyki TDD nie dotyczy tylko produkcyjnego kodu
+- może spowodować większe lub mniejsze problemy z wydajnością aplikacji (więcej wywołań metod, wiekszy poziom abstrakcji)
 
 ### Jak unikać ryzyka?
 
 - małe kroki, małe commity
+- miej wcześniej przygotowane testy
 - systematycznie wykonuj refaktoryzację
 - musimy wiedzieć kiedy zacząć, kiedy kończyć, kiedy nie refaktoryzować
 - ustalaj osiągalne cele w kwestii refaktoryzacji (zasada S.M.A.R.T)
@@ -107,7 +112,14 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
 - klarmy dla instrukcji warunkowej ```if``` są bardzo ważne! nawet dla *jednolinijkowca*, ich brak sprawia problemy z czytelnością kodu
 - długi metody/funkcje - rozbij na kilka mniejszych
 - zamień ```switch``` na *wzorzec strategii*
-  
+
+### Refactoring w parach
+
+- jeżeli partner nie rozumie tego co robisz - to robisz to prawdopodobnie źle
+- szybciej idetyfikujecie możliwe problemy
+- co dwie pary oczu to nie jedna - Twój partner może dostrzegać szerszy kontekst wprowadzanych zmian
+- pobudzanie pewności siebie + praca nad współpracą
+
 ## Wymiana i zdobywanie wiedzy
 
 - Miej mentora - kogoś kto doradzi Ci w rozwoju Twojej kariery jako programista
