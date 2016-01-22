@@ -79,9 +79,7 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
 
 ## Refaktoryzacja
 
-@TODO czym jest refaktoryzacji
-
-- refaktoruj przed/po dodaniem nowej funkcjonalności - jeżeli trzeba zrefaktoruj "otoczenie" w którym dana funkcjonalność zostanie implementowana
+Proces wprowadzania zmian w kodzie - nie wprowadzający funkcjonalności lecz wprowadzający ulepszenia w kwestii **jakości kodu**.
 
 ### Co daje nam refaktoryzacja?
 
@@ -107,6 +105,7 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
 - musimy wiedzieć kiedy zacząć, kiedy kończyć, kiedy nie refaktoryzować
 - ustalaj osiągalne cele w kwestii refaktoryzacji (zasada S.M.A.R.T)
 - pamiętaj, że refaktoryzacja nie poprawia błędów funkcjonalnych
+- jeżeli nie masz czasu, który możesz specjalnie święcić na refaktoryzację, to refaktoryzuj *przy okazji* - przed/po dodaniem nowej funkcjonalności - jeżeli trzeba zrefaktoruj "otoczenie" w którym dana funkcjonalność zostanie zaimplementowana
 
 ### Na co zwracać uwagę?
   
