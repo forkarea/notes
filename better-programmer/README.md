@@ -81,6 +81,8 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
 
 @TODO czym jest refaktoryzacji
 
+- refaktoruj przed/po dodaniem nowej funkcjonalności - jeżeli trzeba zrefaktoruj "otoczenie" w którym dana funkcjonalność zostanie implementowana
+
 ### Co daje nam refaktoryzacja?
 
 - poprawia jakość kodu, a tym samym oprogramowania
@@ -91,7 +93,7 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
 
 - duża refaktoryzacja wykonana wraz z wprowadzeniem nowej funkcjonalności
   - bałagan w commitach, wykonaj te czynności osobno!
-  - zrób refaktoryzację -> commit,
+  - zrób refaktoryzację -> commit
   - zaimplementuj nową funkcjonalność -> commit
 - późno wprowadzona refaktoryzacja jest ciężka do przeprowadzenia i nie koniecznie musi przynieść korzyści ponieważ możemy mieć za dużo do zrobienia
 - testy też się refaktoryzuje - cykl refactor metodyki TDD nie dotyczy tylko produkcyjnego kodu
@@ -100,18 +102,24 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
 ### Jak unikać ryzyka?
 
 - małe kroki, małe commity
-- miej wcześniej przygotowane testy
+- miej wcześniej przygotowane testy - tak aby mieć pewność, że wprowadzane zmiany nie wprowadzą błędów
 - systematycznie wykonuj refaktoryzację
 - musimy wiedzieć kiedy zacząć, kiedy kończyć, kiedy nie refaktoryzować
 - ustalaj osiągalne cele w kwestii refaktoryzacji (zasada S.M.A.R.T)
 - pamiętaj, że refaktoryzacja nie poprawia błędów funkcjonalnych
 
 ### Na co zwracać uwagę?
-
-- magic numbers - zmiana na stałe, zmienne
+  
 - klarmy dla instrukcji warunkowej ```if``` są bardzo ważne! nawet dla *jednolinijkowca*, ich brak sprawia problemy z czytelnością kodu
-- długi metody/funkcje - rozbij na kilka mniejszych
-- zamień ```switch``` na *wzorzec strategii*
+- długa lista obiektów od których jest zależna klasa
+- duplikacja (np. ekstrakcja klasy bazowej jeżeli w wielu klasach używamy tego samego kodu, opakowanie często wykonywanych instrukcji w funkcję)
+- martwy kod (usuń go),
+- łańcuchy wiadomości ```->get()->get()```,
+- nieadekwatne komentarze do tego co faktycznie robi kod
+- długie metody/funkcje/klasy (rozbij na kilka mniejszych)
+- magic numbers (zmiana na stałe, zmienne)
+- długa lista parametrów (wprowadzenie obiektu)
+- ```switch``` / długa lista instrukcji ```if``` (zmiana na *wzorzec strategii*)
 
 ### Refactoring w parach
 
