@@ -39,6 +39,7 @@ Short notes about software development.
 - [PHP-DI](php-di) - The Dependency Injection Container for humans
 - [SPL](php-spl) - Standard PHP Library
   - [SPL - SplObjectStorage](php-spl/spl-object-storage.md) - Object map
+  - [SPL - Functions](php-spl/spl-functions.md) - Funkcje SPL
 - [Validate JSON schema](php-validate-json-schema.md) - Validate JSON Schema in PHP
 
 ## Contact
