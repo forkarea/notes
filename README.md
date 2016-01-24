@@ -40,6 +40,7 @@ Short notes about software development.
 - [SPL](php-spl) - Standard PHP Library
   - [SPL - SplObjectStorage](php-spl/spl-object-storage.md) - Object map
   - [SPL - Functions](php-spl/spl-functions.md) - Funkcje SPL
+  - [SPL - SplStack, SplQueue, SplPriorityQueue](php-spl/spl-stack-queue-priorityqueue.md) - Wykorzystanie gotowych implementacji kolejek i stosu
 - [Validate JSON schema](php-validate-json-schema.md) - Validate JSON Schema in PHP
 
 ## Contact
