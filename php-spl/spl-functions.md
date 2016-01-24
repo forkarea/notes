@@ -2,7 +2,7 @@
 
 ## class_implements()
 
-Zwraca listê interfejsów, które zosta³y zaimplementowane przez klasê lub obiekt.
+Zwraca listÄ™ interfejsÃ³w, ktÃ³re zostaÅ‚y zaimplementowane przez klasÄ™ lub obiekt.
 
 ```php
 interface Foo {}
@@ -20,7 +20,7 @@ array(1) {
 
 ## iterator_to_array()
 
-Konwertuje interator na tablicê.
+Konwertuje interator na tablicÄ™.
 
 ```php
 $it = new ArrayIterator(['name' => 'Lorem Ipsum', 'Foo', 'Bar']);
@@ -41,7 +41,7 @@ array(3) {
 
 ## spl_autoload_register()
 
-Umo¿liwia rejestrowanie funkcji (jednej i wiêcej) które obs³uguj¹ automatyczne do³¹czanie plików klas w momencie gdy tworzymy obiekt danej klasy. Funkcje ³aduj¹ce bêd¹ wykonywane w kolejnoœci w jakiej zosta³y zarejestrowane, tak d³ugo a¿ zostanie za³adowana ¿¹dana klasa.
+UmoÅ¼liwia rejestrowanie funkcji (jednej i wiÄ™cej) ktÃ³re obsÅ‚ugujÄ… automatyczne doÅ‚Ä…czanie plikÃ³w klas w momencie gdy tworzymy obiekt danej klasy. Funkcje Å‚adujÄ…ce bÄ™dÄ… wykonywane w kolejnoÅ›ci w jakiej zostaÅ‚y zarejestrowane, tak dÅ‚ugo aÅ¼ zostanie zaÅ‚adowana Å¼Ä…dana klasa.
 
 ```php
 spl_autoload_register(function ($class) {
@@ -51,7 +51,7 @@ spl_autoload_register(function ($class) {
 
 ## spl_object_hash()
 
-Zwraca unikalny identyfikator obiektu, którego mo¿na u¿ywaæ do identyfikacji obiektu.
+Zwraca unikalny identyfikator obiektu, ktÃ³rego moÅ¼na uÅ¼ywaÄ‡ do identyfikacji obiektu.
 
 ```php
 $object1 = new stdClass;
