@@ -21,7 +21,7 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
 - ~~Testowanie oprogramowania~~
 - ~~Komentowanie kodu~~
 - ~~Standard kodowania~~
-- ~~Code Review~~
+- [Code Review](#code-review)
 - [Refaktoryzacja](#refaktoryzacja)
 - [Wymiana i zdobywanie wiedzy](#wymiana-i-zdobywanie-wiedzy)
 - [DOJO programowania](#dojo-prgramowania)
@@ -76,6 +76,29 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
   - **Live Coding** - podczas spotkania rekrutacyjnego kandydat otrzymuje zadanie/problem do rozwiązania na komputerze. Ma na to X czasu. Może to być kilka mniejszych zadań programistycznych np. przerobienie jakiegoś wzoru matematycznego na kod, operacje na tablicach itp.
   - **Zadanie z modelowania** - kandydat dostaje zadanie którego celem jest zaprojektowania systemu (pod względem architektury niższego lub wyższego poziomu - klasy/wzorce projektowe lub architektura elementów systemu - serewer www, serwer kolejki, aplikacja).
 
+## Code Review
+
+- Systematycznie wykonywany proces mający na celu:
+  - znalezienie i naprawienie błędów,
+  - poprawienie jakości kodu - spójność, wzorce, dobre praktyki
+  - zwiększenie wiedzy i umiejętności programistów - "Jedna rozmowa z mądrym człowiekiem jest lepsza niż dziesięć lat studiów"
+  - uczynienie kodu tak dobrym, jak to tylko możliwe
+- Przegląd kodu wykonywany powinien być zanim zaimplementowane zmiany trafią do QA
+- Zawsze rób Code Review - nawet dla zmian w jednym wierszu. Często jeden wiersz może mieć konsekwencje w całym systemie. Przemyśl wszystkie możliwe skutki takiej zmiany.
+- Niech review dotyczy commitów / merge request dla konkretnej jednej funkcjonalności, nie zbioru ostatnich zmian z ostatniego tygodnia. Łatwiej odnaleźć kontekst i szukać potencjalnych defektów.
+- Autor kodu niech opisze co wprowadza konkretny commit / merge request - niech opisze funkcjonalność która została dodana / zmieniona. Nie rozchodzi się o komentarze w kodzie per klasa/metoda/argument lecz o kontekst wykonanej zmiany i sposób jej wykonania (zmiany dotyczą YYY, w tym wypadku zastosowałem wzorzec XXX ponieważ ....). Często opisując kod w taki sposób sami jesteśmy w stanie wyłapać wiele defektów, których nie zauważyliśmy podczas programowania.
+- Code Review to także dobry moment aby razem usiąść nad kodem i podyskutować o podjętych decyzjach i rozwiązaniach.
+
+### Code Review Checklist
+
+Przygotuj listę rzeczy o których warto pamiętać podczas inspekcji kodu. Może to być na przykład zbiór najczęściej pojawiających się defektów w waszym kodzie. Warto pomyśleć o liście ogólnej jak i również dla każdego z autorów (częste defekty które wykonuje dany programista - choć powinien nad nimi pracować aby eliminować powtarzające się problemy :-))
+
+### Przydatne definicje
+
+- Inspection Rate - jak szybko dokonujemy inspekcji, ilość linii kodu na godzinę
+- Defect Rate - ile defektów jesteśmy w stanie odnaleźć w jednostce czasu, ilość defektów na godzinę
+- Defect Density - ile defektów jesteśmy w stanie odnaleźć w danej ilości kodu (o ile istnieją takowe), ilość defektów na tysiąc linii kodu
+  
 ## Refaktoryzacja
 
 Proces wprowadzania zmian w kodzie - nie wprowadzający funkcjonalności lecz wprowadzający ulepszenia w kwestii **jakości kodu**.
