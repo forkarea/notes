@@ -78,6 +78,8 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
 
 ## Code Review
 
+> Ask a developer to review 10 lines of code and he’ll find 10 issues, ask him to review 500 lines and he’ll say it looks good.
+
 - Systematycznie wykonywany proces mający na celu:
   - znalezienie i naprawienie błędów,
   - poprawienie jakości kodu - spójność, wzorce, dobre praktyki
