@@ -2,7 +2,7 @@
 
 ## SplStack (LIFO)
 
-*Stos* - struktura danych, w której dane dok³adane s¹ na wierzch stosu i pobierane s¹ tak¿e z wierzchu stosu (LIFO - Last In, First Out).
+*Stos* - struktura danych, w ktÃ³rej dane dokÅ‚adane sÄ… na wierzch stosu i pobierane sÄ… takÅ¼e z wierzchu stosu (LIFO - Last In, First Out).
 
 ```php
 $stack = new SplStack();
@@ -26,7 +26,7 @@ FooBar 1
 
 ## SplQueue (FIFO)
 
-*Kolejka* - struktura danych, w której nowe dane dopisywane s¹ na koñcu kolejki, a pobierane s¹ z pocz¹tku kolejki (FIFO - First In, First Out).
+*Kolejka* - struktura danych, w ktÃ³rej nowe dane dopisywane sÄ… na koÅ„cu kolejki, a pobierane sÄ… z poczÄ…tku kolejki (FIFO - First In, First Out).
 
 ```php
 $queue = new SplQueue();
@@ -50,7 +50,7 @@ FooBar 4
 
 ## SplPriorityQueue
 
-*Kolejka priorytetowa* - abstrakcyjny typ danych w którym elementy zbioru posiadaj¹ okreœlon¹ relacjê porz¹dku.
+*Kolejka priorytetowa* - abstrakcyjny typ danych w ktÃ³rym elementy zbioru posiadajÄ… okreÅ›lonÄ… relacjÄ™ porzÄ…dku.
 
 ```php
 <?php
@@ -74,4 +74,4 @@ FooBar 2
 */
 ```
 
-Elementy wyœwietlane s¹ wzgêdem priorytetu (od najwy¿szego do najni¿szego) nadanego w metodzie insert().
+Elementy wyÅ›wietlane sÄ… wzgÄ™dem priorytetu (od najwyÅ¼szego do najniÅ¼szego) nadanego w metodzie insert().

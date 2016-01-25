@@ -38,10 +38,9 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
 - ~~Praca nad kodem~~
 - ~~Programowanie obiektowe~~
 - ~~Motywacja~~
-- ~~Metodyki~~
-  - ~~Agile i Scrum~~
-  - ~~TDD~~
-  - ~~BDD~~
+- ~~Agile i Scrum~~
+- [TDD](#tdd)
+- ~~BDD~~
 
 ## Podstawowe zasady
 
@@ -236,3 +235,33 @@ Zawartość ekranu rzutowana jest na ścianę. Jedna osoba pisze test i siada na
 - Świetny sposób na dzielenie się wiedza
 - Odpowiedni czas na poznawanie rożnych (nieznanych Ci) części systemu
 - Pamiętaj - co dwie głowy to nie jedna!
+
+## TDD
+
+### Red-Green-Refactor
+
+- RED
+  - Napisz test (jeden! mały!), nastepnie uruchom go - powinneś otrzymać FAIL
+- GREEN
+  - Zaimplementuj testowana funkcjonalność - zadbaj najpierw o to aby spełniała warunki testu, nie zamartwiaj się optymalizacją i refaktoryzacją to nie ten moment - uruchom go, test powinien zakończyć się sukcesem
+- REFACTOR
+  - Zrefaktoryzuj napisany kod. To jest ten czas aby wyglądał on pięknie a zarazem schludnie. Zrefaktoryzuj kod testu jak i również kod zaimplementowanej funkcjonalności, ale pamiętaj - nie zmieniaj zachowania kodu!
+
+### Trzy prawa TDD
+
+1. Nie można napisać nawet linii kodu produkcyjnego jeżeli wcześniej nie napisałeś do niego testu jednostkowego, który rzuca failem
+2. Nie możesz napisać więcej testu jednostkowego niżeli jest to wymagane - nieudana kompilacja/interpretacja też powoduje, że test jest niezaliczony
+3. Nie możesz napisać więcej kodu produkcyjnego niżeli jest to wymagane do zaliczenia wcześniej oblanego testu
+
+### Zalety TDD
+
+- Pewność, że wprowadzona zmiana niczego nie zepsuła - ponieważ tworzysz na bieżąco testy jednostkowe
+- Współczynnik znajdowanych błędów - redukcja błędów w pisanym kodzie
+- Dodaje odwagi podczas poprawiania kodu, którego nie znamy. Mamy pewność, że jeżeli coś zaczynamy poprawiać i nam się nie uda to po uruchomieniu testów jednostkowych mamy od razu informację na ten temat. Dzięki temu, jesteśmy bardziej skłonni do poprawiania bałaganu w kodzie - mam więcej odwagi aby go wyeliminować nie narażając aplikacji na nowe błędy
+- Testy jednostkowe są bardzo dobrą dokumentacją kodu dla innych programistów. Opisują najniższy poziom projektu
+- Napisanie testu jednostkowego przed implementacją kodu produkcyjnego zmusza Cię do przemyślenia jego architektury - piszesz dzięki temu testowalny kod - pamiętasz o dobrych praktykach m.in. Dependency Injection, Single Responsibility Principle
+- Można napisać testy po implementacji ale wtedy testujesz kod który dobrze znasz - znasz jego dobre i złe strony. Na pewno nie napiszesz wtedy testu który celowo nie przechodzi - unikasz takich sytuacji ponieważ wiesz, że musisz wrócić do implementacji i ją poprawić
+
+### Uwaga
+
+Pamiętaj zawodowy programista nigdy nie stosuje metodologii, jeżeli sprawia mu ona kłopoty - ona ma ułatwiać pracę! Czasem pisanie w TDD jest uciążliwe i dobry programista potrafi to zrozumieć oraz dostosować proces tak aby był jak najbardziej odpowiedni do zaistniałych sytuacji.
