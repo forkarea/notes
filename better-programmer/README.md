@@ -24,10 +24,10 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
 - [Code Review](#code-review)
 - [Refaktoryzacja](#refaktoryzacja)
 - [Wymiana i zdobywanie wiedzy](#wymiana-i-zdobywanie-wiedzy)
-- [DOJO programowania](#dojo-prgramowania)
+- [DOJO programowania](#dojo-programowania)
 - [Automatyzacja](#automatyzacja)
-- [Bazy danych](#bazy-danych)
-- [Narzędzia](#narzedzia)
+- [Baza danych](#baza-danych)
+- [Narzędzia](#narzędzia)
 - ~~Projekty i ich prowadzenie~~
 - [Spotkania](#spotkania)
 - ~~Szacowanie~~
