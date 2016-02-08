@@ -6,6 +6,7 @@ Short notes about software development.
 
 - [Better Programmer](better-programmer) - Clean Code, Good Practices, Pragmatic Programmer (*in progress...*)
 - [Conferences & Meetups & Trainings](conferences-meetups-trainings) - Notes From the Front Lines
+- [C#](csharp.md) - From PHP Developer to C#/.Net
 - [D3.js - Data-Driven Documents](d3js) - Manipulating documents based on data (*in progress...*)
 - [Domain-Driven Design](domain-driven-design) - Notes about DDD (*in progress...*)
 - [ELK - Zapanuj nad logami](elk-zapanuj-nad-logami) - Elasticsearch Logstash Kibana
