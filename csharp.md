@@ -1,6 +1,6 @@
 # C# - Notes
 
-Notatki dotyczπce jÍzyka C#
+Notatki dotyczƒÖce jƒôzyka C#
 
 ## Accessors
 
@@ -30,6 +30,57 @@ class Person {
 }
 ```
 
-- *get* wywo≥ywany w momencie pobierania wartoúÊ w≥aúciwoúci
-- *set* wywo≥ywany w momencie nadania wartoúci w≥aúciwoúci
-- s≥owo kluczowe *value* - reprezentacja wartoúci przypisywanej do w≥aúciwoúci w akcesorze set
+- *get* wywo≈Çywany w momencie pobierania warto≈õƒá w≈Ça≈õciwo≈õci
+- *set* wywo≈Çywany w momencie nadania warto≈õci w≈Ça≈õciwo≈õci
+- s≈Çowo kluczowe *value* - reprezentacja warto≈õci przypisywanej do w≈Ça≈õciwo≈õci w akcesorze set
+
+## Implicit - konwersja niejawna
+
+```cs
+class UserDomain
+{
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+}
+
+class UserInfoDTO
+{
+    public string FullName { get; set; }
+
+    public static implicit operator UserInfoDTO(UserDomain user)
+    {
+        return new UserInfoDTO {
+            FullName = user.FirstName + " " + user.LastName
+        };
+    }
+}
+
+UserDomain userDomain = new UserDomain { FirstName = "Adrian", LastName = "Pietka" };
+UserInfoDTO userDto = userDomain;
+```
+
+## Explicit - konwersja jawna
+
+
+```cs
+class UserDomain
+{
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+}
+
+class UserInfoDTO
+{
+    public string FullName { get; set; }
+
+    public static explicit operator UserInfoDTO(UserDomain user)
+    {
+        return new UserInfoDTO {
+            FullName = user.FirstName + " " + user.LastName
+        };
+    }
+}
+
+UserDomain userDomain = new UserDomain { FirstName = "Adrian", LastName = "Pietka" };
+UserInfoDTO userDto = (UserInfoDTO)userDomain;
+```
