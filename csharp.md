@@ -2,6 +2,32 @@
 
 Notatki dotyczące języka C#
 
+## Object Initializers
+
+```cs
+class User
+{
+    public string Nick { get; set; }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public int Age { get; set; }
+    public string Email { get; set; }
+    
+    public User(string nick)
+    {
+        Nick = nick;
+    }
+}
+
+User me = new User("adex")
+{
+    FirstName = "Adrian",
+    LastName = "Pietka",
+    Age = 27,
+    Email = "adrian@pietka.me"
+};
+```
+
 ## Accessors
 
 ```cs
