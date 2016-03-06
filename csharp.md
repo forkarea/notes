@@ -19,6 +19,7 @@ class User
     }
 }
 
+// object initializer way
 User me = new User("adex")
 {
     FirstName = "Adrian",
@@ -26,7 +27,22 @@ User me = new User("adex")
     Age = 27,
     Email = "adrian@pietka.me"
 };
+
+// standard way
+User me = new User("adex");
+me.FirstName = "Adrian";
+me.LastName = "Pietka";
+me.Age = 27;
+me.Email = "adrian@pietka.me";
 ```
+
+Jeżeli przypisanie wartości do którejś właściwości wygeneruje wyjątek to:
+
+- Object initializer way:
+  - zmienna ```me``` będzie miała wartość ```NULL```
+- Standard way:
+  - zmienna ```me``` będzie posiadała utworzony obiekt klasy ```User```
+  - właściwość któa wywołała wyjątek będzie ```NULL```
 
 ## Accessors
 
