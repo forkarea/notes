@@ -145,5 +145,5 @@ Kiedy warto używać?
 - using statement
   - ```using (var file = new StreamReader("file.txt")) { /* ... */ }```
 - for, foreach
-  - ```for(var i = 1; i < 10; i++) { /* ... */ }
-  - ```foreach(var user in users) { /* ... */ }
+  - ```for(var i = 1; i < 10; i++) { /* ... */ }```
+  - ```foreach(var user in users) { /* ... */ }```
