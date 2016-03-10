@@ -136,7 +136,9 @@ var list = new List<int>();
 var anonymous = new { FirstName = "Adrian", LastName = "" };
 ```
 
-Jest ważne, aby zrozumieć, że var słowo kluczowe nie oznacza "wariant" i nie wskazują, że zmienna jest luźno wpisana lub późnym wiązaniem.Oznacza tylko, że kompilator określa i przypisuje najbardziej odpowiedniego typu
+> Słowo kluczowe *var* nie oznacza "variant" i nie wskazują, że zmienna jest "loosely typed" (typowanie słabe) lub "late bound".
+> Oznacza tylko, że kompilator określa i przypisuje najbardziej odpowiedni typ.
+
 Kiedy warto używać?
 
 - local variables - method scope
