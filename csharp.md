@@ -126,3 +126,22 @@ class UserInfoDTO
 UserDomain userDomain = new UserDomain { FirstName = "Adrian", LastName = "Pietka" };
 UserInfoDTO userDto = (UserInfoDTO)userDomain;
 ```
+
+## var
+
+```cs
+var age = 29;
+var user = new User();
+var list = new List<int>();
+var anonymous = new { FirstName = "Adrian", LastName = "" };
+```
+
+Jest ważne, aby zrozumieć, że var słowo kluczowe nie oznacza "wariant" i nie wskazują, że zmienna jest luźno wpisana lub późnym wiązaniem.Oznacza tylko, że kompilator określa i przypisuje najbardziej odpowiedniego typu
+Kiedy warto używać?
+
+- local variables - method scope
+- using statement
+  - ```using (var file = new StreamReader("file.txt")) { /* ... */ }```
+- for, foreach
+  - ```for(var i = 1; i < 10; i++) { /* ... */ }
+  - ```foreach(var user in users) { /* ... */ }
