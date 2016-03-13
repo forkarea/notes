@@ -2,6 +2,8 @@
 
 Short notes about software development.
 
+- [Unnamed Notes](notes.md) - O wszystkim i o niczym.
+
 ## Index
 
 - [Better Programmer](better-programmer) - Clean Code, Good Practices, Pragmatic Programmer (*in progress...*)
