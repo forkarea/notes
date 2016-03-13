@@ -1,4 +1,4 @@
-# Luźne notatki
+# Unnamed Notes
 
 O wszystkim i o niczym.
 
