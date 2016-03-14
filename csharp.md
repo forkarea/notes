@@ -147,3 +147,16 @@ Kiedy warto używać?
 - for, foreach
   - ```for(var i = 1; i < 10; i++) { /* ... */ }```
   - ```foreach(var user in users) { /* ... */ }```
+
+## Null Coalescing Operator
+
+```cs
+// set foo to the value of foobar if foo is NOT null 
+// otherwise if foo = null, set foobar to -1.
+
+int foobar = foo ?? -1;
+
+// vs:
+
+int foobar = foo ? foo : -1;
+```
