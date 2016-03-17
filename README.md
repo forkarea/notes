@@ -6,6 +6,7 @@ Short notes about software development.
 
 ## Index
 
+- [AngularJS](angularjs.md) - Notes about practical using AngularJS
 - [Better Programmer](better-programmer) - Clean Code, Good Practices, Pragmatic Programmer (*in progress...*)
 - [Conferences & Meetups & Trainings](conferences-meetups-trainings) - Notes From the Front Lines
 - [C#](csharp.md) - From PHP Developer to C#/.Net
@@ -23,7 +24,6 @@ Short notes about software development.
 ### Kata
 
 - [Algorithms](kata-algorithms) - Practicing algorithms
-- [AngularJS](kata-angularjs) - Practicing AngularJS
 - [Concepts](kata-concepts) - Concepts of architecture and solutions for typical problems
 
 ### MySQL
