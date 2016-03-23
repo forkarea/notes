@@ -1,0 +1,87 @@
+# Git
+
+Stylesheet, Tips&Tricks
+
+## Run merge conflict resolution tools to resolve merge conflicts
+
+```
+$: git mergetool
+```
+
+##  How to switch back to 'master' with git?
+
+```
+$: git checkout master
+```
+
+##  How to create tag and pushing it to repository?
+
+```
+$: git tag 0.1.2
+$: git push origin master --tags
+```
+
+## Creating new branch
+
+```
+$: git checkout -b iss53
+```
+
+## Checkout remote branch (with refreshing list of remote branches)
+
+```
+$: git fetch
+$: git checkout test
+```
+
+## Best (and safest) way to merge a git branch into master
+
+```
+$: git checkout test
+$: git pull origin test
+$: git checkout master
+$: git pull origin master
+$: git merge test
+$: git push origin master
+```
+## Fast way to merge other branch into current branch
+
+```
+$: git checkout mybranch
+$: git pull origin maseter
+```
+
+## Reset not commited changes
+
+```
+$: git reset --hard HEAD
+```
+
+## Revert changes from file
+
+```
+$: git checkout file.ext
+```
+
+## Add an empty directory to a Git repository
+
+Create a .gitignore file inside that directory.
+
+```
+# Ignore everything in this directory
+*
+# Except this file
+!.gitignore
+```
+
+## Undo a commit
+```
+$: git commit -m "Something really bad"
+$: git reset --soft HEAD~
+```
+
+## The tree-like view of commits
+
+```
+$: git log --oneline --decorate --all --graph --abbrev-commit
+```

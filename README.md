@@ -13,6 +13,7 @@ Short notes about software development.
 - [D3.js - Data-Driven Documents](d3js) - Manipulating documents based on data (*in progress...*)
 - [Domain-Driven Design](domain-driven-design) - Notes about DDD (*in progress...*)
 - [ELK - Zapanuj nad logami](elk-zapanuj-nad-logami) - Elasticsearch Logstash Kibana
+- [GIT](git.md) - Stylesheet, Tips&Tricks
 - [Websocket WAMP](https://github.com/adrianpietka/websocket-wamp) - The Web Application Messaging Protocol
 
 ### Big Data
