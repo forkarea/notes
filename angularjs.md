@@ -6,6 +6,11 @@
 
 ## Directives
 
+- używaj prefixów do nazywania własnych dyrektyw w aplikacji np.
+  - larmo-project-list
+  - larmo-currency-input
+  - larmo-datepicker
+
 ### Bindings
 
 ```js
@@ -31,6 +36,57 @@ restrict: 'E'
 - 'C' - directive as class name
 
 These restrictions can all be combined - *AEC*, *AC* etc.
+
+### Templates
+
+```
+template: '<div>My extra template is here</div>'
+
+// or
+
+templateUrl: 'app/templates/component-name/project-list.html',
+```
+
+Szablony umieszczane w osobnych plikach są:
+
+- ładowane asynchronicznie,
+- cachowane - poszczególne przejścia pomiędzy stanami aplikacji nie pobierają na nowo szablonu.
+
+### Link vs Compile
+
+*Compile*
+
+- wykonuje się jednokrotnie dla dyrektywy (szablonu)
+- wykonuje się transformacja szablonu
+- ma dostęp do: transclude, DOM i atrybutów szablonu
+- nie ma dostępu do scope
+- zwrócić może: preLink() i postLink()
+- dla modyfikacji elementów DOM
+
+*Link*
+
+- wykonywany po compile
+- wykonywana dla każdego użycia dyrektywy w HTML
+- ma dostęp do: scope, DOM, atrybutów szablonu
+- zwrócić może postLink() 
+- dla bindowania logiki dla danych
+
+### Transclude
+
+```
+template: '<div class="message" ng-transclude></div>',
+transclude: true
+```
+
+"Przenosi" zawartość elementu definiującego dyrektywę w HTMLu do szablonu dyrektywy.
+
+```
+<larmo-text><p>Super text!</p></larmo-text>
+
+// =>  
+
+<div class="message"><p>Super text!</p></div>
+```
 
 ### Directive template
 
