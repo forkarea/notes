@@ -85,3 +85,7 @@ $: git reset --soft HEAD~
 ```
 $: git log --oneline --decorate --all --graph --abbrev-commit
 ```
+
+## GitFlow
+
+![git-flow.png](git-flow.png)
