@@ -160,3 +160,41 @@ int foobar = foo ?? -1;
 
 int foobar = foo ? foo : -1;
 ```
+
+## JSON Payload to object - using extension method
+
+```cs
+using System.IO;
+using System.Runtime.Serialization.Json;
+
+namespace Larmo.Common
+{
+    public static class StreamExtensions
+    {
+        public static TElement JsonStreamToObject<TElement>(this Stream stream)
+        {
+            var jsonSerializer = new DataContractJsonSerializer(typeof(TElement));
+            return (TElement)jsonSerializer.ReadObject(stream);
+        }
+    }
+}
+
+namespace Larmo.Example
+{
+    [DataContract]
+    public class GitUser
+    {
+        [DataMember(Name = "id")]
+        public int Id { get; set; }
+        
+        [DataMember(Name = "name")]
+        public string Name { get; set; }
+    }
+}
+
+// Payload: {"id":1,"name":"Adrian Pietka"}
+
+// Usage:
+// var payload = await request.Content.ReadAsStreamAsync();
+// var user = payload.JsonStreamToObject<Larmo.Example.User>();
+```
