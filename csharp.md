@@ -161,6 +161,16 @@ int foobar = foo ?? -1;
 int foobar = foo ? foo : -1;
 ```
 
++ Nullable
+
+```cs
+return user == null || user.CurrentDebt == null ? 0 : user.CurrentDebt.Value;
+
+// vs:
+
+return user?.CurrentDebt ?? 0;
+```
+
 ## JSON Payload to object - using extension method
 
 ```cs

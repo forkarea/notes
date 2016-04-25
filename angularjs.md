@@ -2,7 +2,14 @@
 
 ## Hints & Tips & Trickts
 
-// 
+- koncepcja *states* zamiast standardowego bindowania ```route => controller``` - [angular-ui/ui-router](https://github.com/angular-ui/ui-router)
+- podział funkcjonalny zamiast technicznego!
+- full jQuery zamiast okrojonej wersji w AngularJS (wystarczy zaincludować skrypt jQuery przed skryptami AngularJS)
+
+## Filters
+
+- używaj własnych filtrów jako formaterów na dane - np. wyświetalnie formatu daty w specyficzny dla aplikacji sposób - ```larmoDate```
+- braki w filtrach AngularJS uzupełnia świetny plugin - [a8m/angular-filter](https://github.com/a8m/angular-filter)
 
 ## Directives
 
@@ -10,6 +17,11 @@
   - larmo-project-list
   - larmo-currency-input
   - larmo-datepicker
+- świetny sposób na hermetyzację funkcjonalności - edytowalny grid lub tylko jego wiersz
+- rozwiązanie na problem z duplikacją logiki/elementów HTML
+- używaj zagnieżdżania dyrektyw (podziału na mniejsze dyrektywy) tak aby nie posiadały on zbyt dużo logiki
+- hermetyzacja pól formularza jako dyrektywy aplikacyjne (szczególnie gdy posiada skomplikowaną walidację którą należałoby duplikować lub umieszczać w parent state)
+- dostarczanie danych z API do dyrektywy czy w dyrektywie (??)
 
 ### Bindings
 
