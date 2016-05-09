@@ -91,6 +91,28 @@ $: git log --oneline --decorate --all --graph --abbrev-commit
 - *author* - is the one who created the content
 - *commiter* - is the one who committed changes/patch
 
+## "Merge" vs "Rebase"
+
+- merge - tworzy nowy commit "merge commit" który scala dwie gałęzie, nieliniowa struktura zmian, zastosowanie
+  - wdrażanie "feature branche" do "develop" / "master"
+- rebase - liniowa struktura zmian, nie widać momentu kiedy nastąpił "rebase", zastosowanie:
+  - gałęzie współdzielone pomiędzy programistami (bez kolejnych rozgałęzień, np. ktoś inny zrobi "hotfixes" na gałęzi "feature branch")
+  - synchronizacja "develop" / "master" do "feature branch" (jeżeli nasz "feature branch" pochodzi bezpośrednio z "develop" / "master")
+
+## Fast-Forward
+
+```
+$: git merge --ff topic
+```
+
+When the merge resolves as a fast-forward, only update the branch pointer, without creating a merge commit. (linear history)
+
+```
+$: git merge --no-ff topic
+```
+
+Create a merge commit even when the merge resolves as a fast-forward. (explicit branches)
+
 ## GitFlow
 
 ![git-flow.png](git-flow.png)
