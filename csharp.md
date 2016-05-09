@@ -161,6 +161,14 @@ int foobar = foo ?? -1;
 int foobar = foo ? foo : -1;
 ```
 
+## Access Modifiers
+
+- *public* - not restricted access
+- *private* - class scope (i.e. accessible only from code in the same class)
+- *protected* - class scope + types derived from the containing class
+- *internal* - assembly scope (i.e. only accessible from code in the same .exe or .dll)
+- *protected internal* - assembly scope + types derived from the containing class.
+
 ## JSON Payload to object - using extension method
 
 ```cs
@@ -169,12 +177,21 @@ using System.Runtime.Serialization.Json;
 
 namespace Larmo.Common
 {
-    public static class StreamExtensions
+    public static class StringExtensions
     {
-        public static TElement JsonStreamToObject<TElement>(this Stream stream)
+        public static TElement DeserializeJson<TElement>(this string json)
         {
-            var jsonSerializer = new DataContractJsonSerializer(typeof(TElement));
-            return (TElement)jsonSerializer.ReadObject(stream);
+            var bytes = Encoding.Unicode.GetBytes(json);
+            var settings = new DataContractJsonSerializerSettings
+            {
+                DateTimeFormat = new System.Runtime.Serialization.DateTimeFormat("%Y-%m-%dT%H:%M:%SZ")
+            };
+            
+            using (var stream = new MemoryStream(bytes))
+            {
+                var serializer = new DataContractJsonSerializer(typeof(TElement), settings);
+                return (TElement)serializer.ReadObject(stream);
+            }
         }
     }
 }
@@ -195,6 +212,6 @@ namespace Larmo.Example
 // Payload: {"id":1,"name":"Adrian Pietka"}
 
 // Usage:
-// var payload = await request.Content.ReadAsStreamAsync();
-// var user = payload.JsonStreamToObject<Larmo.Example.User>();
+// var payload = await request.Content.ReadAsStringAsync();
+// var user = payload.DeserializeJson<Larmo.Example.User>();
 ```

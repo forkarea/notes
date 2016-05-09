@@ -86,6 +86,11 @@ $: git reset --soft HEAD~
 $: git log --oneline --decorate --all --graph --abbrev-commit
 ```
 
+## "Author" vs "Committer"
+
+- *author* - is the one who created the content
+- *commiter* - is the one who committed changes/patch
+
 ## GitFlow
 
 ![git-flow.png](git-flow.png)
