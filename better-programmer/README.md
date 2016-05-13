@@ -36,7 +36,7 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
 - [Współpraca](#współpraca)
 - ~~Debugowanie~~
 - ~~Praca nad kodem~~
-- ~~Programowanie obiektowe~~
+- [Programowanie obiektowe](#programowanie-obiektowe)
 - ~~Motywacja~~
 - ~~Agile i Scrum~~
 - [TDD](#tdd)
@@ -260,6 +260,52 @@ Zawartość ekranu rzutowana jest na ścianę. Jedna osoba pisze test i siada na
 - Świetny sposób na dzielenie się wiedza
 - Odpowiedni czas na poznawanie rożnych (nieznanych Ci) części systemu
 - Pamiętaj - co dwie głowy to nie jedna!
+
+## Programowanie obiektowe
+
+- przekładanie kompozycji ponad dziedziczenie
+- luźne zależności pomiędzy obiektami
+
+### Zasady SOLID
+
+### Reuse/Release Equivalence Principle (REP)
+
+- Kod nie powinien być ponownie wykorzystany przez skopiowanie go z jednego miejsca i wklejenie do drugiego - wyodrębnianie do postaci reużywalnych komponentów, bibliotek
+- Autor odpowiedzialny jest za utrzymywanie takiego kodu
+- Na przykładzie korzystania z gotowej biblioteki:
+  - oczekujemy, że znalezione błędy będą naprawiane,
+   - dodawane będą rozszerzenia które nie spowodują problemów z kompatybilnością
+- Wymusza to na autorach bibliotek/komponentów:
+  - wersjonowania wydań
+  - pozwolenie na wykorzystywanie starszych wersji
+
+### Common Reuse Principle (CRP)
+
+- Klasy które ściśle współdziałają ze sobą, muszą być umieszczone razem w komponencie, takie klasy powinny być nierozłączne
+- Klasy które nie są ze sobą powiązane nie powinny być umieszczane razem
+
+### Common Closure Principle (CCP)
+
+- SRP na poziomie pakietów/bibliotek
+- Klasy które zmieniają się razem z tego samego powodu powinny być umieszczone razem w jednym komponencie
+- Przy ewentualnych zmianach liczba komponentów, które należy przetestować i wydać (w postaci nowej wersji) będzie ograniczona
+
+### Acyclic Dependencies Principle (ADP)
+
+- Unikaj wszelkich cykli w grafie zależności komponentu
+po czym poznać ADP? po prostu moduł pośrednio zależy sam od siebie
+
+### Stable-Dependencies Principle (SPD)
+
+- Powinno się tworzyć zależności do pakietów stabilnych a nie takich których API często ulega zmianom
+- Jeżeli uzależniamy się od pakietu niestabilnego musimy przy każdej aktualizacji gruntownie przetestować pakiety od niego zależne a w gorszym przypadku nawet część z nich przepisać (warto opakowywać pakiety wzorcem mediatora lub adapteru, wtedy zmianę dokonujemy tylko w jednym miejscu a nie w każdym zależnym pakiecie)
+
+### Stable-Abstractions Principle (SAP)
+
+- Dopiero stabilny komponent powinien dążyć do abstrakcyjności
+- Stabilny = abstrakcyjny, interfejs oparty o klasy abstrakcyjne
+- Komponent niestabilny powinien składać się z klas konkretnych
+- Uważaj jednak z wczesnym wdrażaniem abstrakcyjności - w momencie gdy zaczynasz abstrachować możesz nie mieć pełnej wiedzy domenowej i w późniejszym czasie możliwe, że abstrakcja którą wdrożyłeś jest wystarczająca
 
 ## TDD
 
