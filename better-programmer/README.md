@@ -268,6 +268,18 @@ Zawartość ekranu rzutowana jest na ścianę. Jedna osoba pisze test i siada na
 
 ### Zasady SOLID
 
+- **Single responsibility principle** - "a class should have only a single responsibility (i.e. only one potential change in the software's specification should be able to affect the specification of the class)"
+- **Open/closed principle** - "software entities ... should be open for extension, but closed for modification."
+- **Liskov substitution principle** - "objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program." (design by contract)
+- **Interface segregation principle** - "many client-specific interfaces are better than one general-purpose interface."
+- **Dependency inversion principle** - "one should “Depend upon Abstractions. Do not depend upon concretions."
+
+###  Inversion of Control (IoC)
+
+- "wyciągnięcie" na zewnątrz komponentu (obiektu) odpowiedzialności za realizację pewnych czynności,
+- nie chcemy się uzależniać się od jednej konkretnej implementacji (np. obliczanie rabatu - możemy wstrzyknąć strategię wyliczania rabatu),
+- realizacja za pomocą np. *Dependency Injection*, *Service Locator*
+
 ### Reuse/Release Equivalence Principle (REP)
 
 - Kod nie powinien być ponownie wykorzystany przez skopiowanie go z jednego miejsca i wklejenie do drugiego - wyodrębnianie do postaci reużywalnych komponentów, bibliotek
