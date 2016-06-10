@@ -40,3 +40,10 @@ var userDTO = new UserDTO(userDomain);
   - tranzakcja zostaje uznana zakończoną dopiero gdy dwie w.w operacje zostaną wykonane,
 - "model wykorzystywany" w wysokodostępnych, rozproszonych systemach,
 - często utażsamiane z BASE (Basically Available, Soft state, Eventual consistency), przeciwnie niż w tradycyjnym ACID (Atomicity, Consistency, Isolation, Durability)
+
+### Vendor lock-in
+
+- uzależnienie się od dostawcy
+- na podstawie cloud services:
+  - problem: implementacja obsługi storage/service bus (etc) dla konkretnego rozwiązania dostarczanego przez np. Azure/AWS
+  - rozwiązanie: definicja interfejsu, a następnie dostarczanie implementacji interfejsu (np. Double Dispatch, Dependency Injection)
