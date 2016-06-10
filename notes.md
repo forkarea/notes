@@ -11,6 +11,7 @@ O wszystkim i o niczym.
 
 - extension method ```var userDto = userDomain.AsDTO();```
 - explict operator ```(MyDTO)MyDomainObject```
+- metody fabrykujące wyciągnięte do zewnętrznej klasy (fabryki) ```public class UserDtoFabric() {} ```
 - metody fabrykujące na poziomie DTO poprzez przeciążanie konstruktorów
 
 ```
