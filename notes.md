@@ -29,3 +29,14 @@ public class UserDTO {
 var userDomain = new UserDomain();
 var userDTO = new UserDTO(userDomain);
 ```
+
+### Eventual consistency
+
+- dane będą spójne, ale bez żadnych wskazówek co do czasu kiedy to nastąpi,
+- przykład do zoobrazowania: tranzakcja obejmuje operację zapisu informacji do bazy danych oraz generowanie raportu w formie PDF:
+  - zapis do DB możemy potraktować jako coś co zostanie wykonane natychmiast, 
+  - wygenerowanie PDF nastąpi dopiero za X czasu,
+  - użytkownik poinformowany zostaje komunikatem "Trwa generwoanie raportu PDF",
+  - tranzakcja zostaje uznana zakończoną dopiero gdy dwie w.w operacje zostaną wykonane,
+- "model wykorzystywany" w wysokodostępnych, rozproszonych systemach,
+- często utażsamiane z BASE (Basically Available, Soft state, Eventual consistency), przeciwnie niż w tradycyjnym ACID (Atomicity, Consistency, Isolation, Durability)
