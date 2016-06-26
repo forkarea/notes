@@ -205,6 +205,38 @@ Generowanie wartości: 2
 ... itd.
 ```
 
+## Nullable Types
+
+Zmienne które mogą przyjmować wartości z zakresu wskazanego typu (int, string, etc.), plus wartość null
+
+Definicja:
+
+```cs
+int? x = null;
+
+// or
+
+Nullable<int> y = null;
+```
+
+Przydatne metody dla nullable types:
+
+- x.GetValueOrDefault() // zwraca konkretna wartość lub null
+- x.HasValue // zwaraca true/false w zależności od tego czy ustawiono wartość
+- 
+
+Przykład:
+
+```cs
+int? x = null;
+Console.WriteLine("x = " + x.HasValue.ToString()); // x = False
+Console.WriteLine("x = " + x.GetValueOrDefault().ToString()); // x = 0
+
+int? y = 1;
+Console.WriteLine("x = " + y.HasValue.ToString()); // x = True
+Console.WriteLine("y = " + y.GetValueOrDefault().ToString()); // y = 1
+```
+
 ## Access Modifiers
 
 - *public* - not restricted access
