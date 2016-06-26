@@ -171,6 +171,40 @@ return user == null || user.CurrentDebt == null ? 0 : user.CurrentDebt.Value;
 return user?.CurrentDebt ?? 0;
 ```
 
+## yield return
+
+Tworzenie "leniwych kolekcji". Poszczególne elementy kolekcji dodawane są do niej dopiero w momencie gdy jest na nie zapotrzebowanie 
+
+```cs
+static IEnumerable<int> GetData()
+{
+    for (int i = 1; i <= 5; i++)
+    {
+        Console.WriteLine("Generowanie wartości: " + i.ToString());
+        yield return i;
+    }
+}
+
+static void Main(string[] args)
+{
+    IEnumerable<int> data = GetData();
+    foreach (int i in data)
+    {
+        Console.WriteLine("Pobieranie wartości: " + i.ToString());
+    }
+}
+```
+
+Rezultat:
+
+```
+Generowanie wartości: 1
+Pobieranie wartości: 1
+Generowanie wartości: 2
+
+... itd.
+```
+
 ## Access Modifiers
 
 - *public* - not restricted access
