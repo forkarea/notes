@@ -161,16 +161,6 @@ int foobar = foo ?? -1;
 int foobar = foo ? foo : -1;
 ```
 
-- Nullable
-
-```cs
-return user == null || user.CurrentDebt == null ? 0 : user.CurrentDebt.Value;
-
-// vs:
-
-return user?.CurrentDebt ?? 0;
-```
-
 ## yield return
 
 Tworzenie "leniwych kolekcji". Poszczególne elementy kolekcji dodawane są do niej dopiero w momencie gdy jest na nie zapotrzebowanie 
@@ -234,6 +224,23 @@ Console.WriteLine("x = " + x.GetValueOrDefault().ToString()); // x = 0
 int? y = 1;
 Console.WriteLine("x = " + y.HasValue.ToString()); // x = True
 Console.WriteLine("y = " + y.GetValueOrDefault().ToString()); // y = 1
+```
+
+## Null-conditional operators
+
+> Used to test for null before performing a member access (?.) or index (?[) operation. 
+> These operators help you write less code to handle null checks, especially for descending into data structures.
+
+```cs
+if (user != null && user.CurrentDebt != null) {
+    return user.CurrentDebt.getValue();
+} else {
+    return 0;
+}
+
+// vs:
+
+return user?.CurrentDebt?.getValue() ?? 0;
 ```
 
 ## Access Modifiers
