@@ -223,7 +223,6 @@ Przydatne metody dla nullable types:
 
 - x.GetValueOrDefault() // zwraca konkretna wartość lub null
 - x.HasValue // zwaraca true/false w zależności od tego czy ustawiono wartość
-- 
 
 Przykład:
 
