@@ -24,7 +24,7 @@ $: git push origin master --tags
 ## Creating new branch
 
 ```
-$: git checkout -b iss53
+$: git checkout -b new-branch-name
 ```
 
 ## Checkout remote branch (with refreshing list of remote branches)
@@ -84,6 +84,12 @@ $: git reset --soft HEAD~
 
 ```
 $: git log --oneline --decorate --all --graph --abbrev-commit
+```
+
+## Preety Git Log
+
+```
+$: git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 ```
 
 ## "Author" vs "Committer"
