@@ -243,6 +243,20 @@ if (user != null && user.CurrentDebt != null) {
 return user?.CurrentDebt?.getValue() ?? 0;
 ```
 
+## Anonymous Types
+
+- nie posiada własnej nazwy, przydatna przy wyrażeniach, zapytaniach i typach zwracanych przez LINQ
+- właściwości takiego typu zawsze są *readonly*,
+- nie można definiować metod,
+- jeśli metoda ma zwracać *anonymous type* deklaruje się, że zwraca typ  *object*
+
+```cs
+var user = new { id = 1, username = "AdrianPietka" };
+
+Console.WriteLine(user.id);
+Console.WriteLine(user.username);
+```
+
 ## Access Modifiers
 
 - *public* - not restricted access
