@@ -135,11 +135,11 @@ Wykorzysytwane między innymi przez:
 - FacebookPosts (np. per day),
 - WikipediaArticles.
 
+**Type** - "kategoryzacja" dokumentów w obrębie indexu
+
 **Document** - odpowiednik rekordu w RDBMS, JSON ({key:value})
 
 **Shard** - część indexu, która jest dystrybuowana pomiędzy nodami, forma kopii zapasowej (w momencie gdy któryś z node jest niedostępny)
-
-// @todo dodać grafikę obrazującą terminologię: https://s3.amazonaws.com/media-p.slid.es/uploads/szymontezewski/images/42225/Zrzut_ekranu_2013-07-2_o_20.47.51.png
 
 #### Full-Text Search
 
