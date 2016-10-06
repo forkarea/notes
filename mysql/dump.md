@@ -55,3 +55,17 @@ $: \. db_backup.sql
 ```
 
 Należy pamiętać, że operacja ta zadziała tylko jeśli wskazana baza danych została wcześniej stworzona.
+
+## Problemy
+
+### Error 1016 - Podczas zrzucania bazy danych do pliku
+
+*Problem:*
+
+```
+Error: MySQL - mysqldump: Got error: 1016: Can't open file: './exampledb/xxx.frm' (errno: 24) when using LOCK TABLES
+```
+
+*Solution:*
+
+Dodać parametr ```--lock-tables=false``` do ```mysqldump```
