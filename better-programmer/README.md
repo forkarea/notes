@@ -18,7 +18,7 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
 
 - [Podstawowe zasady](#podstawowe-zasady)
 - [Rekrutacja](#rekrutacja)
-- ~~Testowanie oprogramowania~~
+- [Testowanie oprogramowania](#testowanie-oprogramowania)
 - ~~Komentowanie kodu~~
 - ~~Standard kodowania~~
 - [Code Review](#code-review)
@@ -75,6 +75,11 @@ Pewne punkty są "zainspirowane" oryginalnym źródłem z którego pochodzą - t
   - **Code Review** - kandydat otrzymuje fragment kodu łamiący ogólnoprzyjete standardy i dobre praktyki. Jego zadaniem jest przeprowadzenie procesu Core Review, wytykając jak największa ilość uchybień i możliwych usprawnień.
   - **Live Coding** - podczas spotkania rekrutacyjnego kandydat otrzymuje zadanie/problem do rozwiązania na komputerze. Ma na to X czasu. Może to być kilka mniejszych zadań programistycznych np. przerobienie jakiegoś wzoru matematycznego na kod, operacje na tablicach itp.
   - **Zadanie z modelowania** - kandydat dostaje zadanie którego celem jest zaprojektowania systemu (pod względem architektury niższego lub wyższego poziomu - klasy/wzorce projektowe lub architektura elementów systemu - serewer www, serwer kolejki, aplikacja).
+
+## Testowanie oprogramowania
+
+> Refactoring to proces modyfikacji struktury kodu bez zmiany jego działania. A więc: bez dotykania testów. Skoro tak, to testy są kontraktem. A kod: jego implementacją.
+> -- via Maciej Anisierowicz
 
 ## Code Review
 
