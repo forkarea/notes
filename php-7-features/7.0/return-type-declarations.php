@@ -1,7 +1,7 @@
 <?php
 
 /**
- * PHP 7
+ * PHP 7.0
  * Defining return type for: method, functions and closure.
  * Supported return types: class & interface name, self, parent, array, string, int, float, bool, callable, Closure
  */

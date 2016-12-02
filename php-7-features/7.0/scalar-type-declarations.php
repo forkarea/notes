@@ -1,7 +1,7 @@
 <?php
 
 /**
- * PHP 7
+ * PHP 7.0
  * Added support to declarations type: int, string, float, bool.
  * Two flavours:
  * - coercive - default behaviour, auto convert type of value,

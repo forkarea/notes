@@ -1,7 +1,7 @@
 <?php
 
 /**
- * PHP 7
+ * PHP 7.0
  * Short notation for performing isset()
  */
 

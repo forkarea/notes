@@ -1,7 +1,7 @@
 <?php
 
 /**
- * PHP 7
+ * PHP 7.0
  * Short notation for performing three-way comparisons. Possible return value: 1, 0, -1.
  * Objects are not comparable in this case.
  */
