@@ -6,9 +6,9 @@ Notatki na temat *JavaScript*.
 
 ## const, let, var
 
-- [*const*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) - sta³a, block-scoped
-  - brak mo¿liwoœci nadpisania w tym samym scope,
-  - poza scope np. wewn¹trz kolejnego, mo¿na zdefinowaæ sta³¹ o tej samej nazwie
+- [*const*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) - staÅ‚a, block-scoped
+  - brak moÅ¼liwoÅ›ci nadpisania w tym samym scope,
+  - poza scope np. wewnÄ…trz kolejnego, moÅ¼na zdefinowaÄ‡ staÅ‚Ä… o tej samej nazwie
 - [*let*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let) - zmienna, block-scoped,
   - zmienne tymczasowe np. ```for(let i = 0; i < 10; i++) { /** ... **/ }```
 - [*var*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var) - zmienna, function-scoped
