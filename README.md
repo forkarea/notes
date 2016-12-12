@@ -14,6 +14,7 @@ Short notes about software development.
 - [Domain-Driven Design](domain-driven-design) - Notes about DDD (*in progress...*)
 - [ELK - Zapanuj nad logami](elk-zapanuj-nad-logami) - Elasticsearch Logstash Kibana
 - [GIT](git.md) - Stylesheet, Tips&Tricks
+- [JavaScript](javascript.md) - Notes about JavaScript
 - [Websocket WAMP](https://github.com/adrianpietka/websocket-wamp) - The Web Application Messaging Protocol
 
 ### Big Data
