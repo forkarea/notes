@@ -44,6 +44,7 @@ $: git pull origin master
 $: git merge test
 $: git push origin master
 ```
+
 ## Fast way to merge other branch into current branch
 
 ```
@@ -84,6 +85,16 @@ $: git reset --soft HEAD~
 
 ```
 $: git log --oneline --decorate --all --graph --abbrev-commit
+```
+
+## Stash changes
+
+```
+# save changes
+$: git stash
+
+# restore saved changes
+$: git stash pop
 ```
 
 ## Preety Git Log
