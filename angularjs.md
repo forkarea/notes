@@ -23,7 +23,7 @@
 - hermetyzacja pól formularza jako dyrektywy aplikacyjne (szczególnie gdy posiada skomplikowaną walidację którą należałoby duplikować lub umieszczać w parent state)
 - dostarczanie danych z API do dyrektywy czy w dyrektywie (??)
 
-### Bindings
+### Scope & Bindings
 
 ```js
 scope: {
@@ -36,6 +36,14 @@ scope: {
 - *@* Attribute string binding (string)
 - *=* Two-way model binding (model)
 - *&* Callback method binding (method)
+
+Definicja *scope* dla dyrektywy definiuje nam *isolated scope* czyli dyrektywa ma dostęp tylko dla swojego *scope*, jeśli chcemy coś przekazać z *parent scope* musimy to zrobić jawnie, poprzez przekazanie do dyrektywy.
+
+```html
+<larmo-text directive-model="parent-scope-model"></larmo-text>
+```
+
+W przypadku nie korzystania z definicji *scope*, dyrektywa domyślnie dziedziczy *parent scope*, czyli otrzumuje *scope* z miejsca w którym została wykorzystana.
  
 ### Restrict option
 
