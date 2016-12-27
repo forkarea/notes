@@ -6,8 +6,8 @@
  */
  
 class Enums {
-	// Default, public
-	const DEFAULT_VY = 0;
+    // Default, public
+    const DEFAULT_VY = 0;
     
     // Public/Private/Protected visibility
     public const PUBLIC_VY = 1;
